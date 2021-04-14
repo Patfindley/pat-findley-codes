@@ -1,0 +1,56 @@
+
+
+* {
+  border: 1px #D2CED2 solid;
+  font-family: 'Raleway', sans-serif;
+}
+
+header {
+  display: flex;
+}
+
+body {
+  border: 2px #AE371F solid;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background-color: #F5F6FB;
+  justify-content: space-between;
+  height: 100vh;
+  font-weight: 200;
+}
+
+.main-content {
+  display: flex;
+  height: 97vh;
+}
+
+.blog {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+
+.blog-post {
+  background-color: white;
+}
+
+.about-me {
+
+}
+
+
+@media only screen and (min-device-width: 812px)
+{
+
+.blog {
+
+}
+
+.about-me {
+
+}
+
+}
