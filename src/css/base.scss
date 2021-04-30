@@ -25,7 +25,7 @@ body {
   height: 97vh;
 }
 
-.blog {
+.blog-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -37,7 +37,7 @@ body {
   background-color: white;
 }
 
-.about-me {
+.blog-image {
 
 }
 
@@ -45,12 +45,27 @@ body {
 @media only screen and (min-device-width: 812px)
 {
 
-.blog {
+  .blog {
 
-}
+  }
 
-.about-me {
+  .blog-image {
+  width: 33vh;
+  }
 
-}
+  .time-stamp {
+    width: 3.5vw;
+    position: relative;
+    bottom: 18vh;
+    left: 13.7vw;
+    background-image: linear-gradient(
+180deg
+,transparent 65%,#AE371F 65%);
+    /* border-bottom: 3px #AE371F solid; */
+  }
+
+  .about-me {
+
+  }
 
 }
