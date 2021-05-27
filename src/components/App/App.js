@@ -1,4 +1,5 @@
 import React from 'react';
+import { Switch, Route, Link, Redirect } from "react-router-dom";
 import './App.css';
 import Aside from '../Aside/Aside.js';
 import Projects from '../Projects/Projects.js';
@@ -13,7 +14,6 @@ class App extends React.Component {
     this.state = {
       projects: projectsData,
       filteredProjects: [],
-      showingDetails: false,
       selectedProject: null,
     }
   }
@@ -38,16 +38,12 @@ class App extends React.Component {
     this.setState({filteredProjects: filter})
   }
 
-  homeButton = () => {
-    this.setState({showingDetails: false})
-  }
-
   render() {
     return (
       <div className='body'>
         <nav className="header-nav">
           <ul className="nav-links">
-              <li>Home</li>
+              <Link to='/' className='link'><li>Home</li></Link>
               <li>Projects</li>
               <li>Contact</li>
           </ul>
@@ -64,19 +60,25 @@ class App extends React.Component {
         </div>
         <section className='main-content'>
           <div className='project-grid'>
-            {this.state.showingDetails &&
-            <ProjectInfo
-            homeButton={this.homeButton}
-            selectedProject={this.state.selectedProject}
-            />
-          }
-          {!this.state.showingDetails &&
-            <Projects
-            projects={this.state.projects}
-            filteredProjects={this.state.filteredProjects}
-            handleClick={this.handleClick}
-            />
-          }
+          <Switch>
+            <Route exact path ='/'
+              render={() => (
+                <Projects
+                projects={this.state.projects}
+                filteredProjects={this.state.filteredProjects}
+                handleClick={this.handleClick}
+                />
+              )}/>
+            <Route exact path='/:id'
+              render={() => (
+                this.state.selectedProject ?
+                  <ProjectInfo
+                    homeButton={this.homeButton}
+                    selectedProject={this.state.selectedProject}
+                    /> : null
+              )}/>
+              <Redirect to='/'/>
+          </Switch>
           </div>
           <Aside />
         </section>
@@ -87,3 +89,18 @@ class App extends React.Component {
 }
 
 export default App;
+
+
+// {this.state.showingDetails &&
+// <ProjectInfo
+// homeButton={this.homeButton}
+// selectedProject={this.state.selectedProject}
+// />
+// }
+// {!this.state.showingDetails &&
+// <Projects
+// projects={this.state.projects}
+// filteredProjects={this.state.filteredProjects}
+// handleClick={this.handleClick}
+// />
+// }
