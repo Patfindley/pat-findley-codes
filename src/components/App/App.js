@@ -1,11 +1,10 @@
 import React from 'react';
 import './App.css';
-import Header from '../Header/Header.js';
-import SearchBar from '../SearchBar/SearchBar.js'
 import Aside from '../Aside/Aside.js';
 import Projects from '../Projects/Projects.js';
 import ProjectInfo from '../ProjectInfo/ProjectInfo.js'
 import projectsData from '../../projectsData'
+import SearchBar from '../SearchBar/SearchBar.js'
 
 
 class App extends React.Component {
@@ -46,9 +45,15 @@ class App extends React.Component {
   render() {
     return (
       <div className='body'>
-        <Header />
+        <nav className="header-nav">
+          <ul className="nav-links">
+              <li>Home</li>
+              <li>Projects</li>
+              <li>Contact</li>
+          </ul>
+        </nav>
         <div className="neck">
-          <h2>Pat Findley Codes</h2>
+          <h2 className="current-view">Portfolio</h2>
           <div className="search-wrapper">
             <SearchBar
               handleChange={this.handleChange}
