@@ -1,0 +1,57 @@
+
+
+
+@media screen and (min-width: 812px) {
+
+  .body {
+    border: 2px #DF562A solid;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: #E8E8ED;
+    justify-content: space-between;
+    height: 100vh;
+    font-weight: 200;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .neck {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .search-wrapper {
+    width: 15%;
+  }
+
+  form {
+    height: 50px;
+  }
+
+  .search-input {
+    width: 100%;
+    height: 100%;
+  }
+
+  .main-content {
+    display: flex;
+    height: 97vh;
+    justify-content: space-evenly;
+  }
+
+  .project-grid {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    background-color: #F5F6FB;
+    width: 1450px;
+    /* width: 63%; */
+    height: 693px;
+    /* height: 87%; */
+    /* grid-row-gap: 10px; */
+  }
+
+}
