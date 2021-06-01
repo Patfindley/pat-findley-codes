@@ -19,9 +19,8 @@ class App extends React.Component {
   }
 
   handleClick = (event) => {
-    const project = this.state.projects.find(project => project.id === Number(event.target.id));
+    const project = this.state.projects.find(project => project.id === Number(event.target.closest('article').id));
     this.setState({
-      showingDetails: !this.state.showingDetails,
       selectedProject: project
     })
   }
@@ -59,15 +58,16 @@ class App extends React.Component {
           </div>
         </div>
         <section className='main-content'>
-          <div className='project-grid'>
           <Switch>
             <Route exact path ='/'
               render={() => (
+                <div className='project-grid'>
                 <Projects
                 projects={this.state.projects}
                 filteredProjects={this.state.filteredProjects}
                 handleClick={this.handleClick}
                 />
+                </div>
               )}/>
             <Route exact path='/:id'
               render={() => (
@@ -79,7 +79,6 @@ class App extends React.Component {
               )}/>
               <Redirect to='/'/>
           </Switch>
-          </div>
           <Aside />
         </section>
       </div>

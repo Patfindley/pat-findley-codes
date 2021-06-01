@@ -1,10 +1,17 @@
+import idea_thumb from './assets/idea_thumb.gif'
+import fitLit_thumb from './assets/fitLit_thumb.gif'
+import whereTo_thumb from './assets/whereTo_thumb.gif'
+import rancid_thumb from './assets/rancid_thumb.gif'
+import refactor_thumb from './assets/refactor_thumb.gif'
+
 const projectsData = [
   {
     name: "Idea Box",
-    id: 1,
+    id: 10,
     date:'3/02/21',
     description: `"Idea Box" quarter 1 group project`,
-    thumbnail: "https://media.giphy.com/media/uEnDw0eZALQEuoM5kz/giphy.gif",
+    thumbnail: idea_thumb,
+    gif: "https://media.giphy.com/media/uEnDw0eZALQEuoM5kz/giphy.gif",
     body: `<h3 class='project-title'> Idea Box</h3>
     <p class='post-body'><a href="https://github.com/Patfindley/ideabox-boilerplate">Idea Box</a>
     was a project given on week four of Turing, it was my third
@@ -17,38 +24,42 @@ const projectsData = [
     tags:['JS', 'vanilla JS', 'JavaScript', 'html', 'html5', 'css', 'idea', 'ideaBox', 'box', 'project', 'mod 1', 'group']
   },
   {
-    name: "FitLit",
-    id: 2,
+    name: "Fitbit data mngmnt",
+    id: 11,
     date: '4/06/21',
     description: "Paired project number 2",
-    thumbnail: "https://media.giphy.com/media/mEvg9wL0dMJEXZiDUa/giphy.gif",
+    thumbnail: fitLit_thumb,
+    gif: "https://media.giphy.com/media/mEvg9wL0dMJEXZiDUa/giphy.gif",
     body: "FitLit Body",
     tags:['shit']
   },
   {
-    name: "Refactor",
-    id: 3,
+    name: "Refactor Nightmare",
+    id: 12,
     date: '4/20/21',
     description: "Group project number 3",
-    thumbnail: "https://github.com/AndieDrew/refactorTractor/blob/main/docs/fav_todo.gif?raw=true",
+    thumbnail: refactor_thumb,
+    gif: "https://github.com/AndieDrew/refactorTractor/blob/main/docs/fav_todo.gif?raw=true",
     body: "Refactor Body",
     tags:[]
   },
   {
-    name: "Travel Tracker",
-    id: 4,
+    name: "Vacation Booker",
+    id: 13,
     date: '4/27/21',
     description: "Qaurter 2 final project..",
-    thumbnail: "https://media.giphy.com/media/LqOLXnOW9qLbR8nFFT/giphy.gif",
+    thumbnail: whereTo_thumb,
+    gif: "https://media.giphy.com/media/LqOLXnOW9qLbR8nFFT/giphy.gif",
     body: "Travel Tracker Body",
     tags:[]
   },
   {
-    name: "Rancid Tomatillos",
-    id: 5,
+    name: "Movie Browser",
+    id: 14,
     date: '5/24/21',
     description: "web application that utilizes API data to display movies for a user to browse through",
-    thumbnail: "https://user-images.githubusercontent.com/71860165/119421000-ecefa780-bcba-11eb-910e-f86ac8608b8a.gif",
+    thumbnail: rancid_thumb,
+    gif: "https://user-images.githubusercontent.com/71860165/119421000-ecefa780-bcba-11eb-910e-f86ac8608b8a.gif",
     body: "Rancid Tomatillos is a web application that utilizes API data to display movies for a user to browse through",
     tags:['JS', 'JavaScript', 'React', 'html', 'css', 'API', 'html5', 'rancid tomatillos', 'imdb', 'rotten tomatoes', 'movie', 'paired', 'group', 'git', 'github']
   }
