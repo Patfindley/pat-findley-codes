@@ -3,10 +3,10 @@ import { Switch, Route, Link, Redirect } from "react-router-dom";
 import './App.css';
 import Aside from '../Aside/Aside.js';
 import Projects from '../Projects/Projects.js';
-import ProjectInfo from '../ProjectInfo/ProjectInfo.js'
-import projectsData from '../../projectsData'
-import SearchBar from '../SearchBar/SearchBar.js'
-
+import ProjectInfo from '../ProjectInfo/ProjectInfo.js';
+import projectsData from '../../projectsData';
+import SearchBar from '../SearchBar/SearchBar.js';
+import Landing from '../Landing/Landing';
 
 class App extends React.Component {
   constructor() {
@@ -43,12 +43,12 @@ class App extends React.Component {
         <nav className="header-nav">
           <ul className="nav-links">
               <Link to='/' className='link'><li>Home</li></Link>
-              <li>Projects</li>
+              <Link to='/Projects' className='link'><li>Projects</li></Link>
               <li>Contact</li>
           </ul>
         </nav>
         <div className="neck">
-          <h2 className="current-view">Portfolio</h2>
+          <h2 className="current-view">Projects</h2>
           <div className="search-wrapper">
             <SearchBar
               handleChange={this.handleChange}
@@ -59,7 +59,12 @@ class App extends React.Component {
         </div>
         <section className='main-content'>
           <Switch>
-            <Route exact path ='/'
+            <Route exact path = '/'
+              render={()=> (
+                <Landing />
+              )}
+            />
+            <Route exact path ='/Projects'
               render={() => (
                 <div className='project-grid'>
                 <Projects
@@ -89,17 +94,3 @@ class App extends React.Component {
 
 export default App;
 
-
-// {this.state.showingDetails &&
-// <ProjectInfo
-// homeButton={this.homeButton}
-// selectedProject={this.state.selectedProject}
-// />
-// }
-// {!this.state.showingDetails &&
-// <Projects
-// projects={this.state.projects}
-// filteredProjects={this.state.filteredProjects}
-// handleClick={this.handleClick}
-// />
-// }

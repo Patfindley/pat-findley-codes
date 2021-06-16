@@ -14,7 +14,7 @@
     /* height: 693px; */
     height: 100%;
     border-radius: 10px;
-    box-shadow: 0px 3px 35px 1px rgba(0,0,0,0.19)
+    box-shadow: 8px 10px 27px -1px rgba(0,0,0,0.12)
   }
 
   .project-link {
@@ -35,13 +35,12 @@
     position: relative;
   }
 
-
   .project-image {
     position: relative;
     width: 448px;
     height: 259px;
     object-fit: fill;
-    box-shadow: 5px 6px 13px 2px rgba(0,0,0,0.41)
+    box-shadow: 5px 6px 13px 2px rgba(0,0,0,0.20)
   }
 
    .gif-hover {
@@ -67,7 +66,7 @@
     font-size: 1.4em;
     font-weight: 500;
     position: relative;
-    bottom: 315px;
+    bottom:  362px;
     left: 6px;
 
   }
@@ -77,19 +76,20 @@
     position: relative;
     bottom: 0px;
     left: 373px;
-    background-image: linear-gradient(
+    /* background-image: linear-gradient(
 0deg
-,transparent 20%,#DF562A 52%);
+,transparent 20%,#DF562A 52%); */
   }
 
   .project-description-wrap {
     border-radius: 3px;
     bottom: 265px;
     width: 113%;
+    height: 20%;
     position: relative;
-    background-image: linear-gradient(
-0deg
-,transparent 6%,#E8E8ED 19%);
+    background-image: linear-gradient( 
+      0deg
+       ,transparent 45%,#F9F9F9 91%);
   }
 
   .project-bottom {
