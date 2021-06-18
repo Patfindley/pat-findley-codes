@@ -47,8 +47,8 @@ export const Projects = ({ projects, filteredProjects, handleClick }) => {
             <img className="project-image gif-hover" src={project.gif} alt={project.name} />
             <div className="project-description-wrap" >
               <span className="time-stamp" >{project.date}</span>
-            </div>
               <p className="descript" >{project.name}</p>
+            </div>
             </nav>
         </article>
         </DelayLink>
