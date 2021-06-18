@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, Link, Redirect } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import './App.css';
 import Aside from '../Aside/Aside.js';
 import Projects from '../Projects/Projects.js';
@@ -7,6 +7,7 @@ import ProjectInfo from '../ProjectInfo/ProjectInfo.js';
 import projectsData from '../../projectsData';
 import SearchBar from '../SearchBar/SearchBar.js';
 import Landing from '../Landing/Landing';
+import Nav from '../Nav/Nav'
 
 class App extends React.Component {
   constructor() {
@@ -39,40 +40,48 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className='body'>
-        <nav className="header-nav">
-          <ul className="nav-links">
-              <Link to='/' className='link'><li>Home</li></Link>
-              <Link to='/Projects' className='link'><li>Projects</li></Link>
-              <li>Contact</li>
-          </ul>
-        </nav>
-        <div className="neck">
-          <h2 className="current-view">Projects</h2>
-          <div className="search-wrapper">
-            <SearchBar
-              handleChange={this.handleChange}
-              filterProjects={this.filterProjects}
-              renderFiltered={this.renderFiltered}
-              />
-          </div>
-        </div>
-        <section className='main-content'>
+      <div className='site-container'>
           <Switch>
             <Route exact path = '/'
               render={()=> (
                 <Landing />
               )}
             />
+            <Route exact path = '/About'
+              render={()=> (
+                <div >
+                <Nav />
+                <Aside />
+                </div>
+              )}
+            />
             <Route exact path ='/Projects'
               render={() => (
-                <div className='project-grid'>
-                <Projects
-                projects={this.state.projects}
-                filteredProjects={this.state.filteredProjects}
-                handleClick={this.handleClick}
-                />
-                </div>
+                <div>
+                <Nav />
+                <section className='main-content'>
+                  <div className="neck">
+                    <h2 className="current-view">Projects</h2> 
+                    <SearchBar
+                      handleChange={this.handleChange}
+                      filterProjects={this.filterProjects}
+                      renderFiltered={this.renderFiltered}
+                      />
+                  </div>
+                  {/* <div className="search-wrapper"> */}
+                  {/* </div> */}
+                  <div className='projects-view-wrap'>
+                  <div className='project-grid'>
+                    <Projects
+                      projects={this.state.projects}
+                      filteredProjects={this.state.filteredProjects}
+                      handleClick={this.handleClick}
+                      />
+                  </div>
+                  <Aside />
+                  </div>
+              </section>
+              </div>
               )}/>
             <Route exact path='/:id'
               render={() => (
@@ -82,11 +91,9 @@ class App extends React.Component {
                     selectedProject={this.state.selectedProject}
                     /> : null
               )}/>
-              <Redirect to='/'/>
+              <Redirect to='/Projects'/>
           </Switch>
-          <Aside />
-        </section>
-      </div>
+          </div>
     )
   }
 

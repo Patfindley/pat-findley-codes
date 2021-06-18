@@ -5,43 +5,22 @@
 
 @media screen and (min-width: 812px) {
 
-  .body {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
+  body {
+    margin-inline: auto;
+    height: 100vh;
     background-color: #F9F9F9;
-    justify-content: space-between;
-    overflow-y: auto;
     font-weight: 200;
     font-family: 'Raleway', sans-serif;
   }
 
-  .header-nav {
-    width: 100%;
+  .site-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #F9F9F9;
-    height: 76px;
-    margin-bottom: 75px;
-    /* border-bottom: 2px solid #bababe; */
-    box-shadow: 0px 0px 21px 1px rgba(0,0,0,0.04);
+    flex-direction: column;
   }
 
   .link, a:visited, a:link {
     text-decoration: none;
     color: inherit;
-  }
-
-  .nav-links {
-    width: 64%;
-    display: flex;
-    list-style-type: none;
-    align-content: stretch;
-    align-items: baseline;
-    justify-content: space-evenly;
-    font-size: 1.5em;
-    font-weight: 400;
   }
 
   .neck {
@@ -50,8 +29,13 @@
     width: 100%;
   }
 
-  .search-wrapper {
+  /* .search-wrapper {
     width: 15%;
+  } */
+
+  .projects-view-wrap {
+    display: flex;
+    justify-content: space-around
   }
 
   form {
@@ -65,6 +49,7 @@
 
   .main-content {
     display: flex;
+    flex-direction: column;
     height: 100%;
     justify-content: space-evenly;
   }
