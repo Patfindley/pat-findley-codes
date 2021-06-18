@@ -38,7 +38,7 @@ export const Projects = ({ projects, filteredProjects, handleClick }) => {
   } else {
     return projects.sort((a, b) => b.id - a.id).map(project => {
       return (
-        <DelayLink delay={1000}
+        <DelayLink delay={700}
         to={`/project${project.id}`}
         key={project.id}>
         <article className="project-post"  key={project.id} onClick={(event)=> selectProject(event)} id={project.id}>

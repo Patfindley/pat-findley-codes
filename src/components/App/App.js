@@ -86,10 +86,15 @@ class App extends React.Component {
             <Route exact path='/:id'
               render={() => (
                 this.state.selectedProject ?
+                <div>
+                  <Nav />
+                  <section className='main-content'>
                   <ProjectInfo
                     homeButton={this.homeButton}
                     selectedProject={this.state.selectedProject}
-                    /> : null
+                    /> 
+                    </section>
+                    </div>: null
               )}/>
               <Redirect to='/Projects'/>
           </Switch>
