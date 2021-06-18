@@ -46,4 +46,11 @@
     text-align: center;
   }
 
+  .project-info {
+    width: 70%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 8px 10px 27px -1px rgba(0,0,0,0.12)
+  }
+
 }

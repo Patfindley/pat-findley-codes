@@ -89,10 +89,18 @@ class App extends React.Component {
                 <div>
                   <Nav />
                   <section className='main-content'>
+                  <div className="neck">
+                    <h2 className="current-view">{this.state.selectedProject.name}</h2> 
+                  </div>
+                  <div className='projects-view-wrap'>
+                    <div className='project-info'>
                   <ProjectInfo
                     homeButton={this.homeButton}
                     selectedProject={this.state.selectedProject}
                     /> 
+                    </div>
+                    <Aside />
+                    </div>
                     </section>
                     </div>: null
               )}/>
