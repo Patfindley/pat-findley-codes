@@ -22,4 +22,13 @@
     font-size: 1.5em;
     font-weight: 400;
   }
+
+  li {
+    font-weight: 600;
+  }
+
+  li:hover {
+    color: #DF562A;
+    transition: color 300ms;
+  }
 }
