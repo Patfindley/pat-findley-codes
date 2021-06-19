@@ -1,12 +1,13 @@
 import React from 'react';
+import { Switch, Route, Redirect } from "react-router-dom";
 import './App.css';
-import Header from '../Header/Header.js';
-import SearchBar from '../SearchBar/SearchBar.js'
 import Aside from '../Aside/Aside.js';
 import Projects from '../Projects/Projects.js';
-import ProjectInfo from '../ProjectInfo/ProjectInfo.js'
-import projectsData from '../../projectsData'
-
+import ProjectInfo from '../ProjectInfo/ProjectInfo.js';
+import projectsData from '../../projectsData';
+import SearchBar from '../SearchBar/SearchBar.js';
+import Landing from '../Landing/Landing';
+import Nav from '../Nav/Nav'
 
 class App extends React.Component {
   constructor() {
@@ -14,15 +15,13 @@ class App extends React.Component {
     this.state = {
       projects: projectsData,
       filteredProjects: [],
-      showingDetails: false,
       selectedProject: null,
     }
   }
 
   handleClick = (event) => {
-    const project = this.state.projects.find(project => project.id === Number(event.target.id));
+    const project = this.state.projects.find(project => project.id === Number(event.target.closest('article').id));
     this.setState({
-      showingDetails: !this.state.showingDetails,
       selectedProject: project
     })
   }
@@ -39,46 +38,66 @@ class App extends React.Component {
     this.setState({filteredProjects: filter})
   }
 
-  homeButton = () => {
-    this.setState({showingDetails: false})
-  }
-
   render() {
     return (
-      <div className='body'>
-        <Header />
-        <div className="neck">
-          <h2>Pat Findley Codes</h2>
-          <div className="search-wrapper">
-            <SearchBar
-              handleChange={this.handleChange}
-              filterProjects={this.filterProjects}
-              renderFiltered={this.renderFiltered}
-              />
-          </div>
-        </div>
-        <section className='main-content'>
-          <div className='project-grid'>
-            {this.state.showingDetails &&
-            <ProjectInfo
-            homeButton={this.homeButton}
-            selectedProject={this.state.selectedProject}
+      <div className='site-container'>
+          <Switch>
+            <Route exact path = '/'
+              render={()=> (
+                <Landing />
+              )}
             />
-          }
-          {!this.state.showingDetails &&
-            <Projects
-            projects={this.state.projects}
-            filteredProjects={this.state.filteredProjects}
-            handleClick={this.handleClick}
+            <Route exact path = '/About'
+              render={()=> (
+                <div >
+                <Nav />
+                <Aside />
+                </div>
+              )}
             />
-          }
+            <Route exact path ='/Projects'
+              render={() => (
+                <div>
+                <Nav />
+                <section className='main-content'>
+                  <div className="neck">
+                    <h2 className="current-view">Projects</h2> 
+                    <SearchBar
+                      handleChange={this.handleChange}
+                      filterProjects={this.filterProjects}
+                      renderFiltered={this.renderFiltered}
+                      />
+                  </div>
+                  {/* <div className="search-wrapper"> */}
+                  {/* </div> */}
+                  <div className='projects-view-wrap'>
+                  <div className='project-grid'>
+                    <Projects
+                      projects={this.state.projects}
+                      filteredProjects={this.state.filteredProjects}
+                      handleClick={this.handleClick}
+                      />
+                  </div>
+                  <Aside />
+                  </div>
+              </section>
+              </div>
+              )}/>
+            <Route exact path='/:id'
+              render={() => (
+                this.state.selectedProject ?
+                  <ProjectInfo
+                    homeButton={this.homeButton}
+                    selectedProject={this.state.selectedProject}
+                    /> : null
+              )}/>
+              <Redirect to='/Projects'/>
+          </Switch>
           </div>
-          <Aside />
-        </section>
-      </div>
     )
   }
 
 }
 
 export default App;
+
