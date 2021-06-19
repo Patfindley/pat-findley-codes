@@ -53,4 +53,10 @@
     box-shadow: 8px 10px 27px -1px rgba(0,0,0,0.12)
   }
 
+  .contact-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
 }
