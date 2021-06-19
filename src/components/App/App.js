@@ -8,11 +8,12 @@ import Projects from '../Projects/Projects.js';
 import ProjectInfo from '../ProjectInfo/ProjectInfo.js';
 import Aside from '../Aside/Aside.js';
 import Contact from '../Contact/Contact.js'
-import projectsData from '../../assets/projectsData';
+import { projectsData, aboutMe } from '../../assets/projectsData';
 
 class App extends React.Component {
   constructor() {
     super()
+    console.log(aboutMe)
     this.state = {
       projects: projectsData,
       filteredProjects: [],
@@ -52,7 +53,7 @@ class App extends React.Component {
               render={()=> (
                 <div >
                 <Nav />
-                <Aside />
+                {/* <Aside /> */}
                 </div>
               )}
             />
@@ -69,8 +70,6 @@ class App extends React.Component {
                       renderFiltered={this.renderFiltered}
                       />
                   </div>
-                  {/* <div className="search-wrapper"> */}
-                  {/* </div> */}
                   <div className='projects-view-wrap'>
                   <div className='project-grid'>
                     <Projects
@@ -79,7 +78,7 @@ class App extends React.Component {
                       handleClick={this.handleClick}
                       />
                   </div>
-                  <Aside />
+                  <Aside selectedProject={aboutMe}/>
                   </div>
               </section>
               </div>

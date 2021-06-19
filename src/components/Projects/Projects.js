@@ -1,5 +1,4 @@
-import React, { useRef, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
 import DelayLink from '../DelayLink/DelayLink.js'
 import { gsap } from 'gsap';
 import "./Projects.css"

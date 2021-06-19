@@ -4,7 +4,7 @@ import whereTo_thumb from './whereTo_thumb.gif'
 import rancid_thumb from './rancid_thumb.gif'
 import refactor_thumb from './refactor_thumb.gif'
 
-const projectsData = [
+export const projectsData = [
   {
     name: "Idea Box",
     id: 10,
@@ -23,6 +23,7 @@ const projectsData = [
     something solo is a completely different animal than paired and group programming.</p>`,
     technology:['JavaScript', 'HTML', 'CSS'],
     gitHub: 'https://github.com/Patfindley/ideabox-boilerplate',
+    deploy: '',
     tags:['JS', 'vanilla JS', 'JavaScript', 'html', 'html5', 'css', 'idea', 'ideaBox', 'box', 'project', 'mod 1', 'group']
   },
   {
@@ -34,7 +35,8 @@ const projectsData = [
     gif: "https://media.giphy.com/media/mEvg9wL0dMJEXZiDUa/giphy.gif",
     body: "FitLit Body",
     technology:['JavaScript', 'HTML', 'CSS'],
-    github: 'https://github.com/battan40/fit-for-life',
+    gitHub: 'https://github.com/battan40/fit-for-life',
+    deploy: '',
     tags:['shit']
   },
   {
@@ -46,7 +48,8 @@ const projectsData = [
     gif: "https://github.com/AndieDrew/refactorTractor/blob/main/docs/fav_todo.gif?raw=true",
     body: "Refactor Body",
     technology:['JavaScript', 'HTML', 'CSS'],
-    github: 'https://github.com/AndieDrew/refactorTractor',
+    gitHub: 'https://github.com/AndieDrew/refactorTractor',
+    deploy: '',
     tags:[]
   },
   {
@@ -58,7 +61,8 @@ const projectsData = [
     gif: "https://media.giphy.com/media/LqOLXnOW9qLbR8nFFT/giphy.gif",
     body: "Travel Tracker Body",
     technology:['JavaScript', 'HTML', 'CSS', 'Sass'],
-    github: 'https://github.com/Patfindley/where-in-the-world',
+    gitHub: 'https://github.com/Patfindley/where-in-the-world',
+    deploy: '',
     tags:[]
   },
   {
@@ -70,10 +74,14 @@ const projectsData = [
     gif: "https://user-images.githubusercontent.com/71860165/119421000-ecefa780-bcba-11eb-910e-f86ac8608b8a.gif",
     body: "Rancid Tomatillos is a web application that utilizes API data to display movies for a user to browse through",
     technology:['JavaScript', 'React', 'React-Router', 'HTML', 'CSS'],
-    github: 'https://github.com/bhohnco/Rancid-Tomatillos',
+    gitHub: 'https://github.com/bhohnco/Rancid-Tomatillos',
+    deploy: '',
     tags:['JS', 'JavaScript', 'React', 'html', 'css', 'API', 'html5', 'rancid tomatillos', 'imdb', 'rotten tomatoes', 'movie', 'paired', 'group', 'git', 'github']
   }
 ];
 
 
-export default projectsData;
+export const aboutMe = {
+  id: 0,
+  body: '<p>Hey! Im Pat Findley, Im currently a student at <a href="https://turing.io/"> Turing School of Software and Design</a>. I like to consider myself a "creator of non-tangible things", and aspiringoptimist. My goal for my little nook of the internet is to creatively apply what I\'m currently learning, have fun, and grow through experience!</p>'
+}
