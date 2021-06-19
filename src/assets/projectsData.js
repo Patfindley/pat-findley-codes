@@ -1,8 +1,8 @@
-import idea_thumb from './assets/idea_thumb.gif'
-import fitLit_thumb from './assets/fitLit_thumb.gif'
-import whereTo_thumb from './assets/whereTo_thumb.gif'
-import rancid_thumb from './assets/rancid_thumb.gif'
-import refactor_thumb from './assets/refactor_thumb.gif'
+import idea_thumb from './idea_thumb.gif'
+import fitLit_thumb from './fitLit_thumb.gif'
+import whereTo_thumb from './whereTo_thumb.gif'
+import rancid_thumb from './rancid_thumb.gif'
+import refactor_thumb from './refactor_thumb.gif'
 
 const projectsData = [
   {
@@ -21,6 +21,8 @@ const projectsData = [
     took some stress off of layout, but also being so new to HTML & CSS, put a lot of stress on
     layout. I think my most valuable take away from this though, was group dynamic. Planning and executing
     something solo is a completely different animal than paired and group programming.</p>`,
+    technology:['JavaScript', 'HTML', 'CSS'],
+    gitHub: 'https://github.com/Patfindley/ideabox-boilerplate',
     tags:['JS', 'vanilla JS', 'JavaScript', 'html', 'html5', 'css', 'idea', 'ideaBox', 'box', 'project', 'mod 1', 'group']
   },
   {
@@ -31,6 +33,8 @@ const projectsData = [
     thumbnail: fitLit_thumb,
     gif: "https://media.giphy.com/media/mEvg9wL0dMJEXZiDUa/giphy.gif",
     body: "FitLit Body",
+    technology:['JavaScript', 'HTML', 'CSS'],
+    github: 'https://github.com/battan40/fit-for-life',
     tags:['shit']
   },
   {
@@ -41,6 +45,8 @@ const projectsData = [
     thumbnail: refactor_thumb,
     gif: "https://github.com/AndieDrew/refactorTractor/blob/main/docs/fav_todo.gif?raw=true",
     body: "Refactor Body",
+    technology:['JavaScript', 'HTML', 'CSS'],
+    github: 'https://github.com/AndieDrew/refactorTractor',
     tags:[]
   },
   {
@@ -51,6 +57,8 @@ const projectsData = [
     thumbnail: whereTo_thumb,
     gif: "https://media.giphy.com/media/LqOLXnOW9qLbR8nFFT/giphy.gif",
     body: "Travel Tracker Body",
+    technology:['JavaScript', 'HTML', 'CSS', 'Sass'],
+    github: 'https://github.com/Patfindley/where-in-the-world',
     tags:[]
   },
   {
@@ -61,6 +69,8 @@ const projectsData = [
     thumbnail: rancid_thumb,
     gif: "https://user-images.githubusercontent.com/71860165/119421000-ecefa780-bcba-11eb-910e-f86ac8608b8a.gif",
     body: "Rancid Tomatillos is a web application that utilizes API data to display movies for a user to browse through",
+    technology:['JavaScript', 'React', 'React-Router', 'HTML', 'CSS'],
+    github: 'https://github.com/bhohnco/Rancid-Tomatillos',
     tags:['JS', 'JavaScript', 'React', 'html', 'css', 'API', 'html5', 'rancid tomatillos', 'imdb', 'rotten tomatoes', 'movie', 'paired', 'group', 'git', 'github']
   }
 ];

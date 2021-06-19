@@ -8,7 +8,7 @@ import Projects from '../Projects/Projects.js';
 import ProjectInfo from '../ProjectInfo/ProjectInfo.js';
 import Aside from '../Aside/Aside.js';
 import Contact from '../Contact/Contact.js'
-import projectsData from '../../projectsData';
+import projectsData from '../../assets/projectsData';
 
 class App extends React.Component {
   constructor() {
@@ -107,7 +107,7 @@ class App extends React.Component {
                     selectedProject={this.state.selectedProject}
                     /> 
                     </div>
-                    <Aside />
+                    <Aside selectedProject={this.state.selectedProject}/>
                     </div>
                     </section>
                     </div>: null
