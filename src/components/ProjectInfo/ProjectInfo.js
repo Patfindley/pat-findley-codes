@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './ProjectInfo.css'
 
 const ProjectInfo = ({ selectedProject, homeButton }) => {
   return (
     <div>
       <h2>{selectedProject.name}</h2>
       <p>{selectedProject.body}</p>
-      <Link to='/' className='link'>
+      <Link to='/Projects' className='link'>
       <button onClick={homeButton}>Back to Main</button>
       </Link>
     </div>

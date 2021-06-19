@@ -1,4 +1,5 @@
 import React from 'react'
+import './SearchBar.css'
 
 class SearchBar extends React.Component {
   constructor() {
@@ -17,6 +18,7 @@ class SearchBar extends React.Component {
 
   render() {
     return (
+      <div className='search-wrap'>
       <form className="search-form">
         <input className="search-input"
           type="text"
@@ -25,6 +27,7 @@ class SearchBar extends React.Component {
           onChange={event => this.handleChange(event)}
         />
       </form>
+      </div>
     )
   }
 }

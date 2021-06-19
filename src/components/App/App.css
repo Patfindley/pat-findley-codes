@@ -29,22 +29,9 @@
     width: 100%;
   }
 
-  /* .search-wrapper {
-    width: 15%;
-  } */
-
   .projects-view-wrap {
     display: flex;
     justify-content: space-around
-  }
-
-  form {
-    height: 50px;
-  }
-
-  .search-input {
-    width: 100%;
-    height: 100%;
   }
 
   .main-content {
@@ -56,6 +43,14 @@
 
   .current-view {
     width: 70%;
+    text-align: center;
+  }
+
+  .project-info {
+    width: 70%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 8px 10px 27px -1px rgba(0,0,0,0.12)
   }
 
 }

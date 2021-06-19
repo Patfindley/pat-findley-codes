@@ -38,7 +38,7 @@ export const Projects = ({ projects, filteredProjects, handleClick }) => {
   } else {
     return projects.sort((a, b) => b.id - a.id).map(project => {
       return (
-        <DelayLink delay={1000}
+        <DelayLink delay={700}
         to={`/project${project.id}`}
         key={project.id}>
         <article className="project-post"  key={project.id} onClick={(event)=> selectProject(event)} id={project.id}>
@@ -47,8 +47,8 @@ export const Projects = ({ projects, filteredProjects, handleClick }) => {
             <img className="project-image gif-hover" src={project.gif} alt={project.name} />
             <div className="project-description-wrap" >
               <span className="time-stamp" >{project.date}</span>
-            </div>
               <p className="descript" >{project.name}</p>
+            </div>
             </nav>
         </article>
         </DelayLink>
