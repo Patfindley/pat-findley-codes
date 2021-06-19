@@ -1,13 +1,14 @@
 import React from 'react';
 import { Switch, Route, Redirect } from "react-router-dom";
 import './App.css';
-import Aside from '../Aside/Aside.js';
-import Projects from '../Projects/Projects.js';
-import ProjectInfo from '../ProjectInfo/ProjectInfo.js';
-import projectsData from '../../projectsData';
-import SearchBar from '../SearchBar/SearchBar.js';
 import Landing from '../Landing/Landing';
 import Nav from '../Nav/Nav'
+import SearchBar from '../SearchBar/SearchBar.js';
+import Projects from '../Projects/Projects.js';
+import ProjectInfo from '../ProjectInfo/ProjectInfo.js';
+import Aside from '../Aside/Aside.js';
+import Contact from '../Contact/Contact.js'
+import projectsData from '../../projectsData';
 
 class App extends React.Component {
   constructor() {
@@ -47,7 +48,7 @@ class App extends React.Component {
                 <Landing />
               )}
             />
-            <Route exact path = '/About'
+            <Route exact path = '/about'
               render={()=> (
                 <div >
                 <Nav />
@@ -55,7 +56,7 @@ class App extends React.Component {
                 </div>
               )}
             />
-            <Route exact path ='/Projects'
+            <Route exact path ='/projects'
               render={() => (
                 <div>
                 <Nav />
@@ -82,6 +83,13 @@ class App extends React.Component {
                   </div>
               </section>
               </div>
+              )}/>
+              <Route exact path='/contact'
+              render={()=> (
+                <div className='contact-wrap'>
+                <Nav />
+                <Contact />
+                </div>
               )}/>
             <Route exact path='/:id'
               render={() => (
