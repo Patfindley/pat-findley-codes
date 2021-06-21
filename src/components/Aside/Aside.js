@@ -2,7 +2,6 @@ import React from 'react';
 import './Aside.css'
 
 const Aside = ({ selectedProject }) => {
-  console.log(selectedProject)
   if (selectedProject.id === 0) {
     return (
       <section className='aside-wrap'>

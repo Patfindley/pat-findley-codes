@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Switch, Route, Redirect } from "react-router-dom";
 import './App.css';
 import Landing from '../Landing/Landing';
@@ -10,37 +10,29 @@ import Aside from '../Aside/Aside.js';
 import Contact from '../Contact/Contact.js'
 import { projectsData, aboutMe } from '../../assets/projectsData';
 
-class App extends React.Component {
-  constructor() {
-    super()
-    console.log(aboutMe)
-    this.state = {
-      projects: projectsData,
-      filteredProjects: [],
-      selectedProject: null,
-    }
+const App = () => {
+  const [projects] = useState(projectsData)
+  const [filteredProjects, setFilteredProjects] = useState([])
+  const [selectedProject, setSelectedProject] = useState('')
+  const [windowWidth] = useState(window.innerWidth)
+ 
+
+  const handleClick = (event) => {
+    setSelectedProject(projects.find(project => project.id === Number(event.target.closest('article').id)));
   }
 
-  handleClick = (event) => {
-    const project = this.state.projects.find(project => project.id === Number(event.target.closest('article').id));
-    this.setState({
-      selectedProject: project
-    })
-  }
-
-  filterProjects = (searchInput) => {
+  const filterProjects = (searchInput) => {
     const search = searchInput.toLowerCase()
-    let filter = this.state.projects.filter(project => {
+    let filter = projects.filter(project => {
       return project.name.toLowerCase().includes(search) ||
       project.description.toLowerCase().includes(search) ||
       project.tags.find(tag => {
         return tag.toLowerCase().includes(search)
       })
     })
-    this.setState({filteredProjects: filter})
+    setFilteredProjects(filter)
   }
 
-  render() {
     return (
       <div className='site-container'>
           <Switch>
@@ -65,17 +57,15 @@ class App extends React.Component {
                   <div className="neck">
                     <h2 className="current-view">Projects</h2> 
                     <SearchBar
-                      handleChange={this.handleChange}
-                      filterProjects={this.filterProjects}
-                      renderFiltered={this.renderFiltered}
+                      filterProjects={filterProjects}
                       />
                   </div>
                   <div className='projects-view-wrap'>
                   <div className='project-grid'>
                     <Projects
-                      projects={this.state.projects}
-                      filteredProjects={this.state.filteredProjects}
-                      handleClick={this.handleClick}
+                      projects={projects}
+                      filteredProjects={filteredProjects}
+                      handleClick={handleClick}
                       />
                   </div>
                   <Aside selectedProject={aboutMe}/>
@@ -87,26 +77,25 @@ class App extends React.Component {
               render={()=> (
                 <div className='contact-wrap'>
                 <Nav />
-                <Contact />
+                <Contact windowWidth={windowWidth} />
                 </div>
               )}/>
             <Route exact path='/:id'
               render={() => (
-                this.state.selectedProject ?
+                selectedProject ?
                 <div>
                   <Nav />
                   <section className='main-content'>
                   <div className="neck">
-                    <h2 className="current-view">{this.state.selectedProject.name}</h2> 
+                    <h2 className="current-view">{selectedProject.name}</h2> 
                   </div>
                   <div className='projects-view-wrap'>
                     <div className='project-info'>
                   <ProjectInfo
-                    homeButton={this.homeButton}
-                    selectedProject={this.state.selectedProject}
+                    selectedProject={selectedProject}
                     /> 
                     </div>
-                    <Aside selectedProject={this.state.selectedProject}/>
+                    <Aside selectedProject={selectedProject}/>
                     </div>
                     </section>
                     </div>: null
@@ -115,8 +104,6 @@ class App extends React.Component {
           </Switch>
           </div>
     )
-  }
-
 }
 
 export default App;
