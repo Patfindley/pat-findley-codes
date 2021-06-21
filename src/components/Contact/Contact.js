@@ -1,7 +1,7 @@
 
-const Contact = () => {
+const Contact = ({ windowWidth }) => {
   return (
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSed7xFAkBBdilezfZe5ek5uCfr1BLEKcrlloZpu-sE0boxrbQ/viewform?embedded=true" width="640" height="702" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <iframe title='contact' src="https://docs.google.com/forms/d/e/1FAIpQLSed7xFAkBBdilezfZe5ek5uCfr1BLEKcrlloZpu-sE0boxrbQ/viewform?embedded=true" width={windowWidth} height="702" frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
   )
 }
 
