@@ -66,6 +66,10 @@
   .gif-hover:hover {
     opacity: 1;
   }
+
+  .main-image {
+    filter: grayscale(57%)
+  }
   
   
   .project-description-wrap {

@@ -42,6 +42,7 @@
   }
 
   .current-view {
+    font-size: 2em;
     width: 70%;
     text-align: center;
   }

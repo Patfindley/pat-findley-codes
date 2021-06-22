@@ -18,7 +18,7 @@ export const Projects = ({ projects, filteredProjects, handleClick }) => {
   if (filteredProjects.length) {
     return filteredProjects.sort((a, b) => b.id - a.id).map(project => {
       return (
-        <DelayLink delay={1000}
+        <DelayLink delay={800}
         to={`/project${project.id}`}
         key={project.id}>
         <article className="project-post" key={project.id} onClick={handleClick} id={project.id}>
@@ -37,7 +37,7 @@ export const Projects = ({ projects, filteredProjects, handleClick }) => {
   } else {
     return projects.sort((a, b) => b.id - a.id).map(project => {
       return (
-        <DelayLink delay={700}
+        <DelayLink delay={800}
         to={`/project${project.id}`}
         key={project.id}>
         <article className="project-post"  key={project.id} onClick={(event)=> selectProject(event)} id={project.id}>
