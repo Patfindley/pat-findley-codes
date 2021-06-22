@@ -17,4 +17,8 @@
     width: 100%;
     position: relative;
   }
+
+  .check {
+    color: #DF562A;
+  }
 }

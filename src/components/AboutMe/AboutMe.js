@@ -18,11 +18,14 @@ const AboutMe = () => {
     I spent some time with my daughter, who was 1 at the time, and I started thinking about who I was, and what else I was capable of. <br/>
     13 years in the service industry felt like enough.<br/>
     I looked into web development, dipped my toes in the water with some <a href='https://www.codecademy.com/' target='_blank' rel="noreferrer">codecademy</a> courses <br/>
-    and found something that I never thought would fit me, but checked every box.<br/>
-    Deep <br/>
-    Creative <br/>
-    Collaboritive <br/>
-    I enrolled in <a href="https://turing.io/" target='_blank' rel="noreferrer"> Turing School of Software and Design's</a> Front-End program and can't believe what I was able to learn in such a short time.
+    and found something that I never thought would fit me, but checked <em>every box</em>.<br/>
+    <span className='check'>&#10003;</span>Deep <br/>
+    <span className='check'>&#10003;</span>Creative <br/>
+    <span className='check'>&#10003;</span>Collaboritive <br/>
+    I enrolled in <a href="https://turing.io/" target='_blank' rel="noreferrer"> Turing School of Software and Design's</a> Front-End program, unaware it would become the first accredited coding bootcamp, <br/> 
+    and can't believe what I was able to learn in such a short time. <br/>
+    I built <strong>A LOT</strong> of basic vanilla JS apps, And that really laid a strong foundation to start building <br/>
+    <strong>A LOT</strong> of React Apps.
 
   </p>
   </div>
