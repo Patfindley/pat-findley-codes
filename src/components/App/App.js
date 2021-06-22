@@ -8,7 +8,8 @@ import Projects from '../Projects/Projects.js';
 import ProjectInfo from '../ProjectInfo/ProjectInfo.js';
 import Aside from '../Aside/Aside.js';
 import Contact from '../Contact/Contact.js'
-import { projectsData, shortAboutMe, aboutMe } from '../../assets/data';
+import AboutMe from '../AboutMe/AboutMe.js'
+import { projectsData, shortAboutMe } from '../../assets/data';
 
 const App = () => {
   const [projects] = useState(projectsData)
@@ -49,9 +50,7 @@ const App = () => {
                 <div className="neck">
                     <h2 className='current-view'>Hi, I'm Pat Findley</h2>
                 </div>
-                <div className='about-me' dangerouslySetInnerHTML={{__html: aboutMe.body}}>
-
-                </div>
+                <AboutMe />
                 </section>
                 </div>
               )}

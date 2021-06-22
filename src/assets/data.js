@@ -3,6 +3,7 @@ import fitLit_thumb from './fitLit_thumb.gif'
 import whereTo_thumb from './whereTo_thumb.gif'
 import rancid_thumb from './rancid_thumb.gif'
 import refactor_thumb from './refactor_thumb.gif'
+// import me_photo from './me_photo.JPG'
 
 export const projectsData = [
   {
@@ -83,12 +84,15 @@ export const projectsData = [
 
 export const shortAboutMe = {
   id: 0,
-  body: '<p>Hey! Im Pat Findley, Im currently a student at <a href="https://turing.io/"> Turing School of Software and Design</a>. I like to consider myself a "creator of non-tangible things", and aspiringoptimist. My goal for my little nook of the internet is to creatively apply what I\'m currently learning, have fun, and grow through experience!</p>'
+  body: '<p>Hey! Im Pat Findley, Im currently a student at <a href="https://turing.io/"> Turing School of Software and Design</a>. I like to consider myself a "creator of non-tangible things", and aspiring optimist. My goal for my little nook of the internet is to creatively apply what I\'m currently learning, have fun, and grow through experience!</p>'
 }
 
 export const aboutMe = {
   id: 1,
-  body: `<p> I'm a web developer, father, husband, service industry veteran, musician, creator, doer, and (aspiring) optimist.<br>
+  body: `<div className='me-picture-container>
+    <img src={me_photo} alt='alleged photo of "Pat Findley"' />
+    </div>
+    <p> I'm a web developer, father, husband, service industry veteran, <a href='https://herenowband.com/' target='_blank'>musician</a>, creator, doer, and (aspiring) optimist.<br>
     <br>
     When the world started shutting down in 2020, Everything I had spent the previous years building and working on came to a screeching halt.<br>
     Restaurants closed, I was out of work. I had just released an album, stocked merchandise, the tours got cancelled.<br>
@@ -97,12 +101,12 @@ export const aboutMe = {
     <br>
     I spent some time with my daughter, who was 1 at the time, and I started thinking about who I was, and what else I was capable of. <br>
     13 years in the service industry felt like enough.<br>
-    I looked into web development, dipped my toes in the water with some <a href='https://www.codecademy.com/'>codecademy</a> courses <br>
+    I looked into web development, dipped my toes in the water with some <a href='https://www.codecademy.com/' target='_blank'>codecademy</a> courses <br>
     and found something that I never thought would fit me, but checked every box.<br>
     Deep <br>
     Creative <br>
     Collaboritive <br>
-    I enrolled in <a href="https://turing.io/"> Turing School of Software and Design's</a> Front-End program and can't believe what I was able to learn in such a short time.
+    I enrolled in <a href="https://turing.io/" target='_blank'> Turing School of Software and Design's</a> Front-End program and can't believe what I was able to learn in such a short time.
 
   </p>`
 }
