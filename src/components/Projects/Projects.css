@@ -78,7 +78,7 @@
     width: 113%;
     height: 20%;
     position: relative;
-    transition: 300ms;
+    transition: color 800ms;
     background-image: linear-gradient( 
       0deg
       ,transparent 45%,#F9F9F9 91%);
