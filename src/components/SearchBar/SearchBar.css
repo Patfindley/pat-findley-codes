@@ -14,7 +14,7 @@
   }
 
   form input:focus {
-    border: 4px solid purple;
+    outline-color:#DF562A;
   }
 
   .search-input:hover {

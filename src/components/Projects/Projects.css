@@ -66,6 +66,10 @@
   .gif-hover:hover {
     opacity: 1;
   }
+
+  .main-image {
+    filter: grayscale(57%)
+  }
   
   
   .project-description-wrap {
@@ -81,20 +85,22 @@
     }
     
     .descript {
-      font-size: 1.4em;
+      font-size: 1.7em;
       font-weight: 600;
+      font-family: 'Bungee Outline', cursive;
       position: relative;
-      bottom: 48px;
+      bottom: 58px;
       left: 6px;
       /* transition: all 500ms; */
     }
   
     .time-stamp {
+      font-family: 'Bungee Outline', cursive;
       font-size: 1.4em;
       font-weight: 600;
       position: relative;
       bottom: 0px;
-      left: 363px;
+      left: 357px;
       /* transition: all 500ms; */
       /* background-image: linear-gradient(
   0deg

@@ -10,9 +10,11 @@ const Aside = ({ selectedProject }) => {
     )
   } else {
   return (
-    <section className='aside-wrap'>
+    <section className='aside-project-wrap'>
         <h1>{selectedProject.name}</h1>
-        <a href={selectedProject.github}>GitHub</a>
+        <a href={selectedProject.gitHub} target='_blank' rel="noreferrer"> GitHub </a>
+        {selectedProject.deploy.length > 1 && 
+        <a href={selectedProject.deploy} target='_blank' rel="noreferrer"> Deploy </a>}
         <h4>{selectedProject.date}</h4>
         <h4>{selectedProject.technology.join(', ')}</h4>
         

@@ -8,7 +8,8 @@ import Projects from '../Projects/Projects.js';
 import ProjectInfo from '../ProjectInfo/ProjectInfo.js';
 import Aside from '../Aside/Aside.js';
 import Contact from '../Contact/Contact.js'
-import { projectsData, aboutMe } from '../../assets/projectsData';
+import AboutMe from '../AboutMe/AboutMe.js'
+import { projectsData, shortAboutMe } from '../../assets/data';
 
 const App = () => {
   const [projects] = useState(projectsData)
@@ -45,7 +46,12 @@ const App = () => {
               render={()=> (
                 <div >
                 <Nav />
-                {/* <Aside /> */}
+                <section className='main-content'>
+                <div className="neck">
+                    <h2 className='current-view'>Hi, I'm Pat Findley</h2>
+                </div>
+                <AboutMe />
+                </section>
                 </div>
               )}
             />
@@ -55,7 +61,7 @@ const App = () => {
                 <Nav />
                 <section className='main-content'>
                   <div className="neck">
-                    <h2 className="current-view">Projects</h2> 
+                    <h2 className='current-view'>Projects</h2> 
                     <SearchBar
                       filterProjects={filterProjects}
                       />
@@ -68,7 +74,7 @@ const App = () => {
                       handleClick={handleClick}
                       />
                   </div>
-                  <Aside selectedProject={aboutMe}/>
+                  <Aside selectedProject={shortAboutMe}/>
                   </div>
               </section>
               </div>
