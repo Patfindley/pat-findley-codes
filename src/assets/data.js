@@ -113,6 +113,6 @@ export const shortAboutMe = {
   id: 0,
   body: `<p>Hey! Im <a href='/about'>Pat Findley</a>, <br/> 
     Im currently a student at <a href="https://turing.io/"> Turing School of Software and Design</a>. <br/>
-    I like to consider myself a "creator of non-tangible things", and my goal for my little nook of the internet is to creatively apply what I'm currently learning, have fun, and grow a little through experience!</p>`
+    I like to consider myself a "creator of non-tangible things".<br> My goal for this little nook of the internet is to have fun applying what I'm currently learning, and grow a little through experience!</p>`
 }
 

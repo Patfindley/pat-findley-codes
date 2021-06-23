@@ -18,6 +18,10 @@
     position: relative;
   }
 
+  .about-me-body {
+    font-size: 1.25em;
+  }
+
   .check {
     color: #DF562A;
   }

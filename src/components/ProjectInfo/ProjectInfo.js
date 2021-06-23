@@ -6,7 +6,7 @@ const ProjectInfo = ({ selectedProject, homeButton }) => {
   return (
     <div>
       <h2>{selectedProject.name}</h2>
-      <p>{selectedProject.body}</p>
+      <p className='project-body'>{selectedProject.body}</p>
       <Link to='/Projects' className='link'>
       <button onClick={homeButton}>Back to Main</button>
       </Link>
