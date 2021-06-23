@@ -21,14 +21,14 @@ export const Projects = ({ projects, filteredProjects, handleClick }) => {
         <DelayLink delay={800}
         to={`/project${project.id}`}
         key={project.id}>
-        <article className="project-post" key={project.id} onClick={handleClick} id={project.id}>
+        <article className="project-post" key={project.id} onClick={(event)=> selectProject(event)} id={project.id}>
             <nav className="image-top" >
               <img className="project-image main-image" src={project.thumbnail} alt={project.name} />
               <img className="project-image gif-hover" src={project.gif} alt={project.name } />
               <div className="project-description-wrap" >
                 <span className="time-stamp" >{project.date}</span>
-              </div>
                 <p className="descript" >{project.name}</p>
+              </div>
               </nav>
         </article>
         </DelayLink>
