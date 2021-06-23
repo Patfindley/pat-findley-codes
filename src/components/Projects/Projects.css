@@ -1,7 +1,4 @@
 
-
-@media screen and (min-width: 812px) {
-
   .project-grid {
     display: grid;
     justify-items: center;
@@ -111,4 +108,3 @@
     border-bottom: 1px solid #E8E8ED;
   }
 
-}
