@@ -8,7 +8,7 @@ const AboutMe = () => {
     <div className='me-picture-container' >
     <img className='me-photo' src={me_photo} alt='Pat Findley'/>
     </div>
-    <p> I'm a web developer, father, husband, service industry veteran, <a href='https://herenowband.com/' target='_blank' rel="noreferrer">musician</a>, creator, doer, and (aspiring) optimist.<br/>
+    <p className='about-me-body'> I'm a web developer, father, husband, service industry veteran, <a href='https://herenowband.com/' target='_blank' rel="noreferrer">musician</a>, creator, doer, and (aspiring) optimist.<br/>
     <br/>
     When the world started shutting down in 2020, Everything I had spent the previous years building and working on came to a screeching halt.<br/>
     Restaurants closed, I was out of work. I had just released an album, stocked merchandise, the tours got cancelled.<br/>

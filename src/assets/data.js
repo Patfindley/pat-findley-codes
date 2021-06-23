@@ -35,7 +35,7 @@ export const projectsData = [
     description: "Paired project number 2",
     thumbnail: fitLit_thumb,
     gif: "https://media.giphy.com/media/mEvg9wL0dMJEXZiDUa/giphy.gif",
-    body: "FitLit Body",
+    body: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
     technology:['JavaScript', 'HTML', 'CSS'],
     gitHub: 'https://github.com/battan40/fit-for-life',
     deploy: '',
@@ -48,7 +48,7 @@ export const projectsData = [
     description: "Group project number 3",
     thumbnail: refactor_thumb,
     gif: "https://github.com/AndieDrew/refactorTractor/blob/main/docs/fav_todo.gif?raw=true",
-    body: "Refactor Body",
+    body: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
     technology:['JavaScript', 'HTML', 'CSS'],
     gitHub: 'https://github.com/AndieDrew/refactorTractor',
     deploy: '',
@@ -61,7 +61,7 @@ export const projectsData = [
     description: "Qaurter 2 final project..",
     thumbnail: whereTo_thumb,
     gif: "https://media.giphy.com/media/LqOLXnOW9qLbR8nFFT/giphy.gif",
-    body: "Travel Tracker Body",
+    body: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
     technology:['JavaScript', 'HTML', 'CSS', 'Sass'],
     gitHub: 'https://github.com/Patfindley/where-in-the-world',
     deploy: '',
@@ -74,7 +74,7 @@ export const projectsData = [
     description: "web application that utilizes API data to display movies for a user to browse through",
     thumbnail: rancid_thumb,
     gif: "https://user-images.githubusercontent.com/71860165/119421000-ecefa780-bcba-11eb-910e-f86ac8608b8a.gif",
-    body: "Rancid Tomatillos is a web application that utilizes API data to display movies for a user to browse through",
+    body: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
     technology:['JavaScript', 'HTML', 'CSS', 'React', 'React-Router'],
     gitHub: 'https://github.com/bhohnco/Rancid-Tomatillos',
     deploy: '',
@@ -100,7 +100,7 @@ export const projectsData = [
     description: "sort and filter through Rick and Morty characters, episodes, and locations with some visual bells and whistles",
     thumbnail: rick_mort_thumb,
     gif: "https://camo.githubusercontent.com/56c22cd8e3d47ca9ba37b8c962faa58c854b6716d5031fde007239799d3ba32a/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f366b51634c4730647545754e59654b5652782f67697068792e676966",
-    body: "",
+    body: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
     technology:['JavaScript', 'HTML', 'CSS', 'React', 'React-Router', 'GSAP', 'Styled Components'],
     gitHub: 'https://github.com/Patfindley/Dimension-34.5N',
     deploy: '',
@@ -113,6 +113,6 @@ export const shortAboutMe = {
   id: 0,
   body: `<p>Hey! Im <a href='/about'>Pat Findley</a>, <br/> 
     Im currently a student at <a href="https://turing.io/"> Turing School of Software and Design</a>. <br/>
-    I like to consider myself a "creator of non-tangible things", and my goal for my little nook of the internet is to creatively apply what I\'m currently learning, have fun, and grow a little through experience!</p>`
+    I like to consider myself a "creator of non-tangible things".<br> My goal for this little nook of the internet is to have fun applying what I'm currently learning, and grow a little through experience!</p>`
 }
 
