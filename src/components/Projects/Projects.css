@@ -1,7 +1,4 @@
 
-
-@media screen and (min-width: 812px) {
-
   .project-grid {
     display: grid;
     justify-items: center;
@@ -78,7 +75,7 @@
     width: 113%;
     height: 20%;
     position: relative;
-    transition: 300ms;
+    transition: color 800ms;
     background-image: linear-gradient( 
       0deg
       ,transparent 45%,#F9F9F9 91%);
@@ -111,4 +108,3 @@
     border-bottom: 1px solid #E8E8ED;
   }
 
-}

@@ -1,8 +1,5 @@
 
 
-
-@media screen and (min-width: 812px) {
-
   .aside-project-wrap {
     height: 100%;
     text-align: left;
@@ -34,4 +31,3 @@
     color: #DF562A;
     transition: color 300ms;
   }
-}
