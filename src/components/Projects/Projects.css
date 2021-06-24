@@ -108,3 +108,56 @@
     border-bottom: 1px solid #E8E8ED;
   }
 
+
+  @media only screen and (max-width: 768px) {
+
+    
+
+  @media only screen and (max-width: 375px) {
+
+    .projects-view-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* visibility: hidden; */
+  }
+
+    .project-grid {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+    }
+
+    .project-post {
+      margin-left: 11px;;
+      margin-top: 15px;
+  }
+
+    .project-image {
+      width: 313px;
+      height: 181px;
+    }
+
+    .project-description-wrap {
+      width: 79%;
+      bottom: 186px;
+    }
+
+    .descript {
+      font-size: 1.2em;
+      bottom: 42px;
+      left: 2px;
+    }
+  
+    .time-stamp {
+      font-size: 1em;
+      left: 247px;
+
+    }
+    
+    .aside-wrap {
+      visibility: hidden;
+    }
+  }
+    
+  }

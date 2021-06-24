@@ -67,7 +67,7 @@ li:hover {
 .socials:hover {
 	filter: invert(58%) sepia(71%) saturate(5625%) hue-rotate(347deg)
 		brightness(93%) contrast(87%);
-	transition: filter 800ms;
+	transition: filter 600ms;
 }
 
 .nav-open {
@@ -85,7 +85,7 @@ li:hover {
 
   .burger-container {
     position: absolute;
-    top: 0;
+    top: 10px;
   }
 
   .nav-open {
