@@ -10,6 +10,9 @@ const Nav = () => {
   const [tl] = useState(gsap.timeline({paused: true}))
 
   useEffect(() => {
+    tl.to('.top', .2, {rotationZ: '90', backgroundColor: '#df562a'})
+    .to('.mid', .2, {rotationZ: '50', y: '9px', x: '-8px', width: '30px', backgroundColor: '#df562a'})
+    .to('.bottom', .2, {rotationZ: '-50', x: '17px', width: '30px', backgroundColor: '#df562a'})
   // tl.to('.top', .5, {y:'-9px', rotationZ: '90', x: '30px'}, 'open')
   // .to('.top', .1, { y: '9px'})
   // .to('.bottom', .5, {y: '9px', rotationZ: '-90', x: '-30px'}, 'open')
@@ -17,7 +20,8 @@ const Nav = () => {
   // .to('.mid', .2, {opacity: 0})
   // .to('.top', .3, {rotationZ: '45'})
   // .to('.bottom', .3, {x: '30px', rotationZ: '135'})
-  tl.to('.nav-open', .2, {opacity: 1, pointerEvents: 'auto'})
+  .to('.header-nav', .4, {height: '98vh'})
+  .to('.nav-open', 0, {opacity: 1, pointerEvents: 'auto'})
   }, [tl])
 
   useEffect(() => {
@@ -34,9 +38,9 @@ const Nav = () => {
       </div>
         <div className='nav-open'>
           <ul className="nav-links">
-              <Link to='/about' className='link'><li>About</li></Link>
-              <Link to='/projects' className='link'><li>Projects</li></Link>
-              <Link to='/contact' className='link'><li>Contact</li></Link>
+              <Link to='/about' className='link' onClick={() => tl.reverse()}><li>About</li></Link>
+              <Link to='/projects' className='link' onClick={() => tl.reverse()}><li>Projects</li></Link>
+              <Link to='/contact' className='link' onClick={() => tl.reverse()}><li>Contact</li></Link>
           </ul>
           
           <div className='nav-socials'>
