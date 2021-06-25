@@ -19,11 +19,11 @@
   }
 
   .project-post {
-    display:flex;
+    /* display:flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 398px;
-    height: 86%;
+    width: 398px; */
+    /* height: 86%; */
     border-radius: 9px;
     margin-top: 15px;
   }
@@ -72,7 +72,7 @@
   .project-description-wrap {
     border-radius: 3px;
     bottom: 265px;
-    width: 113%;
+    width: 100%;
     height: 20%;
     position: relative;
     transition: color 800ms;
@@ -140,7 +140,7 @@
     }
 
     .project-description-wrap {
-      width: 79%;
+      width: 96%;
       bottom: 186px;
     }
 
@@ -157,6 +157,7 @@
     }
     
     .aside-wrap {
+      height: 0px;
       visibility: hidden;
     }
   }

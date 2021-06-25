@@ -13,7 +13,7 @@ const Nav = () => {
     tl.to('.top', .2, {rotationZ: '90', backgroundColor: '#df562a'})
     .to('.mid', .2, {rotationZ: '50', y: '9px', x: '-8px', width: '30px', backgroundColor: '#df562a'})
     .to('.bottom', .2, {rotationZ: '-50', x: '17px', width: '30px', backgroundColor: '#df562a'})
-  .to('.header-nav', .4, {height: '98vh'})
+  .to('.header-nav', .7, {height: '98vh'})
   .to('.nav-open', 0, {opacity: 1, pointerEvents: 'auto'})
   }, [tl])
 
