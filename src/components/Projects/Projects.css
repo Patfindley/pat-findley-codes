@@ -156,8 +156,9 @@
 
     }
     
-    .aside-wrap {
-      height: 0px;
-      visibility: hidden;
+    .aside-wrap,
+    .aside-about-me {
+      display: none;
     }
+
   }

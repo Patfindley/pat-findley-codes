@@ -68,6 +68,11 @@ a:link {
 }
 
 @media only screen and (max-width: 375px) {
+  body {
+    margin: 0;
+    /* height: 100vh; */
+  }
+
 	.neck {
     justify-content: center;
   }

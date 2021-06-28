@@ -31,9 +31,9 @@ const Nav = () => {
       </div>
         <div className='nav-open'>
           <ul className="nav-links">
-              <Link to='/about' className='link' onClick={() => tl.reverse()}><li>About</li></Link>
-              <Link to='/projects' className='link' onClick={() => tl.reverse()}><li>Projects</li></Link>
-              <Link to='/contact' className='link' onClick={() => tl.reverse()}><li>Contact</li></Link>
+              <Link to='/about' className='link' onClick={() => tl.reverse()}><li>ABOUT</li></Link>
+              <Link to='/projects' className='link' onClick={() => tl.reverse()}><li>PROJECTS</li></Link>
+              <Link to='/contact' className='link' onClick={() => tl.reverse()}><li>CONTACT</li></Link>
           </ul>
           
           <div className='nav-socials'>

@@ -15,8 +15,8 @@ const Aside = ({ selectedProject }) => {
         <a href={selectedProject.gitHub} target='_blank' rel="noreferrer"> GitHub </a>
         {selectedProject.deploy.length > 1 && 
         <a href={selectedProject.deploy} target='_blank' rel="noreferrer"> Deploy </a>}
-        <h4>{selectedProject.date}</h4>
-        <h4>{selectedProject.technology.join(', ')}</h4>
+        <h4 className='aside-project-info'><strong>Date:</strong> {selectedProject.date}</h4>
+        <h4 className='aside-project-info'><strong>Technologies:</strong> {selectedProject.technology.join(', ')}</h4>
         
       </section>
   )
