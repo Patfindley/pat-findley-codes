@@ -7,11 +7,11 @@ export const Projects = ({ projects, filteredProjects, handleClick }) => {
 
   useEffect(() => {
     gsap.to('.project-post', 1, {css: {visibility: 'visible'}})
-    gsap.from('.project-post', .8, {x: -300, opacity: 0, stagger: 0.1})
+    gsap.from('.project-post', .8, {y: 450, opacity: 0, stagger: 0.2})
   }, [])
 
   const selectProject = (event) => {
-    gsap.to('.project-post', .8, {x: -300, opacity: 0, stagger: 0.1})
+    gsap.to('.project-post', 1, {y: 450, opacity: 0, stagger: 0})
     handleClick(event)
   }
 

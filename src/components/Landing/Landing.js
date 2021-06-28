@@ -12,7 +12,7 @@ const Landing = () => {
     gsap.to('.wave-1', 35, {css: {left: '390px'}, ease: 'power1', yoyo: 'true', repeat: '-1'})
     gsap.to('.wave-2', 43, {css: {right: '450px'}, ease: 'power1', yoyo: 'true', repeat: '-1'})
     gsap.to('.wave-3', 95, {css: {left: '600px'}, ease: 'power1', yoyo: 'true', repeat: '-1'})
-    gsap.to('.wave-4', 50, {css: {right: '300px'}, ease: 'power1', yoyo: 'true', repeat: '-1'})
+    gsap.to('.wave-4', 48, {css: {right: '300px'}, ease: 'power1', yoyo: 'true', repeat: '-1'})
 
   }, [])
 

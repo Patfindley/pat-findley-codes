@@ -31,3 +31,7 @@
     color: #DF562A;
     transition: color 300ms;
   }
+
+  .aside-project-info {
+    font-weight: 500;
+  }

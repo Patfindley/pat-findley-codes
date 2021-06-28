@@ -11,18 +11,11 @@ export const projectsData = [
     name: "Idea Box",
     id: 10,
     date:'3/02/21',
-    description: `"Idea Box" quarter 1 group project`,
+    description: `Quarter 1 group project`,
     thumbnail: idea_thumb,
     gif: "https://media.giphy.com/media/uEnDw0eZALQEuoM5kz/giphy.gif",
-    body: `<h3 class='project-title'> Idea Box</h3>
-    <p class='post-body'><a href="https://github.com/Patfindley/ideabox-boilerplate">Idea Box</a>
-    was a project given on week four of Turing, it was my third
-    project in learning HTML, vanilla JS, and CSS, and worth mentioning, my second group project.
-    The learning goals for this mostly revolved around getting JavaScript to work cohesively with
-    HTML & CSS, while dipping our toes into JSON via local storage. We were given a comp, so that
-    took some stress off of layout, but also being so new to HTML & CSS, put a lot of stress on
-    layout. I think my most valuable take away from this though, was group dynamic. Planning and executing
-    something solo is a completely different animal than paired and group programming.</p>`,
+    body: `Every developer has more ideas than time. As David Allen likes to say "the human brain is for creating ideas, not remembering them." In this project, my group built one of our first applications to record and archive ideas (good and bad alike).
+    Throughout the project, one of our focuses was on providing a fluid and responsive client-side interface. To this end, we relied on JavaScript to implement snappy filtering in the browser, and localStorage to persist our wonderful ideas between sessions.`,
     technology:['JavaScript', 'HTML', 'CSS'],
     gitHub: 'https://github.com/Patfindley/ideabox-boilerplate',
     deploy: '',
@@ -32,22 +25,22 @@ export const projectsData = [
     name: "Fitbit data mngmnt",
     id: 11,
     date: '4/06/21',
-    description: "Paired project number 2",
+    description: "Quarter 2 Paired Project",
     thumbnail: fitLit_thumb,
     gif: "https://media.giphy.com/media/mEvg9wL0dMJEXZiDUa/giphy.gif",
-    body: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+    body: `This was a Trojan horse of a project, approaching this involved planning a UI to effectively display a user's tracked fitness information. After digging in we quickly realized this data was a mess, and the array algorithm challenges came pouring out. The "FitLit" project turned out to be an effective practice in managing and organizing double datasets, and less flashy progress ring animations than I had originally hoped for. `,
     technology:['JavaScript', 'HTML', 'CSS'],
     gitHub: 'https://github.com/battan40/fit-for-life',
     deploy: '',
-    tags:['shit']
+    tags:['JavaScript', 'vanilla javascript', 'js', 'HTML', 'CSS', 'gotcha']
   },
   {
     name: "Refactor Nightmare",
     id: 12,
     date: '4/20/21',
-    description: "Group project number 3",
+    description: "Quarter 2 Group project",
     thumbnail: refactor_thumb,
-    gif: "https://github.com/AndieDrew/refactorTractor/blob/main/docs/fav_todo.gif?raw=true",
+    gif: "https://github.com/AndieDrew/refactorTractor/blob/main/docs/fav_todo.gif?raw=true", 
     body: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
     technology:['JavaScript', 'HTML', 'CSS'],
     gitHub: 'https://github.com/AndieDrew/refactorTractor',
@@ -111,8 +104,11 @@ export const projectsData = [
 
 export const shortAboutMe = {
   id: 0,
-  body: `<p>Hey! Im <a href='/about'>Pat Findley</a>, <br/> 
+  body: `<p className='aside-about-me'>Hey! I'm <a href='/about'>Pat Findley</a>, <br/> 
     Im currently a student at <a href="https://turing.io/"> Turing School of Software and Design</a>. <br/>
-    I like to consider myself a "creator of non-tangible things".<br> My goal for this little nook of the internet is to have fun applying what I'm currently learning, and grow a little through experience!</p>`
+    <br/>
+    I like to consider myself a <br/>
+    "creator of non-tangible things".<br> 
+    Click around to see what I've been building, breaking, and re-building!`
 }
 

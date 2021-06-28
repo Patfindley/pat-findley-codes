@@ -74,7 +74,7 @@ const App = () => {
                       handleClick={handleClick}
                       />
                   </div>
-                  <Aside selectedProject={shortAboutMe}/>
+                  <Aside className='projects-view-aside' selectedProject={shortAboutMe}/>
                   </div>
               </section>
               </div>
