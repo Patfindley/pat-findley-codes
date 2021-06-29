@@ -1,35 +1,23 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './SearchBar.css'
 
-class SearchBar extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-      searchInput: ''
-    }
-  }
+const SearchBar = ({ filterProjects }) => {
+  const searchValue = useRef()
+  console.log(window.location.href)
 
-  handleChange = (event) => {
-    event.preventDefault()
-    this.setState({searchInput: event.target.value}, () => {
-      this.props.filterProjects(this.state.searchInput)
-    })
-  }
-
-  render() {
     return (
       <div className='search-wrap'>
       <form className="search-form">
         <input className="search-input"
           type="text"
           placeholder="🔎"
+          ref={searchValue}
           name="input"
-          onChange={event => this.handleChange(event)}
+          onChange={() => filterProjects(searchValue.current.value)}
         />
       </form>
       </div>
     )
-  }
 }
 
 export default SearchBar;

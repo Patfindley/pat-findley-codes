@@ -74,7 +74,7 @@ const App = () => {
                       handleClick={handleClick}
                       />
                   </div>
-                  <Aside className='projects-view-aside' selectedProject={shortAboutMe}/>
+                  <Aside selectedProject={shortAboutMe}/>
                   </div>
               </section>
               </div>
@@ -113,4 +113,11 @@ const App = () => {
 }
 
 export default App;
+
+
+//add resume path
+
+//portfolio
+//fabout
+//contact
 
