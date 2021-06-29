@@ -111,6 +111,11 @@
 
   @media only screen and (max-width: 768px) {
 
+    .aside-wrap,
+    .aside-about-me {
+      display: none;
+    }
+
   }
     
 
@@ -154,11 +159,6 @@
       font-size: 1em;
       left: 247px;
 
-    }
-    
-    .aside-wrap,
-    .aside-about-me {
-      display: none;
     }
 
   }
