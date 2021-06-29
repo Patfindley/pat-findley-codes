@@ -45,7 +45,7 @@ const App = () => {
             <Route exact path = '/about'
               render={()=> (
                 <div >
-                <Nav />
+                <Nav windowWidth={windowWidth}/>
                 <section className='main-content'>
                 <div className="neck">
                     <h2 className='current-view'>Hi, I'm Pat Findley</h2>
@@ -58,7 +58,7 @@ const App = () => {
             <Route exact path ='/projects'
               render={() => (
                 <div>
-                <Nav />
+                <Nav windowWidth={windowWidth}/>
                 <section className='main-content'>
                   <div className="neck">
                     <h2 className='current-view'>Projects</h2> 
@@ -74,7 +74,7 @@ const App = () => {
                       handleClick={handleClick}
                       />
                   </div>
-                  <Aside className='projects-view-aside' selectedProject={shortAboutMe}/>
+                  <Aside selectedProject={shortAboutMe}/>
                   </div>
               </section>
               </div>
@@ -82,7 +82,7 @@ const App = () => {
               <Route exact path='/contact'
               render={()=> (
                 <div className='contact-wrap'>
-                <Nav />
+                <Nav windowWidth={windowWidth}/>
                 <Contact windowWidth={windowWidth} />
                 </div>
               )}/>
@@ -90,7 +90,7 @@ const App = () => {
               render={() => (
                 selectedProject ?
                 <div>
-                  <Nav />
+                  <Nav windowWidth={windowWidth}/>
                   <section className='main-content'>
                   <div className="neck">
                     <h2 className="current-view">{selectedProject.name}</h2> 
@@ -113,4 +113,11 @@ const App = () => {
 }
 
 export default App;
+
+
+//add resume path
+
+//portfolio
+//fabout
+//contact
 

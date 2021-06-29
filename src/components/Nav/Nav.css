@@ -5,8 +5,6 @@
 	align-items: center;
 	background-color: #f9f9f9;
 	height: 76px;
-	/* margin-bottom: 75px; */
-	/* border-bottom: 2px solid #bababe; */
 	box-shadow: 0px 0px 21px 1px rgba(0, 0, 0, 0.04);
 }
 
@@ -75,6 +73,10 @@ li:hover {
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
+}
+
+.nav-selected {
+  border-bottom: 2px solid #df562a;
 }
 
 @media only screen and (max-width: 768px) {
