@@ -3,7 +3,6 @@ import './SearchBar.css'
 
 const SearchBar = ({ filterProjects }) => {
   const searchValue = useRef()
-  console.log(window.location.href)
 
     return (
       <div className='search-wrap'>
