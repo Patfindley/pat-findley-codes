@@ -22,9 +22,7 @@ const Nav = ({ windowWidth }) => {
   useEffect(() => {
     tl.reversed() ? tl.play() : tl.reverse()
   }, [burgerActive, tl])
-
-  console.log(window.location.href.indexOf("projects"))
-
+  
   return (
     <nav className="header-nav">
       <div className='burger-container' onClick={() => setBurgerActive(!burgerActive)}>
