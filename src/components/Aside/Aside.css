@@ -35,3 +35,15 @@ a:hover {
 .aside-project-info {
 	font-weight: 500;
 }
+
+@media only screen and (max-width: 768px) {
+
+}
+
+@media only screen and (max-width: 425px) {
+  .aside-project-wrap {
+    margin: 20px 0;
+    width: 70%;
+  }
+
+}
