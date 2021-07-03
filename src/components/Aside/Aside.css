@@ -4,6 +4,7 @@
     height: 100%;
     text-align: left;
     font-size: 1.3em;
+    line-height: 1.4;
     padding: 20px;
     border-radius: 10px;
     background-color: #F9F9F9;
@@ -15,6 +16,7 @@
   .aside-wrap {
     text-align: center;
     font-size: 1.3em;
+    line-height: 1.4;
     padding: 20px;
     border-radius: 10px;
     background-color: #F9F9F9;
