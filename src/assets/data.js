@@ -90,7 +90,7 @@ export const projectsData = [
     name: "Rick and Morty",
     id: 16,
     date: '6/14/21',
-    description: "sort and filter through Rick and Morty characters, episodes, and locations with some visual bells and whistles",
+    description: "Sort and filter through Rick and Morty characters, episodes, and locations with some visual bells and whistles",
     thumbnail: rick_mort_thumb,
     gif: "https://camo.githubusercontent.com/56c22cd8e3d47ca9ba37b8c962faa58c854b6716d5031fde007239799d3ba32a/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f366b51634c4730647545754e59654b5652782f67697068792e676966",
     body: `“I’ll tell you how I feel about school, Jerry: It’s a waste of time. Bunch of people runnin’ around bumpin’ into each other, got a guy up front says, ‘Two plus two,’ and the people in the back say, ‘Four.’ Then the bell rings and they give you a carton of milk and a piece of paper that says you can go take a dump or somethin’. I mean, it’s not a place for smart people, Jerry. I know that’s not a popular opinion, but that’s my two cents on the issue.” — Rick`,

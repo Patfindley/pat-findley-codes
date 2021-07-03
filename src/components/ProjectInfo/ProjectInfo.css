@@ -24,3 +24,19 @@
   color:#f9f9f9;
   background-color:#df562a;
 }
+
+.bouncy {
+  background-color: green;
+  animation:bouncy 4.5s infinite linear;
+  position:relative;
+}
+
+@keyframes bouncy {
+  0%{right: 0em}
+  40%{right: 0em}
+  43%{right: -0.9em}
+  46%{right: 0em}
+  48%{right: -0.4em}
+  50%{right: 0em}
+  100%{right: 0em;}
+}
