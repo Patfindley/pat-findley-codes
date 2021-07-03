@@ -1,4 +1,25 @@
 
-  .project-body {
-    font-size: 1.25em;
-  }
+.project-body {
+  font-size: 1.25em;
+}
+
+.link .back-button {
+  display: inline-block;
+  padding:0.35em 1.2em;
+  border:0.1em solid #df562a;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  color:#df562a;
+  background-color: transparent;
+  text-align:center;
+  transition: all 600ms;
+}
+
+.link .back-button:hover {
+  color:#f9f9f9;
+  background-color:#df562a;
+}
