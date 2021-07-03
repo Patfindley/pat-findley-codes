@@ -48,6 +48,7 @@ a:link {
 }
 
 .project-info {
+  padding: 20px;
 	width: 70%;
 	height: 100%;
 	border-radius: 10px;
