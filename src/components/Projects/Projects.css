@@ -29,6 +29,7 @@
 }
 
 .project-post:hover .project-description-wrap {
+  cursor: pointer;
 	color: #df562a;
 	transition: color 300ms;
 }
@@ -54,6 +55,7 @@
 	object-fit: fill;
 	opacity: 0;
 	transition: opacity 0.2s;
+  cursor: pointer;
 }
 
 .project-image:hover {

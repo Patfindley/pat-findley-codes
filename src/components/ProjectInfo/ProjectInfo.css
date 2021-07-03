@@ -26,7 +26,6 @@
 }
 
 .bouncy {
-  background-color: green;
   animation:bouncy 4.5s infinite linear;
   position:relative;
 }
