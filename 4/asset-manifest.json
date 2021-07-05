@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6e1dc96e.chunk.css",
+    "main.js": "/static/js/main.df5eda90.chunk.js",
+    "main.js.map": "/static/js/main.df5eda90.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b002612e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b002612e.js.map",
+    "static/js/2.d4bc88f6.chunk.js": "/static/js/2.d4bc88f6.chunk.js",
+    "static/js/2.d4bc88f6.chunk.js.map": "/static/js/2.d4bc88f6.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.6e1dc96e.chunk.css.map": "/static/css/main.6e1dc96e.chunk.css.map",
+    "static/js/2.d4bc88f6.chunk.js.LICENSE.txt": "/static/js/2.d4bc88f6.chunk.js.LICENSE.txt",
+    "static/media/fitLit_thumb.72a0bafd.gif": "/static/media/fitLit_thumb.72a0bafd.gif",
+    "static/media/idea_thumb.618b3e10.gif": "/static/media/idea_thumb.618b3e10.gif",
+    "static/media/me_photo.560be9c8.JPG": "/static/media/me_photo.560be9c8.JPG",
+    "static/media/rancid_thumb.0f162379.gif": "/static/media/rancid_thumb.0f162379.gif",
+    "static/media/rick_mort_thumb.90cb0249.gif": "/static/media/rick_mort_thumb.90cb0249.gif",
+    "static/media/synth.e12ddf45.jpeg": "/static/media/synth.e12ddf45.jpeg",
+    "static/media/wave1.857e1962.svg": "/static/media/wave1.857e1962.svg",
+    "static/media/whereTo_thumb.f72e5b7f.gif": "/static/media/whereTo_thumb.f72e5b7f.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b002612e.js",
+    "static/js/2.d4bc88f6.chunk.js",
+    "static/css/main.6e1dc96e.chunk.css",
+    "static/js/main.df5eda90.chunk.js"
+  ]
+}

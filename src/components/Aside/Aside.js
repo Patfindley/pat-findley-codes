@@ -1,5 +1,3 @@
-import React, { useEffect } from 'react';
-import { gsap } from 'gsap';
 import './Aside.css'
 
 const Aside = ({ selectedProject }) => {
