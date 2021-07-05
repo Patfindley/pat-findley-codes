@@ -36,7 +36,7 @@ a:hover {
 	font-weight: 500;
 }
 
-.aside-link {
+.active-link {
   animation: color_change 4.5s infinite alternate;
 }
 

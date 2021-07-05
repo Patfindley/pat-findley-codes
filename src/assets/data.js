@@ -104,13 +104,13 @@ export const projectsData = [
 
 export const shortAboutMe = {
   id: 0,
-  body: `<p className='aside-about-me'>Hey! I'm <a class='aside-link' href='/about'>Pat Findley</a>, <br/> 
-    Im currently a student at <a class='aside-link' href="https://turing.io/"> Turing School of Software and Design</a>. <br/>
+  body: `<p className='aside-about-me'>Hey! I'm <a class='active-link' href='/about'>Pat Findley</a>, <br/> 
+    Im currently a student at <a class='active-link' href="https://turing.io/"> Turing School of Software and Design</a>. <br/>
     <br/>
     I like to consider myself a <br/>
     "creator of non-tangible things".<br>
     This website is one of those things; a never complete, playground to log my progress and try new things <br>
     <br>
-    Click around the projects to see what I've been building, breaking, and re-building, when your finished <a class='aside-link' href='/contact'>reach out</a> and say hi!`
+    Click around the projects to see what I've been building, breaking, and re-building, when your finished <a class='active-link' href='/contact'>reach out</a> and say hi!`
 }
 
