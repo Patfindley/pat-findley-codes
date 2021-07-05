@@ -36,6 +36,15 @@ a:hover {
 	font-weight: 500;
 }
 
+.aside-link {
+  animation: color_change 4.5s infinite alternate;
+}
+
+@keyframes color_change {
+	from { color: black; }
+	to { color: #df562a; }
+}
+
 @media only screen and (max-width: 768px) {
 
 }
