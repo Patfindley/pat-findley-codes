@@ -69,6 +69,10 @@ a:link {
 .resume-wrap {
   display: flex;
   justify-content: center;
+  height: 100%
+}
+.resume {
+  width: 550px;
 }
 
 @media only screen and (max-width: 1200px) {

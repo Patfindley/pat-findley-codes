@@ -27,22 +27,29 @@ a {
 	transition: 300ms;
 }
 
-a:hover {
-	color: #df562a;
-	transition: color 300ms;
-}
 
 .aside-project-info {
-	font-weight: 500;
+  font-weight: 500;
 }
 
 .active-link {
-  animation: color_change 4.5s infinite alternate;
+  animation: bouncy 3.5s infinite linear;
+  position: relative;
 }
 
-@keyframes color_change {
-	from { color: black; }
-	to { color: #df562a; }
+@keyframes bouncy {
+  0%{top: 0em}
+  40%{top: 0em}
+  43%{top: -0.3em}
+  46%{top: 0em}
+  48%{top: -0.1em}
+  50%{top: 0em}
+  100%{top: 0em;}
+}
+
+.active-link:hover {
+  color: #df562a;
+  transition: color 200ms;
 }
 
 @media only screen and (max-width: 768px) {

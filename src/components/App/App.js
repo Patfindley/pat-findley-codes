@@ -10,7 +10,7 @@ import Aside from '../Aside/Aside.js';
 import Contact from '../Contact/Contact.js'
 import AboutMe from '../AboutMe/AboutMe.js'
 import { projectsData, shortAboutMe } from '../../assets/data';
-import resume from '../../assets/Pat_Findley_Codes.pdf';
+import resume from '../../assets/Pat_Findley_Resume.png';
 
 const App = () => {
   const [projects] = useState(projectsData)
@@ -90,9 +90,10 @@ const App = () => {
               <Route exact path='/resume'
               render={()=> (
                 <section className='main-content'>
-                <div className='resume-wrap'>
-                <embed className='resume' src={resume} width='800px' height='2100px' alt='resume' />
-                </div>
+                  <Nav windowWidth={windowWidth}/>
+                  <div className='resume-wrap'>
+                    <img className='resume' src={resume}  alt='resume' />
+                  </div>
                 </section>
               )}/>
             <Route exact path='/:id'
