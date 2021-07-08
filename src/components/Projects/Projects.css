@@ -11,6 +11,7 @@
 	/* height: 693px; */
 	height: 100%;
 	border-radius: 10px;
+  margin-bottom: 20px;
 	box-shadow: 8px 10px 27px -1px rgba(0, 0, 0, 0.12);
 }
 
@@ -29,6 +30,7 @@
 }
 
 .project-post:hover .project-description-wrap {
+  cursor: pointer;
 	color: #df562a;
 	transition: color 300ms;
 }
@@ -54,6 +56,7 @@
 	object-fit: fill;
 	opacity: 0;
 	transition: opacity 0.2s;
+  cursor: pointer;
 }
 
 .project-image:hover {

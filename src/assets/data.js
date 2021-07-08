@@ -90,13 +90,13 @@ export const projectsData = [
     name: "Rick and Morty",
     id: 16,
     date: '6/14/21',
-    description: "sort and filter through Rick and Morty characters, episodes, and locations with some visual bells and whistles",
+    description: "Sort and filter through Rick and Morty characters, episodes, and locations with some visual bells and whistles",
     thumbnail: rick_mort_thumb,
     gif: "https://camo.githubusercontent.com/56c22cd8e3d47ca9ba37b8c962faa58c854b6716d5031fde007239799d3ba32a/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f366b51634c4730647545754e59654b5652782f67697068792e676966",
     body: `“I’ll tell you how I feel about school, Jerry: It’s a waste of time. Bunch of people runnin’ around bumpin’ into each other, got a guy up front says, ‘Two plus two,’ and the people in the back say, ‘Four.’ Then the bell rings and they give you a carton of milk and a piece of paper that says you can go take a dump or somethin’. I mean, it’s not a place for smart people, Jerry. I know that’s not a popular opinion, but that’s my two cents on the issue.” — Rick`,
     technology:['JavaScript', 'HTML', 'CSS', 'React', 'React-Router', 'GSAP', 'Styled Components', 'Cypress'],
     gitHub: 'https://github.com/Patfindley/Dimension-34.5N',
-    deploy: '',
+    deploy: 'https://guarded-chamber-88069.herokuapp.com/',
     tags:['JS', 'JavaScript', 'React', 'html', 'css', 'API', 'html5', 'Rick and Morty', 'Rick & Morty', 'silly', 'gsap', 'wubba lubba dub dub', 'animation', 'solo', 'git', 'github', 'cypress']
   }
 ];
@@ -104,11 +104,13 @@ export const projectsData = [
 
 export const shortAboutMe = {
   id: 0,
-  body: `<p className='aside-about-me'>Hey! I'm <a href='/about'>Pat Findley</a>, <br/> 
-    Im currently a student at <a href="https://turing.io/"> Turing School of Software and Design</a>. <br/>
+  body: `<p className='aside-about-me'>Hey! I'm <a class='active-link' style="animation-delay:0.07s" href='/about'>Pat Findley</a>, <br/> 
+    Im currently a student at <a class='active-link' style="animation-delay:0.14s" href="https://turing.io/"> Turing School of Software and Design</a>. <br/>
     <br/>
     I like to consider myself a <br/>
-    "creator of non-tangible things".<br> 
-    Click around to see what I've been building, breaking, and re-building!`
+    "creator of non-tangible things".<br>
+    This website is one of those things; a never complete, playground to log my progress and try new things <br>
+    <br>
+    Click around the projects to see what I've been building, breaking, and re-building, when your finished <a class='active-link' style="animation-delay:0.21s" href='/contact'>reach out</a> and say hi!`
 }
 

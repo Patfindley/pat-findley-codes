@@ -18,8 +18,9 @@ body {
 .link,
 a:visited,
 a:link {
+  color: #0E151B;
 	text-decoration: none;
-	color: inherit;
+	/* color: inherit; */
 }
 
 .neck {
@@ -48,8 +49,9 @@ a:link {
 }
 
 .project-info {
-	width: 70%;
+  width: 70%;
 	height: 100%;
+  padding: 20px;
 	border-radius: 10px;
 	box-shadow: 8px 10px 27px -1px rgba(0, 0, 0, 0.12);
 }
@@ -62,6 +64,15 @@ a:link {
 
 .about-me {
 	text-align: center;
+}
+
+.resume-wrap {
+  display: flex;
+  justify-content: center;
+  height: 100%
+}
+.resume {
+  width: 550px;
 }
 
 @media only screen and (max-width: 1200px) {

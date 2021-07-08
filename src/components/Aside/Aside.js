@@ -1,7 +1,7 @@
-import React from 'react';
 import './Aside.css'
 
 const Aside = ({ selectedProject }) => {
+
   if (selectedProject.id === 0) {
     return (
       <section className='aside-wrap'>
@@ -12,9 +12,9 @@ const Aside = ({ selectedProject }) => {
   return (
     <section className='aside-project-wrap'>
         <h1>{selectedProject.name}</h1>
-        <a href={selectedProject.gitHub} target='_blank' rel="noreferrer"> GitHub </a>
+        <a className='active-link' style={{animationDelay: "0.07s"}} href={selectedProject.gitHub} target='_blank' rel="noreferrer"> GitHub </a>
         {selectedProject.deploy.length > 1 && 
-        <a href={selectedProject.deploy} target='_blank' rel="noreferrer"> Deploy </a>}
+        <a className='active-link' style={{animationDelay: "0.14s"}} href={selectedProject.deploy} target='_blank' rel="noreferrer"> Deploy </a>}
         <h4 className='aside-project-info'><strong>Date:</strong> {selectedProject.date}</h4>
         <h4 className='aside-project-info'><strong>Technologies:</strong> {selectedProject.technology.join(', ')}</h4>
         
