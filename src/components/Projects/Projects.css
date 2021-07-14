@@ -20,13 +20,10 @@
 }
 
 .project-post {
-	/* display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 398px; */
-	/* height: 86%; */
+
 	border-radius: 9px;
-	margin-top: 15px;
+	margin-top: 25px;
+	/* margin-top: 15px; */
 }
 
 .project-post:hover .project-description-wrap {
