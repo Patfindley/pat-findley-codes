@@ -1,3 +1,5 @@
+
+
 * {
 	font-family: "Raleway", sans-serif;
 }
@@ -88,4 +90,11 @@ a:link {
 
 @media only screen and (max-width: 375px) {
 
+}
+
+/* safari view */
+@media not all and (min-resolution:.001dpcm) { 
+  @supports (-webkit-appearance:none) {
+       
+  }
 }

@@ -31,7 +31,7 @@
   transform: rotate(180deg) scale(35);
   z-index: 5;
   overflow: hidden;
-  filter: invert(72%) sepia(70%) saturate(7459%) hue-rotate(349deg) brightness(94%) contrast(85%);
+  /* filter: invert(72%) sepia(70%) saturate(7459%) hue-rotate(349deg) brightness(94%) contrast(85%); */
 }
 
 .wave-2 {
@@ -41,7 +41,7 @@
   transform: rotate(180deg) scale(42);
   z-index: 4;
   overflow: hidden;
-  filter: invert(61%) sepia(29%) saturate(3502%) hue-rotate(329deg) brightness(96%) contrast(85%);
+  /* filter: invert(61%) sepia(29%) saturate(3502%) hue-rotate(329deg) brightness(96%) contrast(85%); */
 }
 
 .wave-3 {
@@ -52,7 +52,7 @@
   transform: rotate(180deg) scale(40);
   z-index: 3;
   overflow: hidden;
-  filter: invert(62%) sepia(44%) saturate(499%) hue-rotate(328deg) brightness(96%) contrast(91%);
+  /* filter: invert(62%) sepia(44%) saturate(499%) hue-rotate(328deg) brightness(96%) contrast(91%); */
 }
 
 .wave-4 {
@@ -63,5 +63,51 @@
   transform: rotate(180deg) scale(25);
   z-index: 2;
   overflow: hidden;
-  filter: invert(73%) sepia(32%) saturate(478%) hue-rotate(325deg) brightness(96%) contrast(94%);
+  /* filter: invert(73%) sepia(32%) saturate(478%) hue-rotate(325deg) brightness(96%) contrast(94%); */
+}
+
+
+/* safari view */
+@media not all and (min-resolution:.001dpcm) { 
+  @supports (-webkit-appearance:none) {
+    /* .wave-1 {
+      height: 100px;
+      top: 204px;
+      transform: rotate(180deg) scale(35);
+      filter: none;
+    }
+
+    .wave-2 {
+      position: relative;
+      height: 100px;
+      top: 141px;
+      transform: rotate(180deg) scale(42);
+      z-index: 4;
+      overflow: hidden;
+      filter: none;
+    }
+
+    .wave-3 {
+      position: relative;
+      height: 100px;
+      top: 92px;
+      right: 425px;
+      transform: rotate(180deg) scale(40);
+      z-index: 3;
+      overflow: hidden;
+      filter: none;
+    }
+
+    .wave-4 {
+      position: relative;
+      height: 100px;
+      top: 37px;
+      right: 103px;
+      transform: rotate(180deg) scale(25);
+      z-index: 2;
+      overflow: hidden;
+      filter: none;
+    } */
+    
+  }
 }
