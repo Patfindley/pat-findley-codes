@@ -105,7 +105,7 @@ export const projectsData = [
 export const shortAboutMe = {
   id: 0,
   body: `<p className='aside-about-me'>Hey! I'm <a class='active-link' style="animation-delay:0.07s" href='/about'>Pat Findley</a>, <br/> 
-    Im currently a student at <a class='active-link' style="animation-delay:0.14s" href="https://turing.io/"> Turing School of Software and Design</a>. <br/>
+    I graduated <a class='active-link' style="animation-delay:0.14s" href="https://turing.io/"> Turing School of Software and Design</a>'s Front-End program in August. <br/>
     <br/>
     I like to consider myself a <br/>
     "creator of non-tangible things".<br>
