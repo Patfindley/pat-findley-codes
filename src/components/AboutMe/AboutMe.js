@@ -33,7 +33,9 @@ const AboutMe = () => {
     Obviously who doesn't live manipulating data sets, but the satisfaction of imagining an image like the landing you probably clicked to get here,
     and then animating it to life really gets me fired up. <br/>
     <br/>
-    I've spent my life creating; Putting <em>something</em> where there used to be <em>nothing</em>. The literal side of it usually meant filling rooms with people, and all of the planning and hustling that goes into that, music being the main motivator. I couldn't pinpoint a single thing about making music to be <em>the</em> thing that drives me, but I realized all of the same skills are getting called when bringing something to life in an application.
+    I've spent my life creating; Putting <em>something</em> where there used to be <em>nothing</em>. The literal side of it usually meant filling rooms with people, and all of the planning and hustling that goes into that, music being the main motivator. I couldn't pinpoint a single thing about making music to be <em>the</em> thing that drives me, but I realized all of the same skills are getting called when bringing something to life in an application.<br/>
+    <br/>
+    I'm, Currently playing with Context API, Theming, and GraphQL, While polishing up an App built with some friends called <a className='active-link' style={{animationDelay: "0.28s"}} href="https://mysterious-cove-94790.herokuapp.com/" target='_blank' rel="noreferrer">"What We Eatin"</a>.
 
   </p>
   </div>
