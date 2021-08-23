@@ -5,6 +5,8 @@ import rancid_thumb from './rancid_thumb.gif'
 import refactor_thumb from './refactor_thumb.gif'
 import synth_thumb from './synth.jpeg'
 import rick_mort_thumb from './rick_mort_thumb.gif'
+import wwe_landing from './WWE_Landing.png'
+import wwe_gif from './WWE_Gif.gif'
 
 export const projectsData = [
   {
@@ -90,7 +92,7 @@ export const projectsData = [
     name: "Rick and Morty",
     id: 16,
     date: '6/14/21',
-    description: "Sort and filter through Rick and Morty characters, episodes, and locations with some visual bells and whistles",
+    description: "Sort and filter through Rick and Morty data with some visual bells and whistles",
     thumbnail: rick_mort_thumb,
     gif: "https://camo.githubusercontent.com/56c22cd8e3d47ca9ba37b8c962faa58c854b6716d5031fde007239799d3ba32a/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f366b51634c4730647545754e59654b5652782f67697068792e676966",
     body: `“I’ll tell you how I feel about school, Jerry: It’s a waste of time. Bunch of people runnin’ around bumpin’ into each other, got a guy up front says, ‘Two plus two,’ and the people in the back say, ‘Four.’ Then the bell rings and they give you a carton of milk and a piece of paper that says you can go take a dump or somethin’. I mean, it’s not a place for smart people, Jerry. I know that’s not a popular opinion, but that’s my two cents on the issue.” — Rick`,
@@ -98,6 +100,21 @@ export const projectsData = [
     gitHub: 'https://github.com/Patfindley/Dimension-34.5N',
     deploy: 'https://guarded-chamber-88069.herokuapp.com/',
     tags:['JS', 'JavaScript', 'React', 'html', 'css', 'API', 'html5', 'Rick and Morty', 'Rick & Morty', 'silly', 'gsap', 'wubba lubba dub dub', 'animation', 'solo', 'git', 'github', 'cypress']
+  },
+  {
+    name: "What We Eatin'?",
+    id: 17,
+    date: '7/20/21',
+    description: "Social App for picking restaurants to eat",
+    thumbnail: wwe_landing,
+    gif: wwe_gif,
+    body: `What We Eatin' is a social App for experiencing food in new places, or if you're just feeling a little indecisive! The user starts by entering their location to find restaurants nearby. After making a few selections, they are given a link to share to begin voting using drag and drop ranked choice!
+
+    The application implements GraphQL to host a back-end API that creates and updates records in a PostgreSQL database, and React on the front-end for a snappy and interactive user experience. Restaurant selections are supplied by the Yelp! API. Mutations are sent to the back-end to generate restaurant records as well as updating vote counts to allow the user and friends to utilize ranked-choice voting.`,
+    technology:['JavaScript', 'HTML', 'CSS', 'React', 'React-Router', 'graphQL', 'Styled Components', 'Cypress', 'Heroku', 'Travis-CI'],
+    gitHub: 'https://github.com/WhatWeEating/front-end-wwe.git',
+    deploy: 'https://mysterious-cove-94790.herokuapp.com/',
+    tags:['JS', 'JavaScript', 'React', 'html', 'css', 'API', 'html5', 'graphQL', 'food', 'silly', 'where we eatin', 'restaurants', 'animation', 'group', 'git', 'github', 'cypress', 'full stack', 'travis', 'Travis-CI', 'CI', 'continuous integration', 'heroku']
   }
 ];
 
