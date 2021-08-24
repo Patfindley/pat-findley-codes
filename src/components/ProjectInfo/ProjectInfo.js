@@ -8,7 +8,7 @@ const ProjectInfo = ({ selectedProject, homeButton }) => {
       <h2>{selectedProject.description}</h2>
       <p className='project-body'>{selectedProject.body}</p>
       <Link to='/Projects' className='link'>
-      <button className="back-button bouncy" >Back to Main</button>
+      <button className='back-button bouncy' >Back to Main</button>
       </Link>
     </div>
   )
