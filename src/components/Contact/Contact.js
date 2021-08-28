@@ -1,41 +1,53 @@
-import {useRef} from 'react';
+import { useRef, useState } from 'react';
 import './Contact.css'
-const Contact = ({ windowWidth }) => {
+
+const Contact = () => {
   const contactName = useRef()
   const contactEmail = useRef()
   const contactMessage = useRef()
+  const [submitted, setSubmitted] = useState(false)
   
   const submitForm = (e) => {
-    console.log("hi!")
+    const submitURL = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSed7xFAkBBdilezfZe5ek5uCfr1BLEKcrlloZpu-sE0boxrbQ/formResponse'
+
+    console.log("submit log")
     e.preventDefault()
 
-  fetch('https://docs.google.com/forms/u/0/d/e/1FAIpQLSed7xFAkBBdilezfZe5ek5uCfr1BLEKcrlloZpu-sE0boxrbQ/formResponse', {
-    method: 'POST',
-    mode: 'no-cors',
-    header: {
+    const getInputData = () => {
+      let dataToPost = new FormData()
+      // let dataToPost = {
+      //   'entry.2005620554': contactName.current.value,
+      //   'entry.1045781291': contactEmail.current.value,
+      //   'entry.839337160': contactMessage.current.value
+      // }
+    
+      dataToPost.append('entry.2005620554', contactName.current.value)
+      dataToPost.append('entry.1045781291', contactEmail.current.value)
+      dataToPost.append('entry.839337160', contactMessage.current.value)
+      console.log(dataToPost)
+      return dataToPost
+    }
+
+  fetch(submitURL, {
+    method: "POST",
+    mode: "no-cors",
+    header:{
       'Content-Type': 'application/json'
-    },
+     },
     body: getInputData()
-  })
+    })
   .then(data => {
     console.log(data);
   })
   .catch(err => console.error(err))
-}
-  
-const getInputData = () => {
-  let dataToPost = new FormData()
-
-  dataToPost.append('entry.2005620554', contactName)
-  dataToPost.append('entry.1045781291', contactEmail)
-  dataToPost.append('entry.839337160', contactMessage)
-}
-  
+} 
 
   return (
     <>
-    {/* <iframe title='contact' src='https://docs.google.com/forms/d/e/1FAIpQLSed7xFAkBBdilezfZe5ek5uCfr1BLEKcrlloZpu-sE0boxrbQ/viewform?embedded=true' width={windowWidth} height='702' frameBorder='0' marginHeight='0' marginWidth='0'>Loading…</iframe> */}
-    <form action='https://docs.google.com/forms/u/0/d/e/1FAIpQLSed7xFAkBBdilezfZe5ek5uCfr1BLEKcrlloZpu-sE0boxrbQ/formResponse' method='post' onSubmit={(e) => {submitForm(e); console.log('hello there')}}
+    
+    <form action='https://docs.google.com/forms/u/0/d/e/1FAIpQLSed7xFAkBBdilezfZe5ek5uCfr1BLEKcrlloZpu-sE0boxrbQ/formResponse' method='POST'  
+    // target='http://patfindleycodes.com/'
+    onSubmit={(e) => {submitForm(e)}}
     >
       <label for='name-input'>Your Name
         <input type='text' ref={contactName} name='entry.2005620554' placeholder='Name' required="required"></input>
@@ -46,7 +58,7 @@ const getInputData = () => {
       <label>Say Hello!
         <input type='text' ref={contactMessage} name='entry.839337160' placeholder='Hey, Pat!' required="required"></input>
       </label>
-      <button className='submit-button' type='submit'>Submit</button>
+      <button className='submit-button' type='submit' >Submit</button>
     </form>
     </>
   )
