@@ -42,6 +42,7 @@ const Contact = () => {
       onSubmit={(e) => {submitForm(e)}}
       >
       <label for='name-input'>Your Name
+      <br/>
         <input type='text' ref={contactName} name='entry.2005620554' placeholder='Name' required="required"></input>
       </label>
       <label>Your E-Mail

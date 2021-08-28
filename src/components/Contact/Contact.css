@@ -6,7 +6,11 @@
   border: 1px solid red;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  width: 70%;
+	height: 100%;
+  padding: 20px;
+	border-radius: 10px;
+	box-shadow: 8px 10px 27px -1px rgba(0, 0, 0, 0.12);
 }
 
 .contact-form {
