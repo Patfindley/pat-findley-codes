@@ -15,16 +15,10 @@ const Contact = () => {
 
     const getInputData = () => {
       let dataToPost = new FormData()
-      // let dataToPost = {
-      //   'entry.2005620554': contactName.current.value,
-      //   'entry.1045781291': contactEmail.current.value,
-      //   'entry.839337160': contactMessage.current.value
-      // }
     
       dataToPost.append('entry.2005620554', contactName.current.value)
       dataToPost.append('entry.1045781291', contactEmail.current.value)
       dataToPost.append('entry.839337160', contactMessage.current.value)
-      console.log(dataToPost)
       return dataToPost
     }
 
@@ -43,12 +37,10 @@ const Contact = () => {
 } 
 
   return (
-    <>
-    
-    <form action='https://docs.google.com/forms/u/0/d/e/1FAIpQLSed7xFAkBBdilezfZe5ek5uCfr1BLEKcrlloZpu-sE0boxrbQ/formResponse' method='POST'  
-    // target='http://patfindleycodes.com/'
-    onSubmit={(e) => {submitForm(e)}}
-    >
+    <div className='form-container'>
+      <form className='contact-form' action='https://docs.google.com/forms/u/0/d/e/1FAIpQLSed7xFAkBBdilezfZe5ek5uCfr1BLEKcrlloZpu-sE0boxrbQ/formResponse' method='POST'  
+      onSubmit={(e) => {submitForm(e)}}
+      >
       <label for='name-input'>Your Name
         <input type='text' ref={contactName} name='entry.2005620554' placeholder='Name' required="required"></input>
       </label>
@@ -60,7 +52,7 @@ const Contact = () => {
       </label>
       <button className='submit-button' type='submit' >Submit</button>
     </form>
-    </>
+    </div>
   )
 }
 

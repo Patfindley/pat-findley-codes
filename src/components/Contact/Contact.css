@@ -1,3 +1,20 @@
+.contact-wrap {
+  height: 100%
+}
+
+.form-container {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+
 .submit-button {
   display: inline-block;
   padding:0.35em 1.2em;
