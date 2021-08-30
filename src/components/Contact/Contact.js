@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react';
 import './Contact.css'
+import wave4 from '../../assets/wave4-color.svg'
 
 const Contact = () => {
   const contactName = useRef()
@@ -38,21 +39,42 @@ const Contact = () => {
 
   return (
     <div className='form-container'>
+      <img className='wave-4'src={wave4} alt='wave' />
       <form className='contact-form' action='https://docs.google.com/forms/u/0/d/e/1FAIpQLSed7xFAkBBdilezfZe5ek5uCfr1BLEKcrlloZpu-sE0boxrbQ/formResponse' method='POST'  
       onSubmit={(e) => {submitForm(e)}}
       >
-      <label for='name-input'>Your Name
-      <br/>
-        <input type='text' ref={contactName} name='entry.2005620554' placeholder='Name' required="required"></input>
-      </label>
-      <label>Your E-Mail
-        <input type='email' ref={contactEmail} name='entry.1045781291' placeholder='E-Mail' required="required"></input>
-      </label>
-      <label>Say Hello!
-        <input type='text' ref={contactMessage} name='entry.839337160' placeholder='Hey, Pat!' required="required"></input>
-      </label>
-      <button className='submit-button' type='submit' >Submit</button>
-    </form>
+        <label className='form-field label' for='name-input'>Your Name</label>
+        <input 
+          className='form-field input'
+          for='name-input' 
+          type='text' 
+          ref={contactName} 
+          name='entry.2005620554' 
+          placeholder='Name' 
+          required="required">
+        </input>
+        <label className='form-field label' for='email-input'>Your E-Mail</label>
+        <input 
+          className='form-field input'
+          for='email-input' 
+          type='email' 
+          ref={contactEmail} 
+          name='entry.1045781291' 
+          placeholder='E-Mail' 
+          required="required">
+        </input>
+        <label className='form-field label' for='message-input'>Say Hello!</label>
+        <input 
+          className='form-field input'
+          for='message-input' 
+          type='text' 
+          ref={contactMessage} 
+          name='entry.839337160' 
+          placeholder='Hey, Pat!' 
+          required="required">
+        </input>
+        <button className='submit-button' type='submit' >Submit</button>
+      </form>
     </div>
   )
 }

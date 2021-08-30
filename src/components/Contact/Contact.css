@@ -3,12 +3,12 @@
 }
 
 .form-container {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 50%;
 	height: 100%;
   padding: 20px;
+  margin-top:25px;
 	border-radius: 10px;
 	box-shadow: 8px 10px 27px -1px rgba(0, 0, 0, 0.12);
 }
@@ -16,8 +16,9 @@
 .contact-form {
   display: flex;
   flex-direction: column;
+  margin: 16px;
+  z-index: 2;
 }
-
 
 .submit-button {
   display: inline-block;
@@ -33,6 +34,7 @@
   background-color: transparent;
   text-align:center;
   transition: all 600ms;
+  width: 100px;
 }
 
 .submit-button:hover {

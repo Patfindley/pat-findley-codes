@@ -84,9 +84,7 @@ const App = () => {
               render={()=> (
                 <div className='contact-wrap'>
                   <Nav windowWidth={windowWidth}/>
-                  <section className='main-content'>
-                    <Contact windowWidth={windowWidth} />
-                  </section>
+                  <Contact windowWidth={windowWidth} />
                 </div>
               )}/>
               <Route exact path='/resume'
