@@ -6,6 +6,7 @@
 	background-color: #f9f9f9;
 	height: 76px;
 	box-shadow: 0px 0px 21px 1px rgba(0, 0, 0, 0.04);
+  z-index: 5;
 }
 
 .patty {
@@ -80,10 +81,6 @@ li:hover {
 }
 
 @media only screen and (max-width: 768px) {
-
-  .header-nav {
-    z-index: 2;
-  }
 
   .burger-container {
     position: absolute;
