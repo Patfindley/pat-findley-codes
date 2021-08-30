@@ -82,10 +82,10 @@ const App = () => {
               )}/>
             <Route exact path='/contact'
               render={()=> (
-                <div className='contact-wrap'>
+                <section className='main-content'>
                   <Nav windowWidth={windowWidth}/>
                   <Contact windowWidth={windowWidth} />
-                </div>
+                  </section>
               )}/>
               <Route exact path='/resume'
               render={()=> (

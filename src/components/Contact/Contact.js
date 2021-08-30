@@ -47,50 +47,59 @@ const Contact = () => {
 } 
 
   return (
-    <>
-      <img className='contact-wave'src={wave4} alt='wave' />
-    <div className='form-container'>
-      <div className='contact-hello-wrap'>
-        <h1 className='contact-hello'> SAY HELLO! </h1>
-      </div>
-      <form className='contact-form' action='https://docs.google.com/forms/u/0/d/e/1FAIpQLSed7xFAkBBdilezfZe5ek5uCfr1BLEKcrlloZpu-sE0boxrbQ/formResponse' method='POST'  
-      onSubmit={(e) => {submitForm(e)}}
-      >
-        <label className='form-field label' for='name-input'>Your Name</label>
-        <input 
-          className='form-name form-field input'
-          for='name-input' 
-          type='text' 
-          ref={contactName} 
-          name='entry.2005620554' 
-          placeholder='Name' 
-          required="required">
-        </input>
-        <label className='form-field label' for='email-input'>Your E-Mail</label>
-        <input 
-          className='form-field input'
-          for='email-input' 
-          type='email' 
-          ref={contactEmail} 
-          name='entry.1045781291' 
-          placeholder='E-Mail' 
-          required="required">
-        </input>
-        <label className='form-field label' for='message-input'>Say Hello!</label>
-        <input 
-          className='form-message form-field input'
-          for='message-input' 
-          type='text' 
-          ref={contactMessage} 
-          name='entry.839337160' 
-          placeholder='Hey, Pat!' 
-          required="required">
-        </input>
-        <button className='submit-button' type='submit' >Submit</button>
-      </form>
-    </div>
-    </>
-  )
+		<div className="contact-wrap">
+			<img className="contact-wave" src={wave4} alt="wave" />
+			<div className="form-container">
+				<div className="contact-hello-wrap">
+					<h1 className="contact-hello"> SAY HELLO! </h1>
+				</div>
+				<form
+					className="contact-form"
+					action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSed7xFAkBBdilezfZe5ek5uCfr1BLEKcrlloZpu-sE0boxrbQ/formResponse"
+					method="POST"
+					onSubmit={(e) => {
+						submitForm(e);
+					}}>
+					<label className="form-field label" for="name-input">
+						Your Name
+					</label>
+					<input
+						className="form-name form-field input"
+						for="name-input"
+						type="text"
+						ref={contactName}
+						name="entry.2005620554"
+						placeholder="Name"
+						required="required"></input>
+					<label className="form-field label" for="email-input">
+						Your E-Mail
+					</label>
+					<input
+						className="form-email form-field input"
+						for="email-input"
+						type="email"
+						ref={contactEmail}
+						name="entry.1045781291"
+						placeholder="E-Mail"
+						required="required"></input>
+					<label className="form-field label" for="message-input">
+						Say Hello!
+					</label>
+					<input
+						className="form-message form-field input"
+						for="message-input"
+						type="text"
+						ref={contactMessage}
+						name="entry.839337160"
+						placeholder="Hey, Pat!"
+						required="required"></input>
+					<button className="submit-button" type="submit">
+						Submit
+					</button>
+				</form>
+			</div>
+		</div>
+	);
 }
 
 export default Contact;
