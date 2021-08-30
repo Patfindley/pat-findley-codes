@@ -1,4 +1,5 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
+import { gsap } from 'gsap';
 import './Contact.css'
 import wave4 from '../../assets/wave4-color.svg'
 
@@ -7,6 +8,11 @@ const Contact = () => {
   const contactEmail = useRef()
   const contactMessage = useRef()
   const [submitted, setSubmitted] = useState(false)
+
+  useEffect(() => {
+    gsap.to('.wave-4', 20, {css: {right: '300px'}, ease: 'power1', yoyo: 'true', repeat: '-1'})
+
+  }, [])
   
   const submitForm = (e) => {
     const submitURL = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSed7xFAkBBdilezfZe5ek5uCfr1BLEKcrlloZpu-sE0boxrbQ/formResponse'
