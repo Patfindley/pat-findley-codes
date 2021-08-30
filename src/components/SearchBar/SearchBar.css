@@ -12,7 +12,7 @@
     height: 50px;
   }
 
-  form input:focus {
+  form input:focus, textarea:focus {
     outline-color:#DF562A;
   }
 
