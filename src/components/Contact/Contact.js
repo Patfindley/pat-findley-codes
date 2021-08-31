@@ -4,6 +4,7 @@ import './Contact.css'
 import wave4 from '../../assets/wave4-color.svg'
 
 const Contact = () => {
+  const contactHead = useRef()
   const contactName = useRef()
   const contactEmail = useRef()
   const contactMessage = useRef()
@@ -20,7 +21,6 @@ const Contact = () => {
   const submitForm = (e) => {
     const submitURL = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSed7xFAkBBdilezfZe5ek5uCfr1BLEKcrlloZpu-sE0boxrbQ/formResponse'
 
-    console.log("submit log")
     e.preventDefault()
 
     const getInputData = () => {
@@ -45,9 +45,11 @@ const Contact = () => {
   })
   .catch(err => console.error(err))
 
+  setSubmitted(true)
   contactName.current.value = ''
   contactEmail.current.value = ''
   contactMessage.current.value = ''
+  setTimeout(() => { setSubmitted(false); }, 5000);
 } 
 
   return (
@@ -55,7 +57,10 @@ const Contact = () => {
 			<img className="contact-wave" src={wave4} alt="wave" />
 			<div className="form-container">
 				<div className="contact-hello-wrap">
-					<h1 className="contact-hello"> SAY HELLO! </h1>
+          {submitted? 
+          <h1 className="contact-head" ref={contactHead}> SENT! </h1> :
+					<h1 className="contact-head" ref={contactHead}> SAY HELLO! </h1>
+          }
 				</div>
 				<form
 					className="contact-form"
