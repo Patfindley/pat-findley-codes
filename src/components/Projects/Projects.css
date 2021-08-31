@@ -4,11 +4,8 @@
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(3, 1fr);
 	grid-column-gap: 10px;
-	/* background-color: #F9F9F9; */
-	/* width: 1450px; */
 	width: 70%;
   min-width: 924px;
-	/* height: 693px; */
 	height: 100%;
 	border-radius: 10px;
   margin-bottom: 20px;
@@ -23,7 +20,6 @@
 
 	border-radius: 9px;
 	margin-top: 25px;
-	/* margin-top: 15px; */
 }
 
 .project-post:hover .project-description-wrap {
@@ -85,7 +81,6 @@
 	position: relative;
 	bottom: 58px;
 	left: 6px;
-	/* transition: all 500ms; */
 }
 
 .time-stamp {
@@ -95,10 +90,6 @@
 	position: relative;
 	bottom: 0px;
 	left: 357px;
-	/* transition: all 500ms; */
-	/* background-image: linear-gradient(
-  0deg
-  ,transparent 20%,#DF562A 52%); */
 }
 
 .project-bottom {
@@ -122,7 +113,6 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		/* visibility: hidden; */
 	}
 
 	.project-grid {
