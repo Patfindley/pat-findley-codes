@@ -24,7 +24,7 @@
     line-height: 1.4;
     margin: 25px;
     padding: 20px;
-    /* box-shadow: 0px 3px 35px 1px rgba(0, 0, 0, 0.19); */
+    box-shadow: 0px 3px 35px 1px rgba(0, 0, 0, 0.19);
   }
 
   /* .about-me-body {
@@ -35,10 +35,18 @@
     color: #DF562A;
   }
 
+  @media only screen and (max-width: 768px) {
+    .about-me-body-container {
+      font-size: 24px;
+      width: 86%;
+    }
+  
+  }
+
   @media only screen and (max-width: 425px) {
     .about-me-body-container {
       font-size: 18px;
-      width: 20em;
+      width: 79%;
     }
   
   }
@@ -46,7 +54,7 @@
   @media only screen and (max-width: 320px) {
     .about-me-body-container {
       font-size: 17px;
-      width: 18em;
+      width: 78%;
     }
   
   }
