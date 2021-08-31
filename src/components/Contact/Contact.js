@@ -60,8 +60,8 @@ const Contact = () => {
 			<div className="form-container">
 				<div className="contact-hello-wrap">
           {submitted? 
-          <h1 className="contact-head" ref={contactHead}> SENT! </h1> :
-					<h1 className="contact-head" ref={contactHead}> SAY HELLO! </h1>
+            <h1 className="contact-head" ref={contactHead}> SENT! </h1> :
+            <h1 className="contact-head" ref={contactHead}> SAY HELLO! </h1>
           }
 				</div>
 				<form
@@ -81,7 +81,8 @@ const Contact = () => {
 						ref={contactName}
 						name="entry.2005620554"
 						placeholder="Name"
-						required="required"></input>
+						required="required">
+          </input>
 					<label className="form-field label" for="email-input">
 						How can I reach you best?
 					</label>
@@ -92,19 +93,21 @@ const Contact = () => {
 						ref={contactEmail}
 						name="entry.1045781291"
 						placeholder="E-Mail"
-						required="required"></input>
+						required="required">
+          </input>
 					<label className="form-field label" for="message-input">
 						What's on your mind?
 					</label>
           <textarea 
-          className="form-message form-field input"
-          for='message-input' 
-          rows='5' 
-          cols='10'
-          ref={contactMessage}
-          name="entry.839337160"
-          placeholder="Let's get coffee!"
-          required="required"></textarea>
+            className="form-message form-field input"
+            for='message-input' 
+            rows='5' 
+            cols='10'
+            ref={contactMessage}
+            name="entry.839337160"
+            placeholder="Let's get coffee!"
+            required="required">
+          </textarea>
 					<button className="submit-button" type="submit">
 						Submit
 					</button>
