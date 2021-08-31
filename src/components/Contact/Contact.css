@@ -12,7 +12,6 @@
   position: relative;
   height: 100px;
   top: 68px;
-  /* right: 50px; */
   transform: rotate(180deg) scale(6.5);
   overflow: hidden;
   z-index: 1;
