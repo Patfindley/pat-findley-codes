@@ -15,6 +15,7 @@
   form input:focus, textarea:focus {
     outline-color:#DF562A;
   }
+  
 
   .search-input:hover {
     border-color: #DF562A;

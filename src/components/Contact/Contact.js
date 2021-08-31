@@ -10,9 +10,6 @@ const Contact = () => {
   const contactMessage = useRef()
   const [submitted, setSubmitted] = useState(false)
 
-  // useEffect(() => {
-  //   gsap.to('.wave-4', 20, {css: {right: '300px'}, ease: 'power1', yoyo: 'true', repeat: '-1'})
-  // }, [])
   useEffect(() => {
     gsap.to('.contact-wave', 30, {css: {right: '275px'}, ease: 'power1', yoyo: 'true', repeat: '-1'})
     gsap.to('.contact-wave', 1.25, {css: {top: '70px'}, ease: 'bounce', yoyo: 'true', repeat: '-1'})
