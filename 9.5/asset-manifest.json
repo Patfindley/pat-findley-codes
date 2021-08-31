@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/static/css/main.702917a2.chunk.css",
+    "main.js": "/static/js/main.3d032ae4.chunk.js",
+    "main.js.map": "/static/js/main.3d032ae4.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b002612e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b002612e.js.map",
+    "static/css/2.679831fc.chunk.css": "/static/css/2.679831fc.chunk.css",
+    "static/js/2.72243105.chunk.js": "/static/js/2.72243105.chunk.js",
+    "static/js/2.72243105.chunk.js.map": "/static/js/2.72243105.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.679831fc.chunk.css.map": "/static/css/2.679831fc.chunk.css.map",
+    "static/css/main.702917a2.chunk.css.map": "/static/css/main.702917a2.chunk.css.map",
+    "static/js/2.72243105.chunk.js.LICENSE.txt": "/static/js/2.72243105.chunk.js.LICENSE.txt",
+    "static/media/Pat_Findley_Resume.20ae3faa.png": "/static/media/Pat_Findley_Resume.20ae3faa.png",
+    "static/media/WWE_Gif.8739725e.gif": "/static/media/WWE_Gif.8739725e.gif",
+    "static/media/WWE_Landing.03292881.png": "/static/media/WWE_Landing.03292881.png",
+    "static/media/fitLit_thumb.72a0bafd.gif": "/static/media/fitLit_thumb.72a0bafd.gif",
+    "static/media/idea_thumb.618b3e10.gif": "/static/media/idea_thumb.618b3e10.gif",
+    "static/media/me_photo.560be9c8.JPG": "/static/media/me_photo.560be9c8.JPG",
+    "static/media/rancid_thumb.0f162379.gif": "/static/media/rancid_thumb.0f162379.gif",
+    "static/media/rick_mort_thumb.90cb0249.gif": "/static/media/rick_mort_thumb.90cb0249.gif",
+    "static/media/synth.e12ddf45.jpeg": "/static/media/synth.e12ddf45.jpeg",
+    "static/media/wave1-color.f5de42d5.svg": "/static/media/wave1-color.f5de42d5.svg",
+    "static/media/wave1.857e1962.svg": "/static/media/wave1.857e1962.svg",
+    "static/media/wave2-color.50bb1b3c.svg": "/static/media/wave2-color.50bb1b3c.svg",
+    "static/media/wave3-color.56bb4c01.svg": "/static/media/wave3-color.56bb4c01.svg",
+    "static/media/wave4-color.51d84995.svg": "/static/media/wave4-color.51d84995.svg",
+    "static/media/whereTo_thumb.f72e5b7f.gif": "/static/media/whereTo_thumb.f72e5b7f.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b002612e.js",
+    "static/css/2.679831fc.chunk.css",
+    "static/js/2.72243105.chunk.js",
+    "static/css/main.702917a2.chunk.css",
+    "static/js/main.3d032ae4.chunk.js"
+  ]
+}
