@@ -172,3 +172,27 @@
 		left: 247px;
 	}
 }
+
+@media only screen and (max-width: 280px) {
+  .project-image {
+    width: 216px;
+    height: 125px;
+  }
+
+  .project-description-wrap {
+    width: 100%;
+    bottom: 130px;
+}
+
+  .descript {
+    font-size: 17px;
+    bottom: 36px;
+    left: 0px;
+  }
+
+  .time-stamp {
+    font-size: 1em;
+    left: 148px;
+    top: 108px;
+}
+}
