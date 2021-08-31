@@ -4,7 +4,7 @@
 
 .site-container {
 	margin-inline: auto;
-	min-height: 100vh;
+  height: 100vh;
 	background-color: #f9f9f9;
 	font-weight: 200;
 	font-family: "Raleway", sans-serif;
@@ -75,7 +75,9 @@ a:link {
 }
 
 @media only screen and (max-width: 375px) {
-
+  /* .site-container {
+    height: 100vh;
+  } */
 }
 
 /* safari view */

@@ -68,36 +68,36 @@ const Contact = () => {
 					onSubmit={(e) => {
 						submitForm(e);
 					}}>
-					<label className="form-field label" for="name-input">
+					<label className="form-field label" htmlFor="name-input">
 						What do you go by these days?
 					</label>
 					<input
 						className="form-name form-field input"
-						for="name-input"
+						htmlFor="name-input"
 						type="text"
 						ref={contactName}
 						name="entry.2005620554"
 						placeholder="Name"
 						required="required">
           </input>
-					<label className="form-field label" for="email-input">
+					<label className="form-field label" htmlFor="email-input">
 						How can I reach you best?
 					</label>
 					<input
 						className="form-email form-field input"
-						for="email-input"
+						htmlFor="email-input"
 						type="email"
 						ref={contactEmail}
 						name="entry.1045781291"
 						placeholder="E-Mail"
 						required="required">
           </input>
-					<label className="form-field label" for="message-input">
+					<label className="form-field label" htmlFor="message-input">
 						What's on your mind?
 					</label>
           <textarea 
             className="form-message form-field input"
-            for='message-input' 
+            htmlFor='message-input' 
             rows='5' 
             cols='10'
             ref={contactMessage}

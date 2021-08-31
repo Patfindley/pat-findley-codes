@@ -46,9 +46,9 @@ li:hover {
 }
 
 .nav-socials {
-  width: 42%;
+  width: 20%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .socials {
@@ -94,6 +94,11 @@ li:hover {
     position: absolute;
     top: 86px;
     z-index: 3;
+  }
+
+  .nav-socials {
+    width: 42%;
+    justify-content: space-around;
   }
 
   .patty {
