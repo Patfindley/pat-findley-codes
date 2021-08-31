@@ -4,7 +4,7 @@
 
 .site-container {
 	margin-inline: auto;
-	height: 100vh;
+  height: 100vh;
 	background-color: #f9f9f9;
 	font-weight: 200;
 	font-family: "Raleway", sans-serif;
@@ -15,7 +15,6 @@ a:visited,
 a:link {
   color: #0E151B;
 	text-decoration: none;
-	/* color: inherit; */
 }
 
 .neck {
@@ -51,12 +50,6 @@ a:link {
 	box-shadow: 8px 10px 27px -1px rgba(0, 0, 0, 0.12);
 }
 
-.contact-wrap {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
 .about-me {
 	text-align: center;
 }
@@ -82,7 +75,9 @@ a:link {
 }
 
 @media only screen and (max-width: 375px) {
-
+  /* .site-container {
+    height: 100vh;
+  } */
 }
 
 /* safari view */

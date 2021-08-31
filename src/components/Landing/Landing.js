@@ -2,13 +2,10 @@ import React, { useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { gsap } from 'gsap';
 import './Landing.css'
-import wave from '../../assets/wave1.svg'
 import wave1 from '../../assets/wave1-color.svg'
 import wave2 from '../../assets/wave2-color.svg'
 import wave3 from '../../assets/wave3-color.svg'
 import wave4 from '../../assets/wave4-color.svg'
-
-
 
 const Landing = () => {
 
@@ -17,7 +14,6 @@ const Landing = () => {
     gsap.to('.wave-2', 43, {css: {right: '450px'}, ease: 'power1', yoyo: 'true', repeat: '-1'})
     gsap.to('.wave-3', 95, {css: {left: '600px'}, ease: 'power1', yoyo: 'true', repeat: '-1'})
     gsap.to('.wave-4', 48, {css: {right: '300px'}, ease: 'power1', yoyo: 'true', repeat: '-1'})
-
   }, [])
 
   return (
