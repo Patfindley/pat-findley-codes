@@ -44,6 +44,10 @@ const Contact = () => {
     console.log(data);
   })
   .catch(err => console.error(err))
+
+  contactName.current.value = ''
+  contactEmail.current.value = ''
+  contactMessage.current.value = ''
 } 
 
   return (
