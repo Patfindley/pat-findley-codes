@@ -61,7 +61,7 @@ const Contact = () => {
 						submitForm(e);
 					}}>
 					<label className="form-field label" for="name-input">
-						Your Name
+						What do you go by these days?
 					</label>
 					<input
 						className="form-name form-field input"
@@ -72,7 +72,7 @@ const Contact = () => {
 						placeholder="Name"
 						required="required"></input>
 					<label className="form-field label" for="email-input">
-						Your E-Mail
+						How can I reach you best?
 					</label>
 					<input
 						className="form-email form-field input"
@@ -83,7 +83,7 @@ const Contact = () => {
 						placeholder="E-Mail"
 						required="required"></input>
 					<label className="form-field label" for="message-input">
-						Say Hello!
+						What's on your mind?
 					</label>
           <textarea 
           className="form-message form-field input"
