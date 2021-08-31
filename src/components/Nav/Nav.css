@@ -46,9 +46,9 @@ li:hover {
 }
 
 .nav-socials {
-	width: 20%;
-	display: flex;
-	justify-content: space-evenly;
+  width: 42%;
+  display: flex;
+  justify-content: space-around;
 }
 
 .socials {
@@ -67,7 +67,7 @@ li:hover {
 .nav-open {
   width: 100%;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	align-items: center;
 }
 
@@ -88,6 +88,7 @@ li:hover {
     background-color: #f9f9f9;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     height: 100%;
     width: 100%;
     position: absolute;
