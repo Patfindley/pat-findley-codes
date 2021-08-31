@@ -59,33 +59,33 @@ const App = () => {
             <Route exact path ='/projects'
               render={() => (
                 <div>
-                <Nav windowWidth={windowWidth}/>
-                <section className='main-content'>
-                  <div className="neck">
-                    <h2 className='current-view'>Projects</h2> 
-                    <SearchBar
+                  <Nav windowWidth={windowWidth}/>
+                  <section className='main-content'>
+                    <div className="neck">
+                      <h2 className='current-view'>Projects</h2> 
+                      <SearchBar
                       filterProjects={filterProjects}
                       />
-                  </div>
-                  <div className='projects-view-wrap'>
-                  <div className='project-grid'>
-                    <Projects
+                    </div>
+                    <div className='projects-view-wrap'>
+                    <div className='project-grid'>
+                      <Projects
                       projects={projects}
                       filteredProjects={filteredProjects}
                       handleClick={handleClick}
                       />
-                  </div>
-                  <Aside selectedProject={shortAboutMe}/>
-                  </div>
-              </section>
-              </div>
-              )}/>
-              <Route exact path='/contact'
-              render={()=> (
-                <div className='contact-wrap'>
-                <Nav windowWidth={windowWidth}/>
-                <Contact windowWidth={windowWidth} />
+                    </div>
+                    <Aside selectedProject={shortAboutMe}/>
+                    </div>
+                  </section>
                 </div>
+              )}/>
+            <Route exact path='/contact'
+              render={()=> (
+                <section className='main-content'>
+                  <Nav windowWidth={windowWidth}/>
+                  <Contact windowWidth={windowWidth} />
+                  </section>
               )}/>
               <Route exact path='/resume'
               render={()=> (
