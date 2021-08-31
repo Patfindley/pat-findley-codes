@@ -18,9 +18,9 @@ const App = () => {
   const [selectedProject, setSelectedProject] = useState('')
   const [windowWidth] = useState(window.innerWidth)
  
-
   const handleClick = (event) => {
     setSelectedProject(projects.find(project => project.id === Number(event.target.closest('article').id)));
+
   }
 
   const filterProjects = (searchInput) => {
@@ -31,8 +31,10 @@ const App = () => {
       project.tags.find(tag => {
         return tag.toLowerCase().includes(search)
       })
+
     })
     setFilteredProjects(filter)
+
   }
 
     return (
@@ -107,9 +109,9 @@ const App = () => {
                   </div>
                   <div className='projects-view-wrap'>
                     <div className='project-info'>
-                  <ProjectInfo
-                    selectedProject={selectedProject}
-                    /> 
+                      <ProjectInfo
+                      selectedProject={selectedProject}
+                      /> 
                     </div>
                     <Aside selectedProject={selectedProject}/>
                     </div>
