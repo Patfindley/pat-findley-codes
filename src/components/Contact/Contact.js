@@ -19,38 +19,40 @@ const Contact = () => {
   }, [])
   
   const submitForm = (e) => {
-    const submitURL = 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSed7xFAkBBdilezfZe5ek5uCfr1BLEKcrlloZpu-sE0boxrbQ/formResponse'
-
     e.preventDefault()
 
-    const getInputData = () => {
-      let dataToPost = new FormData()
-    
-      dataToPost.append('entry.2005620554', contactName.current.value)
-      dataToPost.append('entry.1045781291', contactEmail.current.value)
-      dataToPost.append('entry.839337160', contactMessage.current.value)
-      return dataToPost
-    }
-
-  fetch(submitURL, {
-    method: "POST",
-    mode: "no-cors",
-    header:{
-      'Content-Type': 'application/json'
-     },
-    body: getInputData()
+    fetch('https://docs.google.com/forms/u/0/d/e/1FAIpQLSed7xFAkBBdilezfZe5ek5uCfr1BLEKcrlloZpu-sE0boxrbQ/formResponse', {
+      method: "POST",
+      mode: "no-cors",
+      header:{
+        'Content-Type': 'application/json'
+      },
+      body: getInputData()
     })
-  .then(data => {
-    console.log(data);
-  })
-  .catch(err => console.error(err))
+    .then(data => {
+      console.log(data);
+    })
+    .catch(err => console.error(err))
+    
+    handleFields()
+  } 
 
-  setSubmitted(true)
-  contactName.current.value = ''
-  contactEmail.current.value = ''
-  contactMessage.current.value = ''
-  setTimeout(() => { setSubmitted(false); }, 5000);
-} 
+  const getInputData = () => {
+    let dataToPost = new FormData()
+  
+    dataToPost.append('entry.2005620554', contactName.current.value)
+    dataToPost.append('entry.1045781291', contactEmail.current.value)
+    dataToPost.append('entry.839337160', contactMessage.current.value)
+    return dataToPost
+  }
+
+  const handleFields = () => {
+    setSubmitted(true);
+    contactName.current.value = '';
+    contactEmail.current.value = '';
+    contactMessage.current.value = '';
+    setTimeout(() => { setSubmitted(false); }, 5000);
+  }
 
   return (
 		<div className="contact-wrap">
@@ -101,7 +103,7 @@ const Contact = () => {
           cols='10'
           ref={contactMessage}
           name="entry.839337160"
-          placeholder='Hey, Pat!'
+          placeholder="Let's get coffee!"
           required="required"></textarea>
 					<button className="submit-button" type="submit">
 						Submit
