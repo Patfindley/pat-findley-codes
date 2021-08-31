@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { gsap } from 'gsap';
 import './Landing.css'
-import wave from '../../assets/wave1.svg'
 import wave1 from '../../assets/wave1-color.svg'
 import wave2 from '../../assets/wave2-color.svg'
 import wave3 from '../../assets/wave3-color.svg'
