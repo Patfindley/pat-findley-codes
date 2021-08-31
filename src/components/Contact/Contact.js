@@ -94,14 +94,6 @@ const Contact = () => {
           name="entry.839337160"
           placeholder='Hey, Pat!'
           required="required"></textarea>
-					{/* <input
-						className="form-message form-field input"
-						for="message-input"
-						type="text"
-						ref={contactMessage}
-						name="entry.839337160"
-						placeholder="Hey, Pat!"
-						required="required"></input> */}
 					<button className="submit-button" type="submit">
 						Submit
 					</button>
