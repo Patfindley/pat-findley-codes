@@ -37,6 +37,7 @@
 	width: 448px;
 	height: 259px;
 	object-fit: fill;
+  border-radius: 9px;
 	box-shadow: 5px 6px 13px 2px rgba(0, 0, 0, 0.2);
 }
 
