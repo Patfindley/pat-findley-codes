@@ -15,7 +15,7 @@ const Nav = ({ windowWidth }) => {
     .to('.mid', .2, {rotationZ: '50', y: '9px', x: '-8px', width: '30px', backgroundColor: '#df562a'})
     .to('.bottom', .2, {rotationZ: '-50', x: '17px', width: '30px', backgroundColor: '#df562a'})
     .to('.header-nav', .7, {height: '98vh'})
-    .to('.nav-open', 0, {opacity: 1, pointerEvents: 'auto'})
+    .to('.nav-open', 0, {display: 'flex', pointerEvents: 'auto'})
     }
   }, [tl, windowWidth])
 
