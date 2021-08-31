@@ -14,6 +14,11 @@ const Contact = () => {
     gsap.to('.contact-wave', 30, {css: {right: '275px'}, ease: 'power1', yoyo: 'true', repeat: '-1'})
     gsap.to('.contact-wave', 1.25, {css: {top: '70px'}, ease: 'bounce', yoyo: 'true', repeat: '-1'})
   }, [])
+
+  useEffect(() => {
+    gsap.to('.form-container', 1, {css: {visibility: 'visible'}})
+    gsap.from('.form-container', .8, {y: 450, opacity: 0, stagger: 0.2})
+  }, [])
   
   const submitForm = (e) => {
     e.preventDefault()
