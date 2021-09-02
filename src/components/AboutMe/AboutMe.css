@@ -21,6 +21,7 @@
 	border-radius: 50%;
 	overflow: hidden;
   z-index: 2;
+  background: linear-gradient(to bottom, #f9f9f9 -3%, #EA9071 88%)
 }
 
 .me-photo {
