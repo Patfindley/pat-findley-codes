@@ -1,9 +1,18 @@
+import { useEffect } from 'react';
+import { gsap } from 'gsap';
 import './AboutMe.css'
 import me_photo from '../../assets/me_photo.JPG'
+import wave3 from '../../assets/wave3-color.svg'
 
 const AboutMe = () => {
+  useEffect(() => {
+    gsap.to('.about-wave', 30, {css: {right: '275px'}, ease: 'power1', yoyo: 'true', repeat: '-1'})
+    gsap.to('.about-wave', 1.25, {css: {top: '282px'}, ease: 'bounce', yoyo: 'true', repeat: '-1'})
+  }, [])
+
   return (
 		<div className="about-me-wrap">
+      <img className="about-wave" src={wave3} alt="wave" />
 			<div className="me-picture-container">
 				<img className="me-photo" src={me_photo} alt="Pat Findley" />
 			</div>

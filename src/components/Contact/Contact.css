@@ -5,7 +5,7 @@
   height: 100%;
   width: 100%;
   overflow: hidden;
-  background: linear-gradient(to bottom, white 30%, #EEAA95 0%);
+  background: linear-gradient(to bottom, #f9f9f9 30%, #EEAA95 0%);
 }
 
 .contact-wave {
