@@ -185,6 +185,31 @@
 	}
 }
 
+@media only screen and (max-width: 360px) {
+  .project-image {
+    width: 249px;
+    height: 144px;
+  }
+
+  .project-description-wrap {
+    width: 100%;
+    bottom: 149px;
+  }
+
+  .descript {
+    font-size: 17px;
+    bottom: 36px;
+    left: 0px;
+  }
+
+  .time-stamp {
+    font-size: 1em;
+    text-shadow: 0px 1px 8px #e8e8ed;
+    left: 182px;
+    top: 127px;
+}
+}
+
 @media only screen and (max-width: 280px) {
   .project-image {
     width: 216px;
