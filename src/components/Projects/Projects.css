@@ -71,6 +71,7 @@
 	width: 100%;
 	height: 20%;
 	position: relative;
+  border-radius: 9px;
 	transition: color 800ms;
 	background-image: linear-gradient(0deg, transparent 45%, #f9f9f9 91%);
 }
@@ -143,6 +144,17 @@
 		font-size: 1em;
 		left: 247px;
 	}
+}
+
+@media only screen and (max-width: 414px) {
+  .project-grid {
+    align-items: center;
+    width: 81%;
+  }
+
+  .project-description-wrap {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 375px) {
