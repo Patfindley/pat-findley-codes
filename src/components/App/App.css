@@ -40,14 +40,7 @@ a:link {
 	font-size: 2em;
 	width: 70%;
 	text-align: center;
-}
-
-.project-info {
-  width: 70%;
-	height: 100%;
-  padding: 20px;
-	border-radius: 10px;
-	box-shadow: 8px 10px 27px -1px rgba(0, 0, 0, 0.12);
+  margin: 0;
 }
 
 .about-me {
