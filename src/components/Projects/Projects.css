@@ -193,7 +193,7 @@
 
 @media only screen and (max-width: 375px) {
 	.project-post {
-		margin-left: 11px;
+		/* margin-left: 11px; */
 		margin-top: 15px;
 	}
 
@@ -224,7 +224,22 @@
 @media only screen and (max-width: 320px) {
   .project-grid {
     width: 90%;
+  }
+
+  .project-image {
+    width: 248px;
+    height: 144px;
+  }
+
+  .project-description-wrap {
+    bottom: 149px;
+  }
+
+  .time-stamp {
+    left: 181px;
+    top: 126px;
 }
+
 }
 
 @media only screen and (max-width: 280px) {
