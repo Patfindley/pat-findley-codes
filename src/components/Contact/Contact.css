@@ -103,14 +103,13 @@ input:-webkit-autofill {
 }
 
 @media only screen and (max-width: 425px) {
-
   .form-container{
     width: 79%;
   }
+
 }
 
 @media only screen and (max-width: 320px) {
-
   .form-container{
     height: 75%;
   }
