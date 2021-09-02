@@ -73,7 +73,7 @@
 	position: relative;
   border-radius: 9px;
 	transition: color 800ms;
-	background-image: linear-gradient(0deg, transparent 45%, #f9f9f9 91%);
+	background-image: linear-gradient(0deg, transparent 45%, #f9f9f9 100%);
 }
 
 .descript {
@@ -106,10 +106,19 @@
 
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1024px) {
   .project-grid {
     min-width: 988px;
   }
+
+  .descript {
+    bottom: 49px;
+  }
+
+  .time-stamp {
+    top: 7px;
+  }
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -133,13 +142,14 @@
 
   .descript {
 		font-size: 1.2em;
-		bottom: 42px;
+		bottom: 35px;
 		left: 2px;
 	}
 
   .time-stamp {
 		font-size: 1em;
 		left: 247px;
+    top: 6px;
 	}
 
 }
@@ -217,6 +227,14 @@
   .project-description-wrap {
     width: 100%;
   }
+
+  .descript {
+    bottom: 36px;
+}
+
+  .time-stamp {
+    top: 162px;
+  }
 }
 
 @media only screen and (max-width: 375px) {
@@ -238,7 +256,7 @@
 	.descript {
     font-size: 17px;
     bottom: 36px;
-    left: 0px;
+    left: 5px;
   }
 
 	.time-stamp {
