@@ -45,6 +45,8 @@ const Contact = () => {
     dataToPost.append('entry.2005620554', contactName.current.value)
     dataToPost.append('entry.1045781291', contactEmail.current.value)
     dataToPost.append('entry.839337160', contactMessage.current.value)
+
+    console.log(dataToPost)
     return dataToPost
   }
 

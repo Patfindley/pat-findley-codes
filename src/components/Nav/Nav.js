@@ -22,6 +22,28 @@ const Nav = ({ windowWidth }) => {
   useEffect(() => {
     tl.reversed() ? tl.play() : tl.reverse()
   }, [burgerActive, tl])
+
+  useEffect(() => {
+    handleScroll()
+  }, [burgerActive])
+
+  const handleScroll = () => {
+    !burgerActive ? enableScroll() : disableScroll();
+  }
+
+  const disableScroll = () => {
+    document.body.style.overflow = "hidden";
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
+    const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+    window.onscroll = () => { 
+      window.scrollTo(scrollLeft, scrollTop); 
+      }; 
+  }
+
+  const enableScroll = () => {
+    document.body.style.overflow = "auto";
+    window.onscroll = () => {}
+  }
   
   return (
 		<nav className="header-nav">
