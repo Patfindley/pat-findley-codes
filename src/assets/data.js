@@ -135,19 +135,14 @@ export const projectsData = [
   }
 ];
 
-{/* <div style="width:100%;height:0;padding-bottom:51%;position:relative;"><iframe src="https://giphy.com/embed/w9c8SA2lI97qIEHLZw" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/w9c8SA2lI97qIEHLZw">via GIPHY</a></p> */}
-
-// https://media.giphy.com/media/w9c8SA2lI97qIEHLZw/source.mov
-
-
 export const shortAboutMe = {
   id: 0,
-  body: `<p className='aside-about-me'>Hey! I'm <a class='active-link' style="animation-delay:0.07s" href='/about'>Pat Findley</a>, <br/> 
+  body: `<p className='aside-about-me'>Hey! <br/>
+    I'm <a class='active-link' style="animation-delay:0.07s" href='/about'>Pat Findley</a>. <br/> 
     I'm a father, husband, musician, and software developer.
-    I like to consider myself a
-    "creator of non-tangible things".<br>
+    I make stuff, and like to consider myself a "creator of non-tangible things".<br>
     This website is one of those things; a never complete, playground to log my progress and try new things <br>
     <br>
-    Click around the projects to see what I've been building, breaking, and re-building, when your finished <a class='active-link' style="animation-delay:0.21s" href='/contact'>reach out</a> and say hi!`
+    Click around the projects to see what I've been building, breaking, and re-building, and when your finished <a class='active-link' style="animation-delay:0.21s" href='/contact'>reach out</a> and say hi!`
 }
 

@@ -70,7 +70,7 @@ const AboutMe = () => {
 					bootcamp, and can't believe what I was able to learn in such a short
 					time. I built <strong>A LOT</strong> of basic vanilla JS apps, And
 					that really laid a strong foundation to start building
-					<strong>A LOT</strong> of React Apps.
+					<strong> A LOT </strong>of React Apps.
 					<br />
 					<br />
 					In the midst of speed-running React applications, I found a passion
