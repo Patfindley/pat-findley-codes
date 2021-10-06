@@ -115,8 +115,29 @@ export const projectsData = [
     gitHub: 'https://github.com/WhatWeEating/front-end-wwe.git',
     deploy: 'https://mysterious-cove-94790.herokuapp.com/',
     tags:['JS', 'JavaScript', 'React', 'html', 'css', 'API', 'html5', 'graphQL', 'food', 'silly', 'where we eatin', 'restaurants', 'animation', 'group', 'git', 'github', 'cypress', 'full stack', 'travis', 'Travis-CI', 'CI', 'continuous integration', 'heroku']
+  },
+  {
+    name: "SHi Static site",
+    id: 18,
+    date: '10/5/21',
+    description: "Static website for contractor",
+    thumbnail: "https://live.staticflickr.com/65535/51555665583_1c7c792134_c.jpg",
+    gif: "https://media3.giphy.com/media/w9c8SA2lI97qIEHLZw/giphy.gif?cid=790b7611531a0c58cf43fdb6afbf5c62a35b118e9300109c&rid=giphy.gif&ct=g",
+    body: `SmarterHomeIntegrations.com is a freelance project in progress for Smarter Home Integrations LLC. Client requested static site to be used to contact for work,list services, view testimonials, and link to socials.
+    
+    The Project started with Figma board to find visual direction with the Client, GitHub Projects to keep tasks organized, a re-styled google form for the contact page, and Surge to test the site before publishing updates.
+    
+    This was my first time deploying with C-Panel, as well as setting up SSL certificates, and it was a learning experience to say the least... 😬`,
+    technology:[ 'JavaScript', 'HTML', 'CSS', 'React', 'React-Router', 'c-panel' ],
+    gitHub: 'https://github.com/Patfindley',
+    deploy: 'https://smarterhomeintegrations.com/',
+    tags:['JS', 'JavaScript', 'React', 'html', 'css', 'API', 'html5', 'graphQL', 'linux', 'cpanel', 'godaddy', 'contract', 'Freelance', 'Free-lance', 'git', 'github', 'surge']
   }
 ];
+
+{/* <div style="width:100%;height:0;padding-bottom:51%;position:relative;"><iframe src="https://giphy.com/embed/w9c8SA2lI97qIEHLZw" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/w9c8SA2lI97qIEHLZw">via GIPHY</a></p> */}
+
+// https://media.giphy.com/media/w9c8SA2lI97qIEHLZw/source.mov
 
 
 export const shortAboutMe = {
