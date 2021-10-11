@@ -6,7 +6,6 @@ import Nav from '../Nav/Nav'
 import SearchBar from '../SearchBar/SearchBar.js';
 import Projects from '../Projects/Projects.js';
 import ProjectInfo from '../ProjectInfo/ProjectInfo.js';
-import Aside from '../Aside/Aside.js';
 import Contact from '../Contact/Contact.js'
 import AboutMe from '../AboutMe/AboutMe.js'
 import { projectsData } from '../../assets/data';
@@ -102,14 +101,9 @@ const App = () => {
                   <div className="neck">
                     <h2 className="current-view">{selectedProject.name}</h2> 
                   </div>
-                  <div className='projects-view-wrap'>
-                    <div className='project-info'>
                       <ProjectInfo
                       selectedProject={selectedProject}
                       /> 
-                    </div>
-                    <Aside selectedProject={selectedProject}/>
-                    </div>
                     </section>
                     </div>: null
               )}/>

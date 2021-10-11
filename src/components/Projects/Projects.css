@@ -2,7 +2,7 @@
 	display: flex;
 	justify-content: space-around;
   overflow: hidden;
-  background: linear-gradient(to bottom, #f9f9f9 30%, #EA9071 0%);
+  background: linear-gradient(to bottom, #f9f9f9 10%, #E3744E 0%);
 }
 
 .projects-wave {
