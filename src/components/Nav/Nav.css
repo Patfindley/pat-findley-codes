@@ -33,6 +33,7 @@
 	justify-content: space-evenly;
 	font-size: 1.5em;
 	font-weight: 400;
+  z-index: 2;
 }
 
 li {
@@ -49,6 +50,7 @@ li:hover {
   width: 20%;
   display: flex;
   justify-content: space-evenly;
+  z-index: 2;
 }
 
 .socials {

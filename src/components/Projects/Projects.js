@@ -19,35 +19,48 @@ export const Projects = ({ projects, filteredProjects, handleClick }) => {
   }
 
   const renderProjects = (projects) => {
-    return projects.sort((a, b) => b.id - a.id).map(project => {
-      return (
-        <DelayLink delay={800}
-        to={`/project${project.id}`}
-        key={project.id}>
-        <article className="project-post"  key={project.id} onClick={(event)=> selectProject(event)} id={project.id}>
-          <nav className="image-top" >
-            <img className="project-image main-image" src={project.thumbnail} alt={project.name} />
-            <img className="project-image gif-hover" src={project.gif} alt={project.name} />
-            <div className="project-description-wrap" >
-              <span className="time-stamp" >{project.date}</span>
-              <p className="descript" >{project.name}</p>
-            </div>
-            </nav>
-        </article>
-        </DelayLink>
-      )
-    }
-    )
-  }
+		return projects.sort((a, b) => b.id - a.id)
+			.map((project) => {
+				return (
+					<DelayLink delay={800} to={`/project${project.id}`} key={project.id}>
+						<article
+							className="project-post"
+							key={project.id}
+							onClick={(event) => selectProject(event)}
+							id={project.id}>
+							<nav className="image-top">
+								<img
+									className="project-image main-image"
+									src={project.thumbnail}
+									alt={project.name}
+								/>
+								<img
+									className="project-image gif-hover"
+									src={project.gif}
+									alt={project.name}
+								/>
+								<div className="project-description-wrap">
+									<span className="time-stamp">{project.date}</span>
+									<p className="descript">{project.name}</p>
+								</div>
+							</nav>
+						</article>
+					</DelayLink>
+				);
+			});
+	};
 
   return (
-    <div className='projects-view-wrap'>
-      <div className='project-grid'>
-        {projects.filtered ? renderProjects(filteredProjects) : renderProjects(projects)}
-      </div>
-      <Aside selectedProject={shortAboutMe}/>
-    </div>
-  )
+		<div className="projects-view-wrap">
+      <img className="projects-wave" src={wave2} alt="wave" />
+			<div className="project-grid">
+				{projects.filtered
+					? renderProjects(filteredProjects)
+					: renderProjects(projects)}
+			</div>
+			<Aside selectedProject={shortAboutMe} />
+		</div>
+	);
   
 }
  export default Projects;

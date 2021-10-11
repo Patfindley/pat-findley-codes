@@ -3,6 +3,7 @@
     width: 22%;
     display: flex;
     justify-content: center;
+    z-index: 2;
   }
   .search-form {
     text-align: center;

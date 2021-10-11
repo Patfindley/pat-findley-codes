@@ -1,3 +1,19 @@
+.projects-view-wrap {
+	display: flex;
+	justify-content: space-around;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #f9f9f9 30%, #EA9071 0%);
+}
+
+.projects-wave {
+  position: absolute;
+  height: 100px;
+  top: 220px;
+  transform: rotate(180deg) scale(6.5);
+  overflow: hidden;
+  z-index: 1;
+}
+
 .project-grid {
 	display: grid;
 	justify-items: center;
@@ -8,8 +24,10 @@
   min-width: 924px;
 	height: 100%;
 	border-radius: 10px;
+  background-color: #f9f9f9;
   margin: 20px 0;
 	box-shadow: 8px 10px 27px -1px rgba(0, 0, 0, 0.12);
+  z-index: 2;
 }
 
 .project-link {
@@ -17,7 +35,6 @@
 }
 
 .project-post {
-
 	border-radius: 9px;
 	margin-top: 25px;
 }
