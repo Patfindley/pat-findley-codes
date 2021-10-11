@@ -9,7 +9,7 @@ import ProjectInfo from '../ProjectInfo/ProjectInfo.js';
 import Aside from '../Aside/Aside.js';
 import Contact from '../Contact/Contact.js'
 import AboutMe from '../AboutMe/AboutMe.js'
-import { projectsData, shortAboutMe } from '../../assets/data';
+import { projectsData } from '../../assets/data';
 import resume from '../../assets/Pat_Findley_Resume.png';
 
 const App = () => {
@@ -69,16 +69,11 @@ const App = () => {
                       filterProjects={filterProjects}
                       />
                     </div>
-                    <div className='projects-view-wrap'>
-                    <div className='project-grid'>
-                      <Projects
-                      projects={projects}
-                      filteredProjects={filteredProjects}
-                      handleClick={handleClick}
-                      />
-                    </div>
-                    <Aside selectedProject={shortAboutMe}/>
-                    </div>
+                        <Projects
+                        projects={projects}
+                        filteredProjects={filteredProjects}
+                        handleClick={handleClick}
+                        />
                   </section>
                 </div>
               )}/>

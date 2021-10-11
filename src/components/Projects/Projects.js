@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react';
 import DelayLink from '../DelayLink/DelayLink.js'
+import Aside from '../Aside/Aside.js';
+import { shortAboutMe } from '../../assets/data';
 import { gsap } from 'gsap';
 import "./Projects.css"
+import wave2 from '../../assets/wave2-color.svg'
 
 export const Projects = ({ projects, filteredProjects, handleClick }) => {
 
@@ -15,26 +18,7 @@ export const Projects = ({ projects, filteredProjects, handleClick }) => {
     handleClick(event)
   }
 
-  if (filteredProjects.length) {
-    return filteredProjects.sort((a, b) => b.id - a.id).map(project => {
-      return (
-        <DelayLink delay={800}
-        to={`/project${project.id}`}
-        key={project.id}>
-        <article className="project-post" key={project.id} onClick={(event)=> selectProject(event)} id={project.id}>
-            <nav className="image-top" >
-              <img className="project-image main-image" src={project.thumbnail} alt={project.name} />
-              <img className="project-image gif-hover" src={project.gif} alt={project.name } />
-              <div className="project-description-wrap" >
-                <span className="time-stamp" >{project.date}</span>
-                <p className="descript" >{project.name}</p>
-              </div>
-              </nav>
-        </article>
-        </DelayLink>
-      )
-    })
-  } else {
+  const renderProjects = (projects) => {
     return projects.sort((a, b) => b.id - a.id).map(project => {
       return (
         <DelayLink delay={800}
@@ -52,7 +36,18 @@ export const Projects = ({ projects, filteredProjects, handleClick }) => {
         </article>
         </DelayLink>
       )
-    })
+    }
+    )
   }
+
+  return (
+    <div className='projects-view-wrap'>
+      <div className='project-grid'>
+        {projects.filtered ? renderProjects(filteredProjects) : renderProjects(projects)}
+      </div>
+      <Aside selectedProject={shortAboutMe}/>
+    </div>
+  )
+  
 }
  export default Projects;
