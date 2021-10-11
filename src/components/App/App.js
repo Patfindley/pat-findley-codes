@@ -95,17 +95,17 @@ const App = () => {
             <Route exact path='/:id'
               render={() => (
                 selectedProject ?
-                <div>
-                  <Nav windowWidth={windowWidth}/>
                   <section className='main-content'>
+                  <Nav windowWidth={windowWidth}/>
                   <div className="neck">
                     <h2 className="current-view">{selectedProject.name}</h2> 
+                    <img className="selected-project-image" src={selectedProject.thumbnail} alt={selectedProject.description} />
                   </div>
                       <ProjectInfo
                       selectedProject={selectedProject}
                       /> 
                     </section>
-                    </div>: null
+                    : null
               )}/>
               <Redirect to='/Projects'/>
           </Switch>
