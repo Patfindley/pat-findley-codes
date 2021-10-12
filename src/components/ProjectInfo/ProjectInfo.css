@@ -20,6 +20,7 @@
 .project-info-wave {
   position: relative;
   height: 100px;
+  left: 55px;
   top: 0px;
   transform: rotate(180deg) scale(6.5);
   overflow: hidden;
@@ -86,10 +87,14 @@
   100%{right: 0em;}
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 1020px) {
 
   .project-info-view {
     height: auto;
+  }
+
+  .project-info-wave {
+    height: 100px;
   }
 
   .project-info-wrap {

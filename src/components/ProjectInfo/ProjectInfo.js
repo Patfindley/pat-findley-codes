@@ -10,6 +10,7 @@ const ProjectInfo = ({ selectedProject, homeButton }) => {
     gsap.to('.project-info-wave', 30, {css: {left: '255px'}, ease: 'power1', yoyo: 'true', repeat: '-1'})
     gsap.to('.project-info-wave', 1.75, {css: {top: '2px'}, ease: 'bounce', yoyo: 'true', repeat: '-1'})
   }, [])
+
   return (
 		<section className="main-content">
 			<div className="project-info-head">
