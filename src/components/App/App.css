@@ -19,10 +19,9 @@ a:link {
 
 .neck {
 	display: flex;
-  flex-direction: column;
 	justify-content: space-around;
-  align-items: center;
 	width: 100%;
+  height: 50px;
 	margin-top: 75px;
   z-index: 2;
 }

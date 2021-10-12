@@ -37,80 +37,88 @@ const App = () => {
   }
 
     return (
-      <div className='site-container'>
-          <Switch>
-            <Route exact path = '/'
-              render={()=> (
-                <Landing />
-              )}
-            />
-            <Route exact path = '/about'
-              render={()=> (
-                <div >
-                <Nav windowWidth={windowWidth}/>
-                <section className='main-content'>
-                <div className="neck">
-                    <h2 className='current-view'>Hi, I'm Pat Findley</h2>
-                </div>
-                <AboutMe />
-                </section>
-                </div>
-              )}
-            />
-            <Route exact path ='/projects'
-              render={() => (
+			<div className="site-container">
+				<Switch>
+					<Route exact path="/" render={() => <Landing />} />
+					<Route
+						exact
+						path="/about"
+						render={() => (
+							<div>
+								<Nav windowWidth={windowWidth} />
+								<section className="main-content">
+									<AboutMe />
+								</section>
+							</div>
+						)}
+					/>
+					<Route
+						exact
+						path="/projects"
+						render={() => (
+							<div>
+								<Nav windowWidth={windowWidth} />
+								<section className="main-content">
+									<div className="neck">
+										<h2 className="current-view">Projects</h2>
+										<SearchBar filterProjects={filterProjects} />
+									</div>
+									<Projects
+										projects={projects}
+										filteredProjects={filteredProjects}
+										handleClick={handleClick}
+									/>
+								</section>
+							</div>
+						)}
+					/>
+					<Route
+						exact
+						path="/contact"
+						render={() => (
+							<section className="main-content">
+								<Nav windowWidth={windowWidth} />
+								<Contact windowWidth={windowWidth} />
+							</section>
+						)}
+					/>
+					<Route
+						exact
+						path="/resume"
+						render={() => (
+							<section className="main-content">
+								<Nav windowWidth={windowWidth} />
+								<div className="resume-wrap">
+									<img className="resume" src={resume} alt="resume" />
+								</div>
+							</section>
+						)}
+					/>
+					<Route
+						exact
+						path="/:id"
+						render={() =>
+							selectedProject ? (
                 <div>
-                  <Nav windowWidth={windowWidth}/>
-                  <section className='main-content'>
-                    <div className="neck">
-                      <h2 className='current-view'>Projects</h2> 
-                      <SearchBar
-                      filterProjects={filterProjects}
-                      />
-                    </div>
-                        <Projects
-                        projects={projects}
-                        filteredProjects={filteredProjects}
-                        handleClick={handleClick}
-                        />
-                  </section>
-                </div>
-              )}/>
-            <Route exact path='/contact'
-              render={()=> (
-                <section className='main-content'>
-                  <Nav windowWidth={windowWidth}/>
-                  <Contact windowWidth={windowWidth} />
-                  </section>
-              )}/>
-              <Route exact path='/resume'
-              render={()=> (
-                <section className='main-content'>
-                  <Nav windowWidth={windowWidth}/>
-                  <div className='resume-wrap'>
-                    <img className='resume' src={resume}  alt='resume' />
-                  </div>
-                </section>
-              )}/>
-            <Route exact path='/:id'
-              render={() => (
-                selectedProject ?
-                  <section className='main-content'>
-                  <Nav windowWidth={windowWidth}/>
-                  <div className="neck">
-                    <h2 className="current-view">{selectedProject.name}</h2> 
-                    <img className="selected-project-image" src={selectedProject.thumbnail} alt={selectedProject.description} />
-                  </div>
-                      <ProjectInfo
-                      selectedProject={selectedProject}
-                      /> 
-                    </section>
-                    : null
-              )}/>
-              <Redirect to='/Projects'/>
-          </Switch>
-          </div>
-    )
+								<section className="main-content">
+									<Nav windowWidth={windowWidth} />
+									<div className="neck">
+										<h2 className="current-view">{selectedProject.name}</h2>
+									</div>
+									{/* <img
+										className="selected-project-image"
+										src={selectedProject.thumbnail}
+										alt={selectedProject.description}
+									/> */}
+									<ProjectInfo selectedProject={selectedProject} />
+								</section>
+							</div>) : null
+						}
+					/>
+					<Redirect to="/Projects" />
+				</Switch>
+			</div>
+		);
 }
 
 export default App;

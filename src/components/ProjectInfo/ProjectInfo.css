@@ -1,8 +1,8 @@
 .project-info-view-wrap {
 	display: flex;
 	justify-content: space-around;
-  overflow: hidden;
-  height: 100%;
+  /* overflow: hidden; */
+  /* height: 100%; */
   background: linear-gradient(to bottom, #f9f9f9 10%, #E3744E 0%);
 }
 
@@ -10,11 +10,11 @@
   width: 448px;
 	height: 259px;
   border-radius: 5px;
+  align-self: center;
 }
 
 .project-info {
   width: 70%;
-	height: 100%;
   padding: 20px;
 	border-radius: 10px;
   margin: 20px 0;
@@ -62,4 +62,14 @@
   48%{right: -0.4em}
   50%{right: 0em}
   100%{right: 0em;}
+}
+
+@media only screen and (max-width: 420px) {
+  .project-info-view-wrap {
+    overflow:hidden;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: normal;
+    align-content: stretch;
+  }
 }
