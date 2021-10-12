@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react';
 import DelayLink from '../DelayLink/DelayLink.js'
 import Aside from '../Aside/Aside.js';
+import SearchBar from '../SearchBar/SearchBar.js';
 import { shortAboutMe } from '../../assets/data';
 import { gsap } from 'gsap';
 import "./Projects.css"
 import wave2 from '../../assets/wave2-color.svg'
 
-export const Projects = ({ projects, filteredProjects, handleClick }) => {
+export const Projects = ({ projects, filterProjects, filteredProjects, handleClick }) => {
 
   useEffect(() => {
     gsap.to('.project-post', 1, {css: {visibility: 'visible'}})
@@ -24,6 +25,7 @@ export const Projects = ({ projects, filteredProjects, handleClick }) => {
   }
 
   const renderProjects = (projects) => {
+    console.log(filteredProjects)
 		return projects.sort((a, b) => b.id - a.id)
 			.map((project) => {
 				return (
@@ -56,15 +58,21 @@ export const Projects = ({ projects, filteredProjects, handleClick }) => {
 	};
 
   return (
-		<div className="projects-view-wrap">
-      <img className="projects-wave" src={wave2} alt="wave" />
-			<div className="project-grid">
-				{projects.filtered
-					? renderProjects(filteredProjects)
-					: renderProjects(projects)}
+		<section className="main-content">
+			<div className="neck">
+				<h2 className="current-view">Projects</h2>
+				<SearchBar filterProjects={filterProjects} />
 			</div>
-			<Aside selectedProject={shortAboutMe} />
-		</div>
+			<div className="projects-view-wrap">
+				<img className="projects-wave" src={wave2} alt="wave" />
+				<div className="project-grid">
+					{projects.filtered
+						? renderProjects(projects)
+						: renderProjects(filteredProjects)}
+				</div>
+				<Aside selectedProject={shortAboutMe} />
+			</div>
+		</section>
 	);
   
 }

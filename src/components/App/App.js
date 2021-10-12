@@ -3,7 +3,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import './App.css';
 import Landing from '../Landing/Landing';
 import Nav from '../Nav/Nav'
-import SearchBar from '../SearchBar/SearchBar.js';
+// import SearchBar from '../SearchBar/SearchBar.js';
 import Projects from '../Projects/Projects.js';
 import ProjectInfo from '../ProjectInfo/ProjectInfo.js';
 import Contact from '../Contact/Contact.js'
@@ -33,7 +33,6 @@ const App = () => {
 
     })
     setFilteredProjects(filter)
-
   }
 
     return (
@@ -58,17 +57,12 @@ const App = () => {
 						render={() => (
 							<div>
 								<Nav windowWidth={windowWidth} />
-								<section className="main-content">
-									<div className="neck">
-										<h2 className="current-view">Projects</h2>
-										<SearchBar filterProjects={filterProjects} />
-									</div>
 									<Projects
 										projects={projects}
+                    filterProjects={filterProjects}
 										filteredProjects={filteredProjects}
 										handleClick={handleClick}
 									/>
-								</section>
 							</div>
 						)}
 					/>
