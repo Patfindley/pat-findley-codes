@@ -12,7 +12,8 @@ const AboutMe = () => {
 
   return (
 		<div className="about-me-wrap">
-      <img className="about-wave" src={wave3} alt="wave" />
+				<h2 className="greeting">Hi, I'm Pat Findley</h2>
+			<img className="about-wave" src={wave3} alt="wave" />
 			<div className="me-picture-container">
 				<img className="me-photo" src={me_photo} alt="Pat Findley" />
 			</div>

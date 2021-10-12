@@ -76,7 +76,7 @@ const Contact = () => {
 						submitForm(e);
 					}}>
 					<label className="form-field label" htmlFor="name-input">
-						What do you go by these days?
+						What's your name?
 					</label>
 					<input
 						className="form-name form-field input"

@@ -9,7 +9,7 @@ const SearchBar = ({ filterProjects }) => {
       <form className="search-form">
         <input className="search-input"
           type="text"
-          placeholder="search tech"
+          placeholder="search topic"
           ref={searchValue}
           name="input"
           onChange={() => filterProjects(searchValue.current.value)}

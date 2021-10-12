@@ -7,6 +7,10 @@
   background: linear-gradient(to bottom, #f9f9f9 30%, #EA9071 0%);
 }
 
+.greeting {
+  margin-top: 75px;
+}
+
 .about-wave {
   position: relative;
   height: 100px;
