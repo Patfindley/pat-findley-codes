@@ -3,7 +3,6 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import './App.css';
 import Landing from '../Landing/Landing';
 import Nav from '../Nav/Nav'
-// import SearchBar from '../SearchBar/SearchBar.js';
 import Projects from '../Projects/Projects.js';
 import ProjectInfo from '../ProjectInfo/ProjectInfo.js';
 import Contact from '../Contact/Contact.js'
@@ -93,19 +92,9 @@ const App = () => {
 						path="/:id"
 						render={() =>
 							selectedProject ? (
-                <div>
-								<section className="main-content">
+                <div className="project-info-view">
 									<Nav windowWidth={windowWidth} />
-									<div className="neck">
-										<h2 className="current-view">{selectedProject.name}</h2>
-									</div>
-									{/* <img
-										className="selected-project-image"
-										src={selectedProject.thumbnail}
-										alt={selectedProject.description}
-									/> */}
 									<ProjectInfo selectedProject={selectedProject} />
-								</section>
 							</div>) : null
 						}
 					/>
