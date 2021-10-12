@@ -16,7 +16,7 @@ export const Projects = ({ projects, filterProjects, filteredProjects, handleCli
 
   useEffect(() => {
     gsap.to('.projects-wave', 40, {css: {left: '575px'}, ease: 'power1', yoyo: 'true', repeat: '-1'})
-    gsap.to('.projects-wave', 1.75, {css: {top: '221px'}, ease: 'bounce', yoyo: 'true', repeat: '-1'})
+    gsap.to('.projects-wave', 1.75, {css: {top: '194px'}, ease: 'bounce', yoyo: 'true', repeat: '-1'})
   }, [])
 
   const selectProject = (event) => {

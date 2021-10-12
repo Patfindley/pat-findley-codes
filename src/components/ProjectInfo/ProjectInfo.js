@@ -6,8 +6,9 @@ import wave1 from '../../assets/wave1-color.svg'
 import './ProjectInfo.css'
 
 const ProjectInfo = ({ selectedProject, homeButton }) => {
+
   useEffect(() => {
-    gsap.to('.project-info-wave', 30, {css: {left: '255px'}, ease: 'power1', yoyo: 'true', repeat: '-1'})
+    gsap.to('.project-info-wave', 30, {css: {left: '200px'}, ease: 'power1', yoyo: 'true', repeat: '-1'})
     gsap.to('.project-info-wave', 1.75, {css: {top: '2px'}, ease: 'bounce', yoyo: 'true', repeat: '-1'})
   }, [])
 
