@@ -17,8 +17,9 @@
 }
 
 .project-info-wave {
-  position: relative;
+  position: fixed;
   height: 100px;
+  top: 260px;
   transform: rotate(180deg) scale(6.5);
   overflow: hidden;
   z-index: 1;
@@ -89,7 +90,7 @@
     /* margin-top: 233px; */
   }
   .project-info-wrap {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     justify-content: normal;
   }
