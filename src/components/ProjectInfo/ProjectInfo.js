@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Aside from '../Aside/Aside.js';
+import wave1 from '../../assets/wave1-color.svg'
 import './ProjectInfo.css'
 
 const ProjectInfo = ({ selectedProject, homeButton }) => {
@@ -14,6 +15,7 @@ const ProjectInfo = ({ selectedProject, homeButton }) => {
 					alt={selectedProject.description}
 				/>
 			</div>
+      <img className="project-info-wave" src={wave1} alt="wave" />
 			<div className="project-info-wrap">
 				<div className="project-info">
 					<h2>{selectedProject.description}</h2>

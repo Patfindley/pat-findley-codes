@@ -14,10 +14,10 @@ export const Projects = ({ projects, filterProjects, filteredProjects, handleCli
     gsap.from('.project-post', .8, {y: 450, opacity: 0, stagger: 0.2})
   }, [])
 
-  // useEffect(() => {
-  //   gsap.to('.projects-wave', 30, {css: {right: '275px'}, ease: 'power1', yoyo: 'true', repeat: '-1'})
-  //   gsap.to('.projects-wave', 1.75, {css: {top: '221px'}, ease: 'bounce', yoyo: 'true', repeat: '-1'})
-  // }, [])
+  useEffect(() => {
+    gsap.to('.projects-wave', 40, {css: {left: '575px'}, ease: 'power1', yoyo: 'true', repeat: '-1'})
+    gsap.to('.projects-wave', 1.75, {css: {top: '221px'}, ease: 'bounce', yoyo: 'true', repeat: '-1'})
+  }, [])
 
   const selectProject = (event) => {
     gsap.to('.project-post', 1, {y: 450, opacity: 0, stagger: 0})

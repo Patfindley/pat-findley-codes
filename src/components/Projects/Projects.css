@@ -11,13 +11,14 @@
 	display: flex;
 	justify-content: space-around;
   overflow: hidden;
-  background: linear-gradient(to bottom, #f9f9f9 10%, #E3744E 0%);
+  background: linear-gradient(to bottom, #f9f9f9 5%, #E3744E 0%);
 }
 
 .projects-wave {
-  position: relative;
+  position: fixed;
   height: 100px;
   top: 220px;
+  left: 150px;
   transform: rotate(180deg) scale(6.5);
   overflow: hidden;
   z-index: 1;
