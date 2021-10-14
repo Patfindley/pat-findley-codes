@@ -29,6 +29,10 @@ const App = () => {
   const [windowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
+    setSelectedTheme(theme);
+   }, [themeLoaded]);
+
+  useEffect(() => {
     WebFont.load({
       google: {
         families: getFonts()
@@ -50,6 +54,11 @@ const App = () => {
       })
     })
     setFilteredProjects(filter)
+  }
+
+  const setThemeMode = () => {
+    console.log(theme)
+    theme.name === 'light' ? setSelectedTheme() : console.log('stay light!');
   }
 
     return (
@@ -77,7 +86,8 @@ const App = () => {
 									path="/projects"
 									render={() => (
 										<div>
-											<Nav windowWidth={windowWidth} />
+											<Nav 
+                        windowWidth={windowWidth} />
 											<Projects
 												projects={projects}
 												filterProjects={filterProjects}
