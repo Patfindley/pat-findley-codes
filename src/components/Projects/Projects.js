@@ -25,7 +25,6 @@ export const Projects = ({ projects, filterProjects, filteredProjects, handleCli
   }
 
   const renderProjects = (projects) => {
-    console.log(filteredProjects)
 		return projects.sort((a, b) => b.id - a.id)
 			.map((project) => {
 				return (

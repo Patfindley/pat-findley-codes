@@ -5,6 +5,18 @@ import App from './components/App/App';
 import { BrowserRouter } from 'react-router-dom';
 import 'normalize.css'
 
-const router = <BrowserRouter> <App /> </BrowserRouter>;
+import * as themes from './theme/Schema.json'
+import { setThemeToLS } from './utils/storage.js';
 
-ReactDOM.render(router, document.getElementById('root'));
+// const router = <BrowserRouter> <App /> </BrowserRouter>;
+const Router = () => {
+  setThemeToLS('all-themes', themes.default);
+  return (
+  <BrowserRouter> <App /> </BrowserRouter>
+  )
+}
+
+ReactDOM.render(
+  <Router />, 
+  document.getElementById('root')
+  );

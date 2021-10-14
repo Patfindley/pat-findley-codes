@@ -1,0 +1,22 @@
+{
+  "data" : {
+    "light" : {
+      "id" : "T_001",
+      "name" : "light",
+      "colors" : {
+        "body" : "#f9f9f9",
+        "text" : "#000000"
+      },
+      "font" : "Raleway"
+    },
+    "dark" : {
+      "id" : "T_002",
+      "name" : "dark",
+      "colors" : {
+        "body" : "#111111",
+        "text" : "#f9f9f9"
+      },
+      "font" : "Raleway"
+    }
+  }
+}

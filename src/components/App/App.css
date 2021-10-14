@@ -1,14 +1,14 @@
-* {
+/* * {
 	font-family: "Raleway", sans-serif;
-}
+} */
 
-.site-container {
+/* .site-container {
 	margin-inline: auto;
   height: 100vh;
 	background-color: #f9f9f9;
 	font-weight: 200;
 	font-family: "Raleway", sans-serif;
-}
+} */
 
 .link,
 a:visited,
@@ -17,14 +17,14 @@ a:link {
 	text-decoration: none;
 }
 
-.neck {
+/* .neck {
 	display: flex;
 	justify-content: space-around;
 	width: 100%;
   height: 50px;
 	margin-top: 75px;
   z-index: 2;
-}
+} */
 
 .main-content {
 	display: flex;
@@ -60,9 +60,9 @@ a:link {
     margin: 0;
   }
 
-  .neck {
+  /* .neck {
     justify-content: center;
-  }
+  } */
 }
 
 @media only screen and (max-width: 375px) {
