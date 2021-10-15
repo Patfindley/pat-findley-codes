@@ -27,7 +27,7 @@ const Patty = styled.span`
   top: 23px;
   height: 4px;
   width: 40px;
-  background-color: #000;
+  background-color: ${({ theme }) => theme.colors.text};
   border-radius: 10px;
   margin: 5px 20px;
   transition: background-color box-shadow .5s;
@@ -163,14 +163,14 @@ const Nav = ({ windowWidth }) => {
   }
   
   return (
-		<HeaderNav>
+		<HeaderNav className='header-nav'>
 			<BurgerContainer
 				onClick={() => setBurgerActive(!burgerActive)}>
 				<Patty className="patty top"></Patty>
 				<Patty className="patty mid"></Patty>
 				<Patty className="patty bottom"></Patty>
 			</BurgerContainer>
-			<NavOpen>
+			<NavOpen className='nav-open'>
 				<NavBarLinks className="nav-links">
 					<NLink
 						to="/about"

@@ -17,7 +17,12 @@
         "a:link" : {
           "text" : "#0E151B",
           "text-decoration" : "none"
-        }
+        },
+        "waveOne" : "#DF562A",
+        "waveTwo" : "#E3744E",
+        "waveThree" : "#EA9071",
+        "waveFour" : "#EEAA95",
+        "waveFive" : "#F4C7B8"
       },
       "font" : "Raleway"
     },
@@ -25,12 +30,17 @@
       "id" : "T_002",
       "name" : "dark",
       "colors" : {
-        "body" : "#111111",
+        "body" : "#011627",
         "text" : "#f9f9f9",
         "link" : {
           "text" : "#f9f9f9",
           "text-decoration" : "none"
-        }
+        },
+        "waveOne" : "#053138",
+        "waveTwo" : "#063D47",
+        "waveThree" : "#1D4F58",
+        "waveFour" : "#325F67",
+        "waveFive" : "#456E75"
       },
       "font" : "Raleway"
     }

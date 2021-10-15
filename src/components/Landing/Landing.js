@@ -2,11 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { gsap } from 'gsap';
 import styled from 'styled-components'
-// import { ReactComponent as WaveO } from '../../assets/wave1-color.svg';
-import wave1 from '../../assets/wave1-color.svg'
-import wave2 from '../../assets/wave2-color.svg'
-import wave3 from '../../assets/wave3-color.svg'
-import wave4 from '../../assets/wave4-color.svg'
+import { ReactComponent as Wave } from '../../assets/wave.svg';
 
 const MainView = styled.div`
   height: 100vh;
@@ -27,27 +23,30 @@ const LandingCircle = styled.div`
   width: 300px;
   border-radius: 50%;
   overflow: hidden;
-  background-color: #F4C7B8;
+  background-color: ${({ theme }) => theme.colors.waveFive};
 `
 
-const WaveOne = styled.img`
+const WaveOne = styled(Wave)`
   position: relative;
   height: 100px;
   top: 204px;
   transform: rotate(180deg) scale(35);
   z-index: 5;
   overflow: hidden;
+  fill: ${({ theme }) => theme.colors.waveOne};
 `
 
-const WaveTwo = styled.img`
+const WaveTwo = styled(Wave)`
   position: relative;
   height: 100px;
   top: 141px;
   transform: rotate(180deg) scale(42);
   z-index: 4;
-  overflow: hidden;`
+  overflow: hidden;
+  fill: ${({ theme }) => theme.colors.waveTwo};
+  `
 
-const WaveThree = styled.img`
+const WaveThree = styled(Wave)`
   position: relative;
   height: 100px;
   top: 92px;
@@ -55,9 +54,10 @@ const WaveThree = styled.img`
   transform: rotate(180deg) scale(40);
   z-index: 3;
   overflow: hidden;
+  fill: ${({ theme }) => theme.colors.waveThree};
 `
 
-const WaveFour = styled.img`
+const WaveFour = styled(Wave)`
   position: relative;
   height: 100px;
   top: 37px;
@@ -65,6 +65,7 @@ const WaveFour = styled.img`
   transform: rotate(180deg) scale(25);
   z-index: 2;
   overflow: hidden;
+  fill: ${({ theme }) => theme.colors.waveFour};
 `
 
 const Landing = () => {
@@ -81,11 +82,10 @@ const Landing = () => {
       <LandingTitle> PAT FINDLEY CODES</LandingTitle>
       <Link to='/Projects'>
     <LandingCircle>
-      {/* <WaveO fill='blue' /> */}
-      <WaveOne className='wave-1'src={wave1} alt='wave' />
-      <WaveTwo className='wave-2'src={wave2} alt='wave' />
-      <WaveThree className='wave-3'src={wave3} alt='wave' />
-      <WaveFour className='wave-4'src={wave4} alt='wave' />
+      <WaveOne className='wave-1' alt='wave' />
+      <WaveTwo className='wave-2' alt='wave' />
+      <WaveThree className='wave-3'alt='wave' />
+      <WaveFour className='wave-4'alt='wave' />
     </LandingCircle>
     </Link>
     </MainView>

@@ -46,7 +46,7 @@ const Wrap = styled.div`
   display: flex;
 	justify-content: space-around;
   overflow: hidden;
-  background: linear-gradient(to bottom, ${({ theme }) => theme.colors.body} 5%, #E3744E 0%);
+  background: linear-gradient(to bottom, ${({ theme }) => theme.colors.body} 4%, #E3744E 0%);
   @media only screen and (max-width: 768px) {
     justify-content: center;
   }
@@ -60,16 +60,13 @@ const Wrap = styled.div`
   }
 `
 
-// background: ${({theme}) => `linear-gradient(to bottom, ${theme.colors.body} 5%, #E3744E 0%)` }
-
-// background: ${({theme}) => theme.name === 'light' ? 'linear-gradient(to bottom, ${theme.color.body} 5%, #E3744E 0%)': 'linear-gradient(to bottom, #f9f9f9 5%, #E3744E 0%)' }
-
 const Grid = styled.div`
   display: grid;
 	justify-items: center;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(3, 1fr);
 	grid-column-gap: 10px;
+  background-color: ${({ theme }) => theme.colors.body};
 	width: 70%;
   min-width: 924px;
 	height: 100%;

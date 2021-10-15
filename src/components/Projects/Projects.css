@@ -121,9 +121,6 @@
 	left: 357px;
 }
 
-.project-bottom {
-	border-bottom: 1px solid #e8e8ed;
-}
 
 @media only screen and (max-width: 1200px) {
   .aside-wrap,
@@ -266,7 +263,6 @@
 
 @media only screen and (max-width: 375px) {
 	.project-post {
-		/* margin-left: 11px; */
 		margin-top: 15px;
 	}
 
