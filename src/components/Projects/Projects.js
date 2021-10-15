@@ -46,7 +46,7 @@ const Wrap = styled.div`
   display: flex;
 	justify-content: space-around;
   overflow: hidden;
-  background: linear-gradient(to bottom, #f9f9f9 5%, #E3744E 0%);
+  background: linear-gradient(to bottom, ${({ theme }) => theme.colors.body} 5%, #E3744E 0%);
   @media only screen and (max-width: 768px) {
     justify-content: center;
   }
@@ -59,6 +59,10 @@ const Wrap = styled.div`
     width: 100%;
   }
 `
+
+// background: ${({theme}) => `linear-gradient(to bottom, ${theme.colors.body} 5%, #E3744E 0%)` }
+
+// background: ${({theme}) => theme.name === 'light' ? 'linear-gradient(to bottom, ${theme.color.body} 5%, #E3744E 0%)': 'linear-gradient(to bottom, #f9f9f9 5%, #E3744E 0%)' }
 
 const Grid = styled.div`
   display: grid;
@@ -329,6 +333,7 @@ export const Projects = ({ projects, filterProjects, filteredProjects, handleCli
 				return (
 					<DelayLink delay={800} to={`/project${project.id}`} key={project.id}>
 						<Post
+              className='project-post'
 							key={project.id}
 							onClick={(event) => selectProject(event)}
 							id={project.id}>
@@ -354,7 +359,7 @@ export const Projects = ({ projects, filterProjects, filteredProjects, handleCli
 
   return (
 		<MainContent>
-			<Wave src={wave2} alt="wave" />
+			<Wave className='projects-wave' src={wave2} alt="wave" />
 			<Head>
 				<View>Projects</View>
 				<SearchBar filterProjects={filterProjects} />

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from "react-router-dom";
 import { gsap } from 'gsap';
 import styled from 'styled-components'
+// import { ReactComponent as WaveO } from '../../assets/wave1-color.svg';
 import wave1 from '../../assets/wave1-color.svg'
 import wave2 from '../../assets/wave2-color.svg'
 import wave3 from '../../assets/wave3-color.svg'
@@ -80,6 +81,7 @@ const Landing = () => {
       <LandingTitle> PAT FINDLEY CODES</LandingTitle>
       <Link to='/Projects'>
     <LandingCircle>
+      {/* <WaveO fill='blue' /> */}
       <WaveOne className='wave-1'src={wave1} alt='wave' />
       <WaveTwo className='wave-2'src={wave2} alt='wave' />
       <WaveThree className='wave-3'src={wave3} alt='wave' />

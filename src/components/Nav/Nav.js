@@ -80,11 +80,11 @@ const NLink = styled(NavLink)`
     border-bottom: 2px solid #df562a;
   }
   &:visited {
-    color: #f9f9f9;
+    color: ${({ theme }) => theme.colors.text};
 	  text-decoration: none;
   }
   &:link {
-    color: #f9f9f9;
+    color: ${({ theme }) => theme.colors.text};
 	  text-decoration: none;
   }
 `

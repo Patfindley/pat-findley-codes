@@ -30,6 +30,7 @@ const App = () => {
 
   useEffect(() => {
     setSelectedTheme(theme);
+    console.log(theme)
    }, [themeLoaded]);
 
   useEffect(() => {
@@ -54,11 +55,6 @@ const App = () => {
       })
     })
     setFilteredProjects(filter)
-  }
-
-  const setThemeMode = () => {
-    console.log(theme)
-    theme.name === 'light' ? setSelectedTheme() : console.log('stay light!');
   }
 
     return (
@@ -89,6 +85,7 @@ const App = () => {
 											<Nav 
                         windowWidth={windowWidth} />
 											<Projects
+                        theme={theme}
 												projects={projects}
 												filterProjects={filterProjects}
 												filteredProjects={filteredProjects}
