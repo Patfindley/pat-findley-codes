@@ -30,17 +30,23 @@
       "id" : "T_002",
       "name" : "dark",
       "colors" : {
-        "body" : "#011627",
-        "text" : "#f9f9f9",
+        "body" : "#020E12",
+        "text" : "#F9F9F9",
         "link" : {
-          "text" : "#f9f9f9",
+          "text" : "#F9F9F9",
           "text-decoration" : "none"
         },
-        "waveOne" : "#053138",
-        "waveTwo" : "#063D47",
-        "waveThree" : "#1D4F58",
-        "waveFour" : "#325F67",
-        "waveFive" : "#456E75"
+        "landing" : {
+          "boxShadow" : "0px 0px 39px 4px rgba(249,249,249,0.27)",
+          "WebkitBoxShadow" : "0px 0px 39px 4px rgba(249,249,249,0.27)"
+        },
+        "boxShadow" : "0px 0px 17px 1px rgba(249,249,249,0.33)",
+        "WebkitBoxShadow" : "0px 0px 17px 1px rgba(249,249,249,0.33)",
+        "waveOne" : "#0B6A81",
+        "waveTwo" : "#21788C",
+        "waveThree" : "#358496",
+        "waveFour" : "#478FA0",
+        "waveFive" : "#5899A9"
       },
       "font" : "Raleway"
     }

@@ -6,7 +6,7 @@ import SearchBar from '../SearchBar/SearchBar.js';
 import { shortAboutMe } from '../../assets/data';
 import { gsap } from 'gsap';
 // import "./Projects.css"
-import wave2 from '../../assets/wave2-color.svg'
+import { ReactComponent as Wave } from '../../assets/wave.svg';
 
 const MainContent = styled.section`
   display: flex;
@@ -16,7 +16,7 @@ const MainContent = styled.section`
   overflow-x: hidden;
 `
 
-const Wave = styled.img`
+const WaveBackground = styled(Wave)`
   position: relative;
   height: 100px;
   top: 192px;
@@ -24,6 +24,7 @@ const Wave = styled.img`
   transform: rotate(180deg) scale(6.5);
   overflow: hidden;
   z-index: 1;
+  fill: ${({ theme }) => theme.colors.waveTwo};
 `
 
 const Head = styled.div`
@@ -46,7 +47,7 @@ const Wrap = styled.div`
   display: flex;
 	justify-content: space-around;
   overflow: hidden;
-  background: linear-gradient(to bottom, ${({ theme }) => theme.colors.body} 4%, #E3744E 0%);
+  background: linear-gradient(to bottom, ${({ theme }) => theme.colors.body} 4%, ${({ theme }) => theme.colors.waveTwo} 0%);
   @media only screen and (max-width: 768px) {
     justify-content: center;
   }
@@ -72,28 +73,29 @@ const Grid = styled.div`
 	height: 100%;
 	border-radius: 10px;
   margin: 20px 0 16px 16px;
-	box-shadow: 8px 10px 27px -1px rgba(0, 0, 0, 0.12);
+	-webkit-box-shadow: ${({ theme }) => theme.colors.WebkitBoxShadow}; 
+  box-shadow: ${({ theme }) => theme.colors.boxShadow};
   z-index: 2;
   @media only screen and (max-width: 1024px) {
       min-width: 988px;
     }
-    @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 768px) {
       min-width: 729px;
     }
-    @media only screen and (max-width: 540px) {
+  @media only screen and (max-width: 540px) {
       min-width: 512px;
     }
-    @media only screen and (max-width: 425px) {
+  @media only screen and (max-width: 425px) {
       display: flex;
       flex-direction: column;
       width: 90%;
       min-width: 0px;
     }
-    @media only screen and (max-width: 414px) {
+  @media only screen and (max-width: 414px) {
       align-items: center;
       width: 87%;
     }
-    @media only screen and (max-width: 320px) {
+  @media only screen and (max-width: 320px) {
       width: 90%;
     }
   `
@@ -102,6 +104,7 @@ const Grid = styled.div`
 const Post = styled.article`
   border-radius: 9px;
 	margin-top: 25px;
+  
   @media only screen and (max-width: 375px) {
     margin-top: 15px;
   }
@@ -356,7 +359,7 @@ export const Projects = ({ projects, filterProjects, filteredProjects, handleCli
 
   return (
 		<MainContent>
-			<Wave className='projects-wave' src={wave2} alt="wave" />
+			<WaveBackground className='projects-wave' alt="wave" />
 			<Head>
 				<View>Projects</View>
 				<SearchBar filterProjects={filterProjects} />

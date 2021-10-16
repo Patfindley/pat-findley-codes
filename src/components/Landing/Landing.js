@@ -24,6 +24,8 @@ const LandingCircle = styled.div`
   border-radius: 50%;
   overflow: hidden;
   background-color: ${({ theme }) => theme.colors.waveFive};
+  -webkit-box-shadow: ${({ theme }) => theme.colors.landing.WebkitBoxShadow}; 
+  box-shadow: ${({ theme }) => theme.colors.landing.boxShadow};
 `
 
 const WaveOne = styled(Wave)`
