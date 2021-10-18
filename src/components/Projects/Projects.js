@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import DelayLink from '../DelayLink/DelayLink.js'
 import Aside from '../Aside/Aside.js';
 import SearchBar from '../SearchBar/SearchBar.js';
-import { shortAboutMe } from '../../assets/data';
 import { gsap } from 'gsap';
 // import "./Projects.css"
 import { ReactComponent as Wave } from '../../assets/wave.svg';
+import { vertBounce } from '../../theme/GlobalStyles';
 
 const MainContent = styled.section`
   display: flex;
@@ -311,6 +311,35 @@ const Description = styled.p`
   }
 `
 
+const AsideWrap = styled.section`
+  text-align: left;
+	font-size: 1.3em;
+	line-height: 1.4;
+	padding: 20px;
+	border-radius: 10px;
+	background-color: ${({ theme }) => theme.colors.body};
+	width: 20%;
+  height: 100%;
+  margin: 20px 16px 16px 0;
+	box-shadow: 8px 10px 27px -1px rgba(0, 0, 0, 0.12);
+  z-index: 2;
+  &.link, :visited, :link {
+    text-decoration: none;
+  }
+`
+
+const ActiveLink = styled.a`
+  animation: ${vertBounce} 4.5s infinite linear;
+  position: relative;
+  color: ${({ theme }) => theme.colors.text};
+  text-decoration: none;
+  &:hover {
+    color: ${({ theme }) => theme.colors.waveThree};
+    transition: color 200ms;
+  }
+`
+
+
 export const Projects = ({ projects, filterProjects, filteredProjects, handleClick }) => {
   useEffect(() => {
     gsap.to('.project-post', 1, {css: {visibility: 'visible'}})
@@ -370,9 +399,16 @@ export const Projects = ({ projects, filterProjects, filteredProjects, handleCli
 						? renderProjects(filteredProjects)
 						: renderProjects(projects)}
 				</Grid>
-				<Aside selectedProject={shortAboutMe} />
+        <AsideWrap>
+          <p >
+            Hey! <br/> I'm <ActiveLink style={{animationDelay:'0.07s'}} href='/about'>Pat Findley</ActiveLink>. <br/> I'm a father, husband, musician, and software developer.
+            I make stuff, and like to consider myself a "creator of non-tangible things".<br/> This website is one of those things; a never complete, playground to log my progress and try new things <br/> <br/>Click around the projects to see what I've been building, breaking, and re-building, and when your finished <ActiveLink style={{animationDelay: '0.21s'}} href='/contact'>reach out</ActiveLink> and say hi!
+          </p>
+        </AsideWrap>
 			</Wrap>
 		</MainContent>
 	);
 }
- export default Projects;
+export default Projects;
+
+{/* <Aside selectedProject={shortAboutMe} /> */}
