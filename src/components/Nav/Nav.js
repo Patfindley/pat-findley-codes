@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { NavLink } from "react-router-dom";
 import { gsap } from "gsap"
 import styled from 'styled-components';
-import github_mark from '../../assets/GitHub-Mark-32px.png'
-import linkedin from '../../assets/linkedin-logo.png'
+import { ReactComponent as github_icon } from '../../assets/github.svg';
+import { ReactComponent as linkedin_icon } from '../../assets/linkedin.svg';
 
 const HeaderNav = styled.nav`
   width: 100%;
@@ -77,7 +77,7 @@ const NavBarLinks = styled.ul`
 
 const NLink = styled(NavLink)`
   &.nav-selected {
-    border-bottom: 2px solid #df562a;
+    border-bottom: 2px solid ${({ theme }) => theme.colors.waveOne};
   }
   &:visited {
     color: ${({ theme }) => theme.colors.text};
@@ -93,7 +93,7 @@ const ListItem = styled.li`
   font-weight: 600;
   transition: color 800ms;
   &:hover {
-    color: #df562a;
+    color: ${({ theme }) => theme.colors.waveThree};
     transition: color 350ms;
   }
 `
@@ -109,17 +109,27 @@ const Socials = styled.div`
   }
 `
 
-const SocialIcon = styled.img`
+const Github = styled(github_icon)`
   width: 1.8em;
-  filter: invert(95%) sepia(9%) saturate(0%) hue-rotate(182deg) brightness(92%)
-    contrast(85%);
+  fill: ${({ theme }) => theme.colors.text};
   transition: filter 800ms;
   &:hover {
-    filter: invert(58%) sepia(71%) saturate(5625%) hue-rotate(347deg)
-      brightness(93%) contrast(87%);
-    transition: filter 500ms;
+    fill: ${({ theme }) => theme.colors.waveOne};
+    transition: all 500ms;
   }
-`
+  `
+
+const Linkedin = styled(linkedin_icon)`
+  width: 1.8em;
+  fill: ${({ theme }) => theme.colors.text};
+  transition: filter 800ms;
+  &:hover {
+    fill: ${({ theme }) => theme.colors.waveOne};
+    transition: fill 500ms;
+  }
+  `
+  // filter: invert(58%) sepia(71%) saturate(5625%) hue-rotate(347deg)
+  //   brightness(93%) contrast(87%);
 
 
 const Nav = ({ windowWidth }) => {
@@ -196,13 +206,13 @@ const Nav = ({ windowWidth }) => {
 						href="https://github.com/Patfindley"
 						target="_blank"
 						rel="noreferrer">
-						<SocialIcon src={github_mark} alt="github" />
+						<Github alt="github" />
 					</a>
 					<a
 						href="https://www.linkedin.com/in/patfindley/"
 						target="_blank"
 						rel="noreferrer">
-						<SocialIcon src={linkedin} alt="linkedin" />
+						<Linkedin alt="linkedin" />
 					</a>
 				</Socials>
 			</NavOpen>
