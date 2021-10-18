@@ -6,6 +6,9 @@ const Wrap = styled.div`
   display: flex;
   justify-content: center;
   z-index: 2;
+  @media only screen and (max-width: 1200px) {
+      display: none;
+  }
 `
 
 const SearchForm = styled.form`
