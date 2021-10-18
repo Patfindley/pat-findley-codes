@@ -1,10 +1,8 @@
 import React, { useEffect } from 'react';
 import styled, { keyframes } from 'styled-components'
 import DelayLink from '../DelayLink/DelayLink.js'
-import Aside from '../Aside/Aside.js';
 import SearchBar from '../SearchBar/SearchBar.js';
 import { gsap } from 'gsap';
-// import "./Projects.css"
 import { ReactComponent as Wave } from '../../assets/wave.svg';
 import { vertBounce } from '../../theme/GlobalStyles';
 
@@ -99,7 +97,6 @@ const Grid = styled.div`
       width: 90%;
     }
   `
-// background-color: #f9f9f9;
 
 const Post = styled.article`
   border-radius: 9px;
@@ -112,6 +109,19 @@ const Post = styled.article`
 
 const ImageTop = styled.nav`
   position: relative;
+  &:hover .main-image {
+    transition: opacity 0.5s;
+    opacity: 0;
+  }
+  &:hover .gif {
+    transition: opacity 0.2s;
+    opacity: 1;
+  }
+  &:hover .description {
+    cursor: pointer;
+	  color: ${({ theme }) => theme.colors.waveOne};
+	  transition: color 300ms;
+  }
 `
 
 const MainImage = styled.img`
@@ -122,9 +132,6 @@ const MainImage = styled.img`
   border-radius: 9px;
   box-shadow: 5px 6px 13px 2px rgba(0, 0, 0, 0.2);
   filter: grayscale(57%);
-  &:hover {
-    opacity: 0;
-  }
   @media only screen and (max-width: 768px) {
     width: 313px;
 		height: 181px;
@@ -166,9 +173,6 @@ const Gif = styled.img`
 	opacity: 0;
 	transition: opacity 0.2s;
   cursor: pointer;
-  &:hover {
-    opacity: 1;
-  }
   @media only screen and (max-width: 768px) {
     width: 313px;
     height: 181px;
@@ -202,8 +206,9 @@ const DescriptionWrap = styled.div`
 	height: 20%;
 	position: relative;
   border-radius: 9px;
+  color: ${({ theme }) => theme.colors.text};
 	transition: color 800ms;
-	background-image: linear-gradient(0deg, transparent 45%, #f9f9f9 100%);
+	background-image: linear-gradient(0deg, transparent 45%, ${({ theme }) => theme.colors.body} 100%);
   @media only screen and (max-width: 768px) {
     width: 100%;
     bottom: 186px;
@@ -368,14 +373,16 @@ export const Projects = ({ projects, filterProjects, filteredProjects, handleCli
 							id={project.id}>
 							<ImageTop>
 								<MainImage
+                  className='main-image'
 									src={project.thumbnail}
 									alt={project.name}
 								/>
 								<Gif
+                className='gif'
 									src={project.gif}
 									alt={project.name}
 								/>
-								<DescriptionWrap>
+								<DescriptionWrap className='description'>
 									<TimeStamp>{project.date}</TimeStamp>
 									<Description>{project.name}</Description>
 								</DescriptionWrap>
