@@ -10,7 +10,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 `
 
-const vertBounce = keyframes`
+export const vertBounce = keyframes`
 0%{top: 0em}
 40%{top: 0em}
 43%{top: -0.3em}
@@ -18,6 +18,16 @@ const vertBounce = keyframes`
 48%{top: -0.1em}
 50%{top: 0em}
 100%{top: 0em;}
+`
+
+export const horizontalBounce = keyframes`
+0%{right: 0em}
+40%{right: 0em}
+43%{right: -0.9em}
+46%{right: 0em}
+48%{right: -0.4em}
+50%{right: 0em}
+100%{right: 0em;}
 `
 
 export const Link = styled.a`

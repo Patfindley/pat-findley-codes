@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from 'react';
 import { gsap } from 'gsap';
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
+import { horizontalBounce } from '../../theme/GlobalStyles'
 import { ReactComponent as Wave } from '../../assets/wave.svg';
 
 const Wrap = styled.div`
@@ -122,6 +123,8 @@ const Submit = styled.button`
   color: ${({ theme }) => theme.colors.waveFour};
   background-color: transparent;
   text-align:center;
+  position: relative;
+  animation: ${horizontalBounce} 6s infinite linear;
   transition: all 600ms;
   width: 100px;
   &:hover {

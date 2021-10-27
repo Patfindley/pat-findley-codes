@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import styled, { keyframes } from 'styled-components'
+import { horizontalBounce } from '../../theme/GlobalStyles'
 import Aside from '../Aside/Aside.js';
 import { ReactComponent as Wave } from '../../assets/wave.svg';
 
@@ -80,16 +81,6 @@ const ProjectBody = styled.p`
   line-height: 1.5;
 `
 
-const bouncy = keyframes`
-  0%{right: 0em}
-  40%{right: 0em}
-  43%{right: -0.9em}
-  46%{right: 0em}
-  48%{right: -0.4em}
-  50%{right: 0em}
-  100%{right: 0em;}
-`
-
 const BackButton = styled.button`
   display: inline-block;
   padding: 0.35em 1.2em;
@@ -103,8 +94,8 @@ const BackButton = styled.button`
   color: ${({ theme }) => theme.colors.waveTwo};
   background-color: transparent;
   text-align: center;
-  animation: ${bouncy} 4.5s infinite linear;
   position: relative;
+  animation: ${horizontalBounce} 4.5s infinite linear;
   transition: all 600ms;
   &:hover {
     color: #f9f9f9;
