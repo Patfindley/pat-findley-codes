@@ -4,7 +4,6 @@ import { gsap } from 'gsap';
 import styled, { keyframes } from 'styled-components'
 import Aside from '../Aside/Aside.js';
 import { ReactComponent as Wave } from '../../assets/wave.svg';
-// import './ProjectInfo.css'
 
 const MainContent = styled.section`
   display: flex;
@@ -93,22 +92,22 @@ const bouncy = keyframes`
 
 const BackButton = styled.button`
   display: inline-block;
-  padding:0.35em 1.2em;
-  border:0.1em solid ${({ theme }) => theme.colors.waveTwo};
-  margin:0 0.3em 0.3em 0;
-  border-radius:0.12em;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid ${({ theme }) => theme.colors.waveTwo};
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
   box-sizing: border-box;
-  text-decoration:none;
-  font-family:'Roboto',sans-serif;
-  font-weight:300;
+  text-decoration: none;
+  font-family: 'Roboto',sans-serif;
+  font-weight: 300;
   color: ${({ theme }) => theme.colors.waveTwo};
   background-color: transparent;
-  text-align:center;
+  text-align: center;
   animation: ${bouncy} 4.5s infinite linear;
-  position:relative;
+  position: relative;
   transition: all 600ms;
   &:hover {
-    color:#f9f9f9;
+    color: #f9f9f9;
   background-color: ${({ theme }) => theme.colors.waveOne};
   }
 `

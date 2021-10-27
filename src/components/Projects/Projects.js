@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import styled, { keyframes } from 'styled-components'
+import { gsap } from 'gsap';
+import { Link } from '../../theme/GlobalStyles';
+import styled from 'styled-components'
 import DelayLink from '../DelayLink/DelayLink.js'
 import SearchBar from '../SearchBar/SearchBar.js';
-import { gsap } from 'gsap';
 import { ReactComponent as Wave } from '../../assets/wave.svg';
-import { vertBounce } from '../../theme/GlobalStyles';
 
 const MainContent = styled.section`
   display: flex;
@@ -333,18 +333,6 @@ const AsideWrap = styled.section`
   }
 `
 
-const ActiveLink = styled.a`
-  animation: ${vertBounce} 4.5s infinite linear;
-  position: relative;
-  color: ${({ theme }) => theme.colors.text};
-  text-decoration: none;
-  &:hover {
-    color: ${({ theme }) => theme.colors.waveThree};
-    transition: color 200ms;
-  }
-`
-
-
 export const Projects = ({ projects, filterProjects, filteredProjects, handleClick }) => {
   useEffect(() => {
     gsap.to('.project-post', 1, {css: {visibility: 'visible'}})
@@ -408,8 +396,8 @@ export const Projects = ({ projects, filterProjects, filteredProjects, handleCli
 				</Grid>
         <AsideWrap>
           <p >
-            Hey! <br/> I'm <ActiveLink style={{animationDelay:'0.07s'}} href='/about'>Pat Findley</ActiveLink>. <br/> I'm a father, husband, musician, and software developer.
-            I make stuff, and like to consider myself a "creator of non-tangible things".<br/> This website is one of those things; a never complete, playground to log my progress and try new things <br/> <br/>Click around the projects to see what I've been building, breaking, and re-building, and when your finished <ActiveLink style={{animationDelay: '0.21s'}} href='/contact'>reach out</ActiveLink> and say hi!
+            Hey! <br/> I'm <Link style={{animationDelay:'0.07s'}} href='/about'>Pat Findley</Link>. <br/> I'm a father, husband, musician, and software developer.
+            I make stuff, and like to consider myself a "creator of non-tangible things".<br/> This website is one of those things; a never complete, playground to log my progress and try new things <br/> <br/>Click around the projects to see what I've been building, breaking, and re-building, and when your finished <Link style={{animationDelay: '0.21s'}} href='/contact'>reach out</Link> and say hi!
           </p>
         </AsideWrap>
 			</Wrap>

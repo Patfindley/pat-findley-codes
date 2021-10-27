@@ -1,4 +1,4 @@
-import { createGlobalStyle, keyframes } from 
+import styled, { createGlobalStyle, keyframes } from 
 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
@@ -10,7 +10,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 `
 
-export const vertBounce = keyframes`
+const vertBounce = keyframes`
 0%{top: 0em}
 40%{top: 0em}
 43%{top: -0.3em}
@@ -18,4 +18,17 @@ export const vertBounce = keyframes`
 48%{top: -0.1em}
 50%{top: 0em}
 100%{top: 0em;}
+`
+
+export const Link = styled.a`
+transition: 300ms;
+animation: ${vertBounce} 4.5s infinite linear;
+position: relative;
+text-decoration: none;
+color: ${({ theme }) => theme.colors.text};
+text-decoration: none;
+&:hover {
+  color: ${({ theme }) => theme.colors.waveThree};
+  transition: color 200ms;
+  }
 `

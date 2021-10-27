@@ -110,7 +110,7 @@ const Message = styled.textarea`
 `
 
 const Submit = styled.button`
-display: inline-block;
+  display: inline-block;
   padding:0.35em 1.2em;
   border:0.1em solid ${({ theme }) => theme.colors.waveFour};
   margin:0 0.3em 0.3em 0;

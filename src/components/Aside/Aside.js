@@ -1,5 +1,4 @@
-import styled from 'styled-components'
-import { vertBounce } from '../../theme/GlobalStyles';
+import styled, { keyframes } from 'styled-components'
 
 const ProjectWrap = styled.section`
   text-align: left;
@@ -14,21 +13,31 @@ const ProjectWrap = styled.section`
   z-index: 2;
 `
 
-const Link = styled.a`
-  transition: 300ms;
-  animation: ${vertBounce} 4.5s infinite linear;
-  position: relative;
-  text-decoration: none;
-  color: ${({ theme }) => theme.colors.text};
-  text-decoration: none;
-  &:hover {
-    color: ${({ theme }) => theme.colors.waveThree};
-    transition: color 200ms;
-  }
-`
-
 const ProjectInfo = styled.h4`
   font-weight: 500;
+`
+
+export const vertBounce = keyframes`
+0%{top: 0em}
+40%{top: 0em}
+43%{top: -0.3em}
+46%{top: 0em}
+48%{top: -0.1em}
+50%{top: 0em}
+100%{top: 0em;}
+`
+
+export const Link = styled.a`
+font-weight: 400;
+color: ${({ theme }) => theme.colors.text};
+text-decoration: none;
+position: relative;
+animation: ${vertBounce} 4.5s infinite linear;
+transition: 300ms;
+&:hover {
+  color: ${({ theme }) => theme.colors.waveThree};
+  transition: color 200ms;
+  }
 `
 
 const Aside = ({ selectedProject }) => {
