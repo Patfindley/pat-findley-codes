@@ -4,6 +4,7 @@ import styled, { ThemeProvider } from 'styled-components'
 import { GlobalStyles } from '../../theme/GlobalStyles';
 import WebFont from 'webfontloader';
 import { useTheme } from '../../theme/useTheme'
+import ThemeSelector from '../../ThemeSelector';
 import './App.css';
 import Landing from '../Landing/Landing';
 import Nav from '../Nav/Nav'
@@ -63,6 +64,9 @@ const App = () => {
 					<ThemeProvider theme={selectedTheme}>
 						<GlobalStyles />
 						<SiteContainer style={{ fontFamily: selectedTheme.font }}>
+              {/* <header>
+                <ThemeSelector setter={ setSelectedTheme } theme={theme} />
+              </header> */}
 							<Switch>
 								<Route exact path="/" render={() => <Landing />} />
 								<Route
