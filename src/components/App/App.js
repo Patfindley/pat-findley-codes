@@ -21,6 +21,10 @@ height: 100vh;
 font-weight: 200;
 `
 
+const SelectorWrap = styled.div`
+  height: 0px;
+`
+
 const App = () => {
   const {theme, themeLoaded, getFonts} = useTheme();
   const [selectedTheme, setSelectedTheme] = useState(theme);
@@ -30,8 +34,9 @@ const App = () => {
   const [windowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
+    console.log(selectedTheme, 'selectedTheme')
+    console.log(theme, 'theme')
     setSelectedTheme(theme);
-    console.log(theme)
    }, [themeLoaded]);
 
   useEffect(() => {
@@ -64,9 +69,9 @@ const App = () => {
 					<ThemeProvider theme={selectedTheme}>
 						<GlobalStyles />
 						<SiteContainer style={{ fontFamily: selectedTheme.font }}>
-              {/* <header>
+              {/* <div> */}
                 <ThemeSelector setter={ setSelectedTheme } theme={theme} />
-              </header> */}
+              {/* </div> */}
 							<Switch>
 								<Route exact path="/" render={() => <Landing />} />
 								<Route
