@@ -11,7 +11,9 @@ const HeaderNav = styled.nav`
   justify-content: space-evenly;
   align-items: center;
   height: 76px;
-  z-index: 5;
+  background-color: ${({ theme }) => theme.colors.body};
+  transition: all 0.5s linear;
+  z-index: 4;
 `
 const BurgerContainer = styled.div`
   @media only screen and (max-width: 768px) {
@@ -30,7 +32,7 @@ const Patty = styled.span`
   background-color: ${({ theme }) => theme.colors.text};
   border-radius: 10px;
   margin: 5px 20px;
-  transition: background-color box-shadow .5s;
+  transition: all 800ms;
   @media only screen and (max-width: 768px) {
     visibility: visible;
     z-index: 3;
@@ -78,6 +80,7 @@ const NavBarLinks = styled.ul`
 const NLink = styled(NavLink)`
   &.nav-selected {
     border-bottom: 2px solid ${({ theme }) => theme.colors.waveOne};
+    transition: all 0.5s;
   }
   &:visited {
     color: ${({ theme }) => theme.colors.text};
@@ -91,7 +94,7 @@ const NLink = styled(NavLink)`
 
 const ListItem = styled.li`
   font-weight: 600;
-  transition: color 800ms;
+  transition: all 800ms;
   &:hover {
     color: ${({ theme }) => theme.colors.waveThree};
     transition: color 350ms;
@@ -112,7 +115,7 @@ const Socials = styled.div`
 const Github = styled(github_icon)`
   width: 1.8em;
   fill: ${({ theme }) => theme.colors.text};
-  transition: filter 800ms;
+  transition: all 800ms;
   &:hover {
     fill: ${({ theme }) => theme.colors.waveOne};
     transition: all 500ms;
@@ -122,15 +125,12 @@ const Github = styled(github_icon)`
 const Linkedin = styled(linkedin_icon)`
   width: 1.8em;
   fill: ${({ theme }) => theme.colors.text};
-  transition: filter 800ms;
+  transition: all 800ms;
   &:hover {
     fill: ${({ theme }) => theme.colors.waveOne};
     transition: fill 500ms;
   }
   `
-  // filter: invert(58%) sepia(71%) saturate(5625%) hue-rotate(347deg)
-  //   brightness(93%) contrast(87%);
-
 
 const Nav = ({ windowWidth }) => {
   const [burgerActive, setBurgerActive] = useState(false)
