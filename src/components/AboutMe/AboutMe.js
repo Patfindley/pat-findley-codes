@@ -12,7 +12,8 @@ const Wrap = styled.div`
 	align-items: center;
 	text-align: center;
   overflow: hidden;
-  background: linear-gradient(to bottom, ${({ theme }) => theme.colors.body} 30%, ${({ theme }) => theme.colors.waveThree} 0%);
+  background: linear-gradient(to bottom, transparent 30%, ${({ theme }) => theme.colors.waveThree} 0%);
+  transition: all 0.5s linear;
 `
 
 const Greeting = styled.h2`
@@ -36,6 +37,7 @@ const PhotoContainer = styled.div`
   overflow: hidden;
   z-index: 2;
   background: linear-gradient(to bottom, ${({ theme }) => theme.colors.body} -3%, ${({ theme }) => theme.colors.waveThree} 88%)
+  
   @media only screen and (max-width: 280px) {
   height: 250px;
       width: 250px;
@@ -56,7 +58,10 @@ const BodyContainer = styled.article`
 	padding: 20px;
   background-color: ${({ theme }) => theme.colors.body};
 	box-shadow: 0px 3px 35px 1px rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: ${({ theme }) => theme.colors.landing.WebkitBoxShadow}; 
+  box-shadow: ${({ theme }) => theme.colors.landing.boxShadow};
   z-index: 2;
+  transition: all 0.5s linear;
   @media only screen and (max-width: 768px) {
     font-size: 20px;
         width: 86%;
