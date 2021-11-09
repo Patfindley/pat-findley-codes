@@ -26,6 +26,7 @@ const LandingCircle = styled.div`
   background-color: ${({ theme }) => theme.colors.waveFive};
   -webkit-box-shadow: ${({ theme }) => theme.colors.landing.WebkitBoxShadow}; 
   box-shadow: ${({ theme }) => theme.colors.landing.boxShadow};
+  transition: all 0.5s;
 `
 
 const WaveOne = styled(Wave)`
@@ -36,6 +37,7 @@ const WaveOne = styled(Wave)`
   z-index: 5;
   overflow: hidden;
   fill: ${({ theme }) => theme.colors.waveOne};
+  transition: fill 0.5s;
 `
 
 const WaveTwo = styled(Wave)`
@@ -46,6 +48,7 @@ const WaveTwo = styled(Wave)`
   z-index: 4;
   overflow: hidden;
   fill: ${({ theme }) => theme.colors.waveTwo};
+  transition: fill 0.5s;
   `
 
 const WaveThree = styled(Wave)`
@@ -57,6 +60,7 @@ const WaveThree = styled(Wave)`
   z-index: 3;
   overflow: hidden;
   fill: ${({ theme }) => theme.colors.waveThree};
+  transition: fill 0.5s;
 `
 
 const WaveFour = styled(Wave)`
@@ -68,6 +72,7 @@ const WaveFour = styled(Wave)`
   z-index: 2;
   overflow: hidden;
   fill: ${({ theme }) => theme.colors.waveFour};
+  transition: fill 0.5s;
 `
 
 const Landing = () => {
