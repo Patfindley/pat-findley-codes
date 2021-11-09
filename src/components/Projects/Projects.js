@@ -45,7 +45,8 @@ const Wrap = styled.div`
   display: flex;
 	justify-content: space-around;
   overflow: hidden;
-  background: linear-gradient(to bottom, ${({ theme }) => theme.colors.body} 4%, ${({ theme }) => theme.colors.waveTwo} 0%);
+  background: linear-gradient(to bottom, transparent 6%, ${({ theme }) => theme.colors.waveTwo} 0%);
+  transition: all 0.5s linear;
   @media only screen and (max-width: 768px) {
     justify-content: center;
   }
@@ -73,6 +74,7 @@ const Grid = styled.div`
   margin: 20px 0 16px 16px;
 	-webkit-box-shadow: ${({ theme }) => theme.colors.WebkitBoxShadow}; 
   box-shadow: ${({ theme }) => theme.colors.boxShadow};
+  transition: all 0.5s linear;
   z-index: 2;
   @media only screen and (max-width: 1024px) {
       min-width: 988px;
@@ -327,6 +329,7 @@ const AsideWrap = styled.section`
   height: 100%;
   margin: 20px 16px 16px 0;
 	box-shadow: 8px 10px 27px -1px rgba(0, 0, 0, 0.12);
+  transition: all 0.5s linear;
   z-index: 2;
   &.link, :visited, :link {
     text-decoration: none;
