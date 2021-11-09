@@ -39,6 +39,7 @@ const View = styled.h2`
 	width: 70%;
 	text-align: center;
   margin: 0;
+  transition: all 0.5s linear;
 `
 
 const Wrap = styled.div`
@@ -103,7 +104,6 @@ const Grid = styled.div`
 const Post = styled.article`
   border-radius: 9px;
 	margin-top: 25px;
-  
   @media only screen and (max-width: 375px) {
     margin-top: 15px;
   }
@@ -209,8 +209,8 @@ const DescriptionWrap = styled.div`
 	position: relative;
   border-radius: 9px;
   color: ${({ theme }) => theme.colors.text};
-	transition: color 800ms;
 	background-image: linear-gradient(0deg, transparent 45%, ${({ theme }) => theme.colors.body} 100%);
+	transition: all 0.5s linear;
   @media only screen and (max-width: 768px) {
     width: 100%;
     bottom: 186px;
@@ -243,6 +243,7 @@ const TimeStamp = styled.span`
 	position: relative;
 	bottom: 0px;
 	left: 357px;
+  transition: all 0.5s linear;
   @media only screen and (max-width: 1024px) {
     top: 7px;
   }
@@ -285,6 +286,7 @@ const Description = styled.p`
 	position: relative;
 	bottom: 58px;
 	left: 6px;
+  transition: all 0.5s linear;
   @media only screen and (max-width: 1024px) {
     bottom: 49px;
   }

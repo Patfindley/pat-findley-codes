@@ -27,6 +27,7 @@ const CurrentView = styled.h2`
 	width: 70%;
 	text-align: center;
   margin: 0;
+  transition: all 0.5s linear;
 `
 
 const ProjectImage = styled.img`
@@ -49,13 +50,15 @@ const WaveBackground = styled(Wave)`
   transform: rotate(180deg) scale(6.5);
   z-index: 1;
   fill: ${({ theme }) => theme.colors.waveOne};
+  transition: all 0.5s linear;
 `
 
 const Wrap = styled.div`
   display: flex;
 	justify-content: space-around;
   height: 100%;
-  background: linear-gradient(to bottom, ${({ theme }) => theme.colors.body} 4%, ${({ theme }) => theme.colors.waveOne} 0%);
+  background: linear-gradient(to bottom, transparent 4%, ${({ theme }) => theme.colors.waveOne} 0%);
+  transition: all 0.5s linear;
   @media only screen and (max-width: 1020px) {
     height: 100px;
   }
@@ -74,11 +77,13 @@ const Info = styled.div`
   background-color: ${({ theme }) => theme.colors.body};
 	box-shadow: 8px 10px 27px -1px rgba(0, 0, 0, 0.12);
   z-index: 2;
+  transition: all 0.5s linear;
 `
 
 const ProjectBody = styled.p`
   font-size: 1.25em;
   line-height: 1.5;
+  transition: all 0.5s linear;
 `
 
 const BackButton = styled.button`

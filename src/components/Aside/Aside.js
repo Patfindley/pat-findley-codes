@@ -10,11 +10,13 @@ const ProjectWrap = styled.section`
 	width: 20%;
   margin: 20px 0;
 	box-shadow: 0px 3px 35px 1px rgba(0, 0, 0, 0.19);
+  transition: all 0.5s linear;
   z-index: 2;
 `
 
 const ProjectInfo = styled.h4`
   font-weight: 500;
+  transition: all 0.5s linear;
 `
 
 export const vertBounce = keyframes`
