@@ -25,6 +25,8 @@ const Input = styled.input`
   height: 100%;
   border-radius: 10px;
   border: solid #c8ccd0 1px;
+  background-color: ${({ theme }) => theme.colors.body};
+  color: ${({ theme }) => theme.colors.text};
   transition: all 800ms;
   &:hover {
     border-color: ${({ theme }) => theme.colors.waveOne};

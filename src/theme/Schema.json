@@ -11,8 +11,8 @@
           "text-decoration" : "none"
         },
         "landing" : {
-          "boxShadow" : "none",
-          "WebkitBoxShadow" : "none"
+          "boxShadow" : "0px 7px 39px 4px rgb(0 0 0 / 35%)",
+          "WebkitBoxShadow" : "0px 0px 39px 4px rgba(0,0,0,0.5)"
         },
         "waveOne" : "#DF562A",
         "waveTwo" : "#E3744E",
