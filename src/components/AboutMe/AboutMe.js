@@ -58,8 +58,6 @@ const BodyContainer = styled.article`
 	padding: 20px;
   background-color: ${({ theme }) => theme.colors.body};
 	box-shadow: 0px 3px 35px 1px rgba(0, 0, 0, 0.19);
-  -webkit-box-shadow: ${({ theme }) => theme.colors.landing.WebkitBoxShadow}; 
-  box-shadow: ${({ theme }) => theme.colors.landing.boxShadow};
   z-index: 2;
   transition: all 0.5s linear;
   @media only screen and (max-width: 768px) {

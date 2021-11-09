@@ -11,7 +11,8 @@ const Wrap = styled.div`
   height: 100%;
   width: 100%;
   overflow: hidden;
-  background: linear-gradient(to bottom, ${({ theme }) => theme.colors.body} 30%, ${({ theme }) => theme.colors.waveFour} 0%);
+  background: linear-gradient(to bottom, transparent 25%, ${({ theme }) => theme.colors.waveFour} 25%);
+  z-index: 2;
 `
 
 const BackgroundWave = styled(Wave)`
@@ -34,6 +35,7 @@ const FormContainer = styled.div`
   margin-bottom: 16px;
 	border-radius: 10px;
   background-color: ${({ theme }) => theme.colors.body};
+  transition: all 0.5s linear;
   z-index: 2;
 	-webkit-box-shadow: ${({ theme }) => theme.colors.WebkitBoxShadow}; 
   box-shadow: ${({ theme }) => theme.colors.boxShadow};
@@ -76,6 +78,10 @@ const Name = styled.input`
   font-size: 20px;
   margin: 5px 0;
   min-height: 35px;
+  background-color: ${({ theme }) => theme.colors.body};
+  color: ${({ theme }) => theme.colors.text};
+  border: 1px solid ${({ theme }) => theme.colors.text};
+  transition: all 0.5s linear;
   &:-webkit-autofill {
     -webkit-box-shadow: none;
   }
@@ -89,6 +95,10 @@ const Email = styled.input`
   font-size: 20px;
   margin: 5px 0;
   min-height: 35px;
+  background-color: ${({ theme }) => theme.colors.body};
+  color: ${({ theme }) => theme.colors.text};
+  border: 1px solid ${({ theme }) => theme.colors.text};
+  transition: all 0.5s linear;
   &:-webkit-autofill {
     -webkit-box-shadow: none;
   }
@@ -102,6 +112,10 @@ const Message = styled.textarea`
   font-size: 20px;
   margin: 5px 0;
   min-height: 35px;
+  background-color: ${({ theme }) => theme.colors.body};
+  color: ${({ theme }) => theme.colors.text};
+  border: 1px solid ${({ theme }) => theme.colors.text};
+  transition: all 0.5s linear;
   &:-webkit-autofill {
     -webkit-box-shadow: none;
   }
