@@ -26,13 +26,17 @@ const Input = styled.input`
   border-radius: 10px;
   border: solid #c8ccd0 1px;
   background-color: ${({ theme }) => theme.colors.body};
+  opacity: 0.5;
   color: ${({ theme }) => theme.colors.text};
+  -webkit-box-shadow: ${({ theme }) => theme.colors.WebkitBoxShadow}; 
+  box-shadow: ${({ theme }) => theme.colors.boxShadow};
   transition: all 800ms;
   &:hover {
     border-color: ${({ theme }) => theme.colors.waveOne};
     box-shadow: 0 0 10px ${({ theme }) => theme.colors.waveOne};
     width: 80%;
-    transition: box-shadow linear 0.2s, width 500ms ease;
+    opacity: 0.8;
+    transition: all linear 0.4s, width 500ms ease;
   }
 `
 

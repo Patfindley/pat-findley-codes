@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import _ from 'lodash';
-import {useTheme} from './theme/useTheme';
-import { getFromLS } from './utils/storage';
-import { ReactComponent as Moon } from './assets/moon.svg';
-import { ReactComponent as Sun } from './assets/sun.svg';
+import {useTheme} from '../../theme/useTheme';
+import { getFromLS } from '../../utils/storage';
+import { ReactComponent as Moon } from '../../assets/moon.svg';
+import { ReactComponent as Sun } from '../../assets/sun.svg';
 
 const Wrapper = styled.div`
   position: fixed;
@@ -17,11 +17,19 @@ const Wrapper = styled.div`
 const SunIcon = styled(Sun)`
   fill: ${({ theme }) => theme.colors.text};
   width: 24px;
+  transition: all 0.5s;
+  &:hover {
+    fill: ${({ theme }) => theme.colors.waveOne};
+  }
 `
 
 const MoonIcon = styled(Moon)`
   fill: ${({ theme }) => theme.colors.text};
   width: 20px;
+  transition: all 0.5s;
+  &:hover {
+    fill: ${({ theme }) => theme.colors.waveOne};
+  }
 `
 
 const ThemeSelector = (props) => {

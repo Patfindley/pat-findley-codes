@@ -9,7 +9,8 @@ const ProjectWrap = styled.section`
 	border-radius: 10px;
 	width: 20%;
   margin: 20px 0;
-	box-shadow: 0px 3px 35px 1px rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: ${({ theme }) => theme.colors.WebkitBoxShadow}; 
+  box-shadow: ${({ theme }) => theme.colors.boxShadow};
   transition: all 0.5s linear;
   z-index: 2;
 `

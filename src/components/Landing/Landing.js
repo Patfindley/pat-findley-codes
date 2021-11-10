@@ -26,7 +26,9 @@ const LandingCircle = styled.div`
   background-color: ${({ theme }) => theme.colors.waveFive};
   -webkit-box-shadow: ${({ theme }) => theme.colors.landing.WebkitBoxShadow}; 
   box-shadow: ${({ theme }) => theme.colors.landing.boxShadow};
-  transition: all 0.5s;
+  transition: all 0.5s;&:hover {
+    transform: scale(1.05);
+  }
 `
 
 const WaveOne = styled(Wave)`

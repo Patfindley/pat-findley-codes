@@ -330,7 +330,8 @@ const AsideWrap = styled.section`
 	width: 20%;
   height: 100%;
   margin: 20px 16px 16px 0;
-	box-shadow: 8px 10px 27px -1px rgba(0, 0, 0, 0.12);
+	-webkit-box-shadow: ${({ theme }) => theme.colors.WebkitBoxShadow}; 
+  box-shadow: ${({ theme }) => theme.colors.boxShadow};
   transition: all 0.5s linear;
   z-index: 2;
   &.link, :visited, :link {

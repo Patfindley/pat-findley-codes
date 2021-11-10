@@ -37,7 +37,6 @@ const PhotoContainer = styled.div`
   overflow: hidden;
   z-index: 2;
   background: linear-gradient(to bottom, ${({ theme }) => theme.colors.body} -3%, ${({ theme }) => theme.colors.waveThree} 88%)
-  
   @media only screen and (max-width: 280px) {
   height: 250px;
       width: 250px;

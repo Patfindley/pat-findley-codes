@@ -36,6 +36,8 @@ const ProjectImage = styled.img`
 	height: 259px;
   border-radius: 5px;
   margin: 35px 0 0 0;
+  -webkit-box-shadow: ${({ theme }) => theme.colors.WebkitBoxShadow}; 
+  box-shadow: ${({ theme }) => theme.colors.boxShadow};
   @media only screen and (max-width: 1020px) {
     width: 276px;
     height: 158px;
@@ -75,7 +77,8 @@ const Info = styled.div`
 	border-radius: 10px;
   margin: 20px 0;
   background-color: ${({ theme }) => theme.colors.body};
-	box-shadow: 8px 10px 27px -1px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: ${({ theme }) => theme.colors.WebkitBoxShadow}; 
+  box-shadow: ${({ theme }) => theme.colors.boxShadow};
   z-index: 2;
   transition: all 0.5s linear;
 `
