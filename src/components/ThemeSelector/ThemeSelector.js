@@ -40,10 +40,8 @@ const ThemeSelector = (props) => {
 	const { setMode } = useTheme();
 
 	const themeSwitcher = (selectedTheme) => {
-		console.log(selectedTheme, 'theme switcher');
 		setMode(selectedTheme);
 		props.setter(selectedTheme);
-    console.log(currentTheme, 'current')
     setCurrentTheme(selectedTheme)
 	};
 

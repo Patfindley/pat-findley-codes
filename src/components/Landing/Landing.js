@@ -87,18 +87,18 @@ const Landing = () => {
   }, [])
 
   return (
-    <MainView>
-      <LandingTitle> PAT FINDLEY CODES</LandingTitle>
-      <Link to='/Projects'>
-    <LandingCircle>
-      <WaveOne className='wave-1' alt='wave' />
-      <WaveTwo className='wave-2' alt='wave' />
-      <WaveThree className='wave-3'alt='wave' />
-      <WaveFour className='wave-4'alt='wave' />
-    </LandingCircle>
-    </Link>
-    </MainView>
-  )
+		<MainView>
+			<LandingTitle> PAT FINDLEY CODES</LandingTitle>
+			<Link to="/Projects">
+				<LandingCircle>
+					<WaveOne className="wave-1" alt="wave" />
+					<WaveTwo className="wave-2" alt="wave" />
+					<WaveThree className="wave-3" alt="wave" />
+					<WaveFour className="wave-4" alt="wave" />
+				</LandingCircle>
+			</Link>
+		</MainView>
+	);
 }
 
 export default Landing;

@@ -76,7 +76,7 @@ const App = () => {
 					<ThemeProvider theme={selectedTheme}>
 						<GlobalStyles />
 						<SiteContainer style={{ fontFamily: selectedTheme.font }}>
-                <ThemeSelector setter={ setSelectedTheme } theme={theme} />
+							<ThemeSelector setter={setSelectedTheme} theme={theme} />
 							<Switch>
 								<Route exact path="/" render={() => <Landing />} />
 								<Route
@@ -96,10 +96,9 @@ const App = () => {
 									path="/projects"
 									render={() => (
 										<div>
-											<Nav 
-                        windowWidth={windowWidth} />
+											<Nav windowWidth={windowWidth} />
 											<Projects
-                        theme={theme}
+												theme={theme}
 												projects={projects}
 												filterProjects={filterProjects}
 												filteredProjects={filteredProjects}
@@ -125,14 +124,13 @@ const App = () => {
 										<MainContent>
 											<Nav windowWidth={windowWidth} />
 											<ResumeWrap>
-                      <iframe
-                          src={resume}
-                          title="Pat Findley Resume"
-                          frameBorder="0"
-                          scrolling="auto"
-                          height="100%"
-                          width="100%"
-                      ></iframe>
+												<iframe
+													src={resume}
+													title="Pat Findley Resume"
+													frameBorder="0"
+													scrolling="auto"
+													height="100%"
+													width="100%"></iframe>
 											</ResumeWrap>
 										</MainContent>
 									)}
@@ -149,7 +147,7 @@ const App = () => {
 										) : null
 									}
 								/>
-								<Redirect to="/Projects"/>
+								<Redirect to="/Projects" />
 							</Switch>
 						</SiteContainer>
 					</ThemeProvider>

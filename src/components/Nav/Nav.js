@@ -173,14 +173,13 @@ const Nav = ({ windowWidth }) => {
   }
   
   return (
-		<HeaderNav className='header-nav'>
-			<BurgerContainer
-				onClick={() => setBurgerActive(!burgerActive)}>
+		<HeaderNav className="header-nav">
+			<BurgerContainer onClick={() => setBurgerActive(!burgerActive)}>
 				<Patty className="patty top"></Patty>
 				<Patty className="patty mid"></Patty>
 				<Patty className="patty bottom"></Patty>
 			</BurgerContainer>
-			<NavOpen className='nav-open'>
+			<NavOpen className="nav-open">
 				<NavBarLinks className="nav-links">
 					<NLink
 						to="/about"

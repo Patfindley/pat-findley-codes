@@ -205,12 +205,13 @@ const Contact = () => {
   return (
 		<Wrap>
 			<BackgroundWave className="contact-wave" alt="wave" />
-			<FormContainer className='form-container'>
+			<FormContainer className="form-container">
 				<Hello>
-          {submitted? 
-            <Head ref={contactHead}> SENT! </Head> :
-            <Head ref={contactHead}> SAY HELLO! </Head>
-          }
+					{submitted ? (
+						<Head ref={contactHead}> SENT! </Head>
+					) : (
+						<Head ref={contactHead}> SAY HELLO! </Head>
+					)}
 				</Hello>
 				<Form
 					action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSed7xFAkBBdilezfZe5ek5uCfr1BLEKcrlloZpu-sE0boxrbQ/formResponse"
@@ -218,43 +219,32 @@ const Contact = () => {
 					onSubmit={(e) => {
 						submitForm(e);
 					}}>
-					<Label htmlFor="name-input">
-						What's your name?
-					</Label>
+					<Label htmlFor="name-input">What's your name?</Label>
 					<Name
 						htmlFor="name-input"
 						type="text"
 						ref={contactName}
 						name="entry.2005620554"
 						placeholder="Name"
-						required="required">
-          </Name>
-					<Label htmlFor="email-input">
-						How can I reach you best?
-					</Label>
+						required="required"></Name>
+					<Label htmlFor="email-input">How can I reach you best?</Label>
 					<Email
 						htmlFor="email-input"
 						type="email"
 						ref={contactEmail}
 						name="entry.1045781291"
 						placeholder="E-Mail"
-						required="required">
-          </Email>
-					<Label htmlFor="message-input">
-						What's on your mind?
-					</Label>
-          <Message 
-            htmlFor='message-input' 
-            rows='5' 
-            cols='10'
-            ref={contactMessage}
-            name="entry.839337160"
-            placeholder="Let's get coffee!"
-            required="required">
-          </Message>
-					<Submit type="submit">
-						Submit
-					</Submit>
+						required="required"></Email>
+					<Label htmlFor="message-input">What's on your mind?</Label>
+					<Message
+						htmlFor="message-input"
+						rows="5"
+						cols="10"
+						ref={contactMessage}
+						name="entry.839337160"
+						placeholder="Let's get coffee!"
+						required="required"></Message>
+					<Submit type="submit">Submit</Submit>
 				</Form>
 			</FormContainer>
 		</Wrap>

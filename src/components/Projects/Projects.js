@@ -411,5 +411,3 @@ export const Projects = ({ projects, filterProjects, filteredProjects, handleCli
 	);
 }
 export default Projects;
-
-{/* <Aside selectedProject={shortAboutMe} /> */}

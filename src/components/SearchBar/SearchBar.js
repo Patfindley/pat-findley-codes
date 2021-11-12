@@ -44,18 +44,18 @@ const SearchBar = ({ filterProjects }) => {
   const searchValue = useRef()
 
     return (
-      <Wrap>
-      <SearchForm>
-        <Input
-          type="text"
-          placeholder="search topic"
-          ref={searchValue}
-          name="input"
-          onChange={() => filterProjects(searchValue.current.value)}
-        />
-      </SearchForm>
-      </Wrap>
-    )
+			<Wrap>
+				<SearchForm>
+					<Input
+						type="text"
+						placeholder="search topic"
+						ref={searchValue}
+						name="input"
+						onChange={() => filterProjects(searchValue.current.value)}
+					/>
+				</SearchForm>
+			</Wrap>
+		);
 }
 
 export default SearchBar;
