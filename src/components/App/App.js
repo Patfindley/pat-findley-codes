@@ -5,7 +5,6 @@ import { GlobalStyles } from '../../theme/GlobalStyles';
 import WebFont from 'webfontloader';
 import { useTheme } from '../../theme/useTheme'
 import ThemeSelector from '../ThemeSelector/ThemeSelector';
-import './App.css';
 import Landing from '../Landing/Landing';
 import Nav from '../Nav/Nav'
 import Projects from '../Projects/Projects.js';
@@ -13,7 +12,7 @@ import ProjectInfo from '../ProjectInfo/ProjectInfo.js';
 import Contact from '../Contact/Contact.js'
 import AboutMe from '../AboutMe/AboutMe.js'
 import { projectsData } from '../../assets/data';
-import resume from '../../assets/Pat_Findley_Resume.png';
+import resume from '../../assets/Pat-Findley-Resume.pdf';
 
 const SiteContainer = styled.div`
 margin-inline: auto;
@@ -21,8 +20,18 @@ height: 100vh;
 font-weight: 200;
 `
 
-const SelectorWrap = styled.div`
-  height: 0px;
+const MainContent = styled.section`
+  display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: space-evenly;
+  overflow-x: hidden;
+`
+
+const ResumeWrap = styled.div`
+  display: flex;
+  justify-content: center;
+  height: 100%
 `
 
 const App = () => {
@@ -34,8 +43,6 @@ const App = () => {
   const [windowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    console.log(selectedTheme, 'selectedTheme')
-    console.log(theme, 'theme')
     setSelectedTheme(theme);
    }, [themeLoaded]);
 
@@ -69,9 +76,7 @@ const App = () => {
 					<ThemeProvider theme={selectedTheme}>
 						<GlobalStyles />
 						<SiteContainer style={{ fontFamily: selectedTheme.font }}>
-              {/* <div> */}
                 <ThemeSelector setter={ setSelectedTheme } theme={theme} />
-              {/* </div> */}
 							<Switch>
 								<Route exact path="/" render={() => <Landing />} />
 								<Route
@@ -80,9 +85,9 @@ const App = () => {
 									render={() => (
 										<div>
 											<Nav windowWidth={windowWidth} />
-											<section className="main-content">
+											<MainContent>
 												<AboutMe />
-											</section>
+											</MainContent>
 										</div>
 									)}
 								/>
@@ -107,22 +112,29 @@ const App = () => {
 									exact
 									path="/contact"
 									render={() => (
-										<section className="main-content">
+										<MainContent>
 											<Nav windowWidth={windowWidth} />
 											<Contact windowWidth={windowWidth} />
-										</section>
+										</MainContent>
 									)}
 								/>
 								<Route
 									exact
 									path="/resume"
 									render={() => (
-										<section className="main-content">
+										<MainContent>
 											<Nav windowWidth={windowWidth} />
-											<div className="resume-wrap">
-												<img className="resume" src={resume} alt="resume" />
-											</div>
-										</section>
+											<ResumeWrap>
+                      <iframe
+                          src={resume}
+                          title="Pat Findley Resume"
+                          frameBorder="0"
+                          scrolling="auto"
+                          height="100%"
+                          width="100%"
+                      ></iframe>
+											</ResumeWrap>
+										</MainContent>
 									)}
 								/>
 								<Route
@@ -130,14 +142,14 @@ const App = () => {
 									path="/:id"
 									render={() =>
 										selectedProject ? (
-											<div className="project-info-view">
+											<div>
 												<Nav windowWidth={windowWidth} />
 												<ProjectInfo selectedProject={selectedProject} />
 											</div>
 										) : null
 									}
 								/>
-								<Redirect to="/Projects" />
+								<Redirect to="/Projects"/>
 							</Switch>
 						</SiteContainer>
 					</ThemeProvider>

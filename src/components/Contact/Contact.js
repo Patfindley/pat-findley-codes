@@ -35,7 +35,7 @@ const FormContainer = styled.div`
   margin-bottom: 16px;
 	border-radius: 10px;
   background-color: ${({ theme }) => theme.colors.body};
-  transition: all 0.5s linear;
+  transition: background-color 0.5s linear;
   z-index: 2;
 	-webkit-box-shadow: ${({ theme }) => theme.colors.WebkitBoxShadow}; 
   box-shadow: ${({ theme }) => theme.colors.boxShadow};
@@ -127,14 +127,14 @@ const Message = styled.textarea`
 const Submit = styled.button`
   display: inline-block;
   padding:0.35em 1.2em;
-  border:0.1em solid ${({ theme }) => theme.colors.waveFour};
+  border:0.1em solid ${({ theme }) => theme.colors.waveTwo};
   margin:0 0.3em 0.3em 0;
   border-radius:0.12em;
   box-sizing: border-box;
-  text-decoration:none;
+  text-decoration: none;
   font-family:'Roboto',sans-serif;
   font-weight:300;
-  color: ${({ theme }) => theme.colors.waveFour};
+  color: ${({ theme }) => theme.colors.waveTwo};
   background-color: transparent;
   text-align:center;
   position: relative;
@@ -142,8 +142,8 @@ const Submit = styled.button`
   transition: all 600ms;
   width: 100px;
   &:hover {
-    color: ${({ theme }) => theme.colors.text};
-    background-color: ${({ theme }) => theme.colors.waveFour};
+    color: ${({ theme }) => theme.colors.body};
+    background-color: ${({ theme }) => theme.colors.waveTwo};
   }
 `
 
