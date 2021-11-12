@@ -1,8 +1,83 @@
 import { useEffect } from 'react';
 import { gsap } from 'gsap';
+import styled from 'styled-components'
+import { Link } from '../../theme/GlobalStyles';
+import { ReactComponent as Wave } from '../../assets/wave.svg';
 import './AboutMe.css'
 import me_photo from '../../assets/me_photo.JPG'
-import wave3 from '../../assets/wave3-color.svg'
+
+const Wrap = styled.div`
+  display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+  overflow: hidden;
+  background: linear-gradient(to bottom, transparent 30%, ${({ theme }) => theme.colors.waveThree} 0%);
+  transition: all 0.5s linear;
+`
+
+const Greeting = styled.h2`
+  margin-top: 75px;
+`
+
+const WaveBackground = styled(Wave)`
+  position: relative;
+  height: 100px;
+  top: 280px;
+  transform: rotate(180deg) scale(6.5);
+  overflow: hidden;
+  z-index: 1;
+  fill: ${({ theme }) => theme.colors.waveThree};
+`
+
+const PhotoContainer = styled.div`
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 2;
+  background: linear-gradient(to bottom, ${({ theme }) => theme.colors.body} -3%, ${({ theme }) => theme.colors.waveThree} 88%)
+  @media only screen and (max-width: 280px) {
+  height: 250px;
+      width: 250px;
+    }
+`
+
+const Photo = styled.img`
+  width: 100%;
+	position: relative;
+`
+
+const BodyContainer = styled.article`
+  border-radius: 10px;
+	width: 36em;
+	font-size: 22px;
+	line-height: 1.4;
+	margin: 25px;
+	padding: 20px;
+  background-color: ${({ theme }) => theme.colors.body};
+	-webkit-box-shadow: ${({ theme }) => theme.colors.WebkitBoxShadow}; 
+  box-shadow: ${({ theme }) => theme.colors.boxShadow};
+  z-index: 2;
+  transition: all 0.5s linear;
+  @media only screen and (max-width: 768px) {
+    font-size: 20px;
+        width: 86%;
+      }
+  @media only screen and (max-width: 425px) {
+    font-size: 18px;
+        width: 79%;
+      }
+  @media only screen and (max-width: 320px) {
+    font-size: 17px;
+        width: 78%;
+      }  
+`
+
+const Check = styled.span`
+  color: ${({ theme }) => theme.colors.waveThree};
+`
+
 
 const AboutMe = () => {
   useEffect(() => {
@@ -11,24 +86,23 @@ const AboutMe = () => {
   }, [])
 
   return (
-		<div className="about-me-wrap">
-				<h2 className="greeting">Hi, I'm Pat Findley</h2>
-			<img className="about-wave" src={wave3} alt="wave" />
-			<div className="me-picture-container">
-				<img className="me-photo" src={me_photo} alt="Pat Findley" />
-			</div>
-			<div className="about-me-body-container">
+		<Wrap>
+				<Greeting>Hi, I'm Pat Findley</Greeting>
+        <WaveBackground className='about-wave' alt="wave" />
+			<PhotoContainer>
+				<Photo src={me_photo} alt="Pat Findley" />
+			</PhotoContainer>
+			<BodyContainer className="about-me-body-container">
 				<p className="about-me-body">
 					{" "}
 					I'm a web developer, father, husband, service industry veteran,{" "}
-					<a
-						className="active-link"
+					<Link
 						style={{ animationDelay: "0.07s" }}
 						href="https://herenowband.com/"
 						target="_blank"
 						rel="noreferrer">
 						musician
-					</a>
+					</Link>
 					, creator, doer, and (aspiring) optimist.
 					<br />
 					<br />
@@ -44,29 +118,27 @@ const AboutMe = () => {
 					started thinking about who I was, and what else I was capable of. 13
 					years in the service industry felt like enough. I looked into web
 					development, dipped my toes in the water with some{" "}
-					<a
-						className="active-link"
+					<Link
 						style={{ animationDelay: "0.14s" }}
 						href="https://www.codecademy.com/"
 						target="_blank"
 						rel="noreferrer">
 						codecademy
-					</a>{" "}
+					</Link>{" "}
 					courses and found something that I never thought would fit me, but
 					checked <em>every box</em>.<br />
-					<span className="check">&#10003;</span>Deep <br />
-					<span className="check">&#10003;</span>Creative <br />
-					<span className="check">&#10003;</span>Collaboritive <br />I enrolled
+					<Check>&#10003;</Check>Deep <br />
+					<Check className="check">&#10003;</Check>Creative <br />
+					<Check className="check">&#10003;</Check>Collaboritive <br />I enrolled
 					in{" "}
-					<a
-						className="active-link"
+					<Link
 						style={{ animationDelay: "0.21s" }}
 						href="https://turing.io/"
 						target="_blank"
 						rel="noreferrer">
 						{" "}
 						Turing School of Software and Design's
-					</a>{" "}
+					</Link>{" "}
 					Front-End program, unaware it would become the first accredited coding
 					bootcamp, and can't believe what I was able to learn in such a short
 					time. I built <strong>A LOT</strong> of basic vanilla JS apps, And
@@ -91,18 +163,17 @@ const AboutMe = () => {
 					<br />
 					I'm, Currently playing with Context API, Theming, and GraphQL, While
 					polishing up an App built with some friends called{" "}
-					<a
-						className="active-link"
+					<Link
 						style={{ animationDelay: "0.28s" }}
 						href="https://mysterious-cove-94790.herokuapp.com/"
 						target="_blank"
 						rel="noreferrer">
 						"What We Eatin"
-					</a>
+					</Link>
 					.
 				</p>
-			</div>
-		</div>
+			</BodyContainer>
+		</Wrap>
 	);
 }
 

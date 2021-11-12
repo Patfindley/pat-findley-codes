@@ -1,7 +1,151 @@
 import { useRef, useState, useEffect } from 'react';
 import { gsap } from 'gsap';
-import './Contact.css'
-import wave4 from '../../assets/wave4-color.svg'
+import styled from 'styled-components'
+import { horizontalBounce } from '../../theme/GlobalStyles'
+import { ReactComponent as Wave } from '../../assets/wave.svg';
+
+const Wrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(to bottom, transparent 25%, ${({ theme }) => theme.colors.waveFour} 25%);
+  z-index: 2;
+`
+
+const BackgroundWave = styled(Wave)`
+  position: relative;
+  height: 100px;
+  top: 68px;
+  transform: rotate(180deg) scale(6.5);
+  overflow: hidden;
+  z-index: 1;
+  fill: ${({ theme }) => theme.colors.waveFour};
+`
+
+const FormContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+	height: 100%;
+  padding: 20px;
+  margin-top:25px;
+  margin-bottom: 16px;
+	border-radius: 10px;
+  background-color: ${({ theme }) => theme.colors.body};
+  transition: background-color 0.5s linear;
+  z-index: 2;
+	-webkit-box-shadow: ${({ theme }) => theme.colors.WebkitBoxShadow}; 
+  box-shadow: ${({ theme }) => theme.colors.boxShadow};
+  @media only screen and (max-width: 1024px) {
+      width: 75%;
+    }
+  @media only screen and (max-width: 425px) {
+      width: 79%;
+    }
+  @media only screen and (max-width: 320px) {
+      height: 75%;
+    }
+`
+
+const Hello = styled.div`
+  align-self: center;
+  width: 200px;
+  height: 75px;
+  border-bottom: 2px solid ${({ theme }) => theme.colors.text};
+`
+
+const Head = styled.h1`
+  text-align: center;
+`
+
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  margin: 16px;
+  z-index: 2;
+`
+
+const Label = styled.label`
+  font-weight: 400;
+`
+
+const Name = styled.input`
+  max-width: 300px;
+  font-size: 20px;
+  margin: 5px 0;
+  min-height: 35px;
+  background-color: ${({ theme }) => theme.colors.body};
+  color: ${({ theme }) => theme.colors.text};
+  border: 1px solid ${({ theme }) => theme.colors.text};
+  transition: all 0.5s linear;
+  &:-webkit-autofill {
+    -webkit-box-shadow: none;
+  }
+  &:focus {
+    outline-color: ${({ theme }) => theme.colors.waveFour};
+  }
+`
+
+const Email = styled.input`
+  max-width: 425px;
+  font-size: 20px;
+  margin: 5px 0;
+  min-height: 35px;
+  background-color: ${({ theme }) => theme.colors.body};
+  color: ${({ theme }) => theme.colors.text};
+  border: 1px solid ${({ theme }) => theme.colors.text};
+  transition: all 0.5s linear;
+  &:-webkit-autofill {
+    -webkit-box-shadow: none;
+  }
+  &:focus {
+    outline-color: ${({ theme }) => theme.colors.waveFour};
+  }
+`
+
+const Message = styled.textarea`
+  height: 50%;
+  font-size: 20px;
+  margin: 5px 0;
+  min-height: 35px;
+  background-color: ${({ theme }) => theme.colors.body};
+  color: ${({ theme }) => theme.colors.text};
+  border: 1px solid ${({ theme }) => theme.colors.text};
+  transition: all 0.5s linear;
+  &:-webkit-autofill {
+    -webkit-box-shadow: none;
+  }
+  &:focus {
+    outline-color: ${({ theme }) => theme.colors.waveFour};
+  }
+`
+
+const Submit = styled.button`
+  display: inline-block;
+  padding:0.35em 1.2em;
+  border:0.1em solid ${({ theme }) => theme.colors.waveTwo};
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  color: ${({ theme }) => theme.colors.waveTwo};
+  background-color: transparent;
+  text-align:center;
+  position: relative;
+  animation: ${horizontalBounce} 6s infinite linear;
+  transition: all 600ms;
+  width: 100px;
+  &:hover {
+    color: ${({ theme }) => theme.colors.body};
+    background-color: ${({ theme }) => theme.colors.waveTwo};
+  }
+`
 
 const Contact = () => {
   const contactHead = useRef()
@@ -59,65 +203,51 @@ const Contact = () => {
   }
 
   return (
-		<div className="contact-wrap">
-			<img className="contact-wave" src={wave4} alt="wave" />
-			<div className="form-container">
-				<div className="contact-hello-wrap">
-          {submitted? 
-            <h1 className="contact-head" ref={contactHead}> SENT! </h1> :
-            <h1 className="contact-head" ref={contactHead}> SAY HELLO! </h1>
-          }
-				</div>
-				<form
-					className="contact-form"
+		<Wrap>
+			<BackgroundWave className="contact-wave" alt="wave" />
+			<FormContainer className="form-container">
+				<Hello>
+					{submitted ? (
+						<Head ref={contactHead}> SENT! </Head>
+					) : (
+						<Head ref={contactHead}> SAY HELLO! </Head>
+					)}
+				</Hello>
+				<Form
 					action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSed7xFAkBBdilezfZe5ek5uCfr1BLEKcrlloZpu-sE0boxrbQ/formResponse"
 					method="POST"
 					onSubmit={(e) => {
 						submitForm(e);
 					}}>
-					<label className="form-field label" htmlFor="name-input">
-						What's your name?
-					</label>
-					<input
-						className="form-name form-field input"
+					<Label htmlFor="name-input">What's your name?</Label>
+					<Name
 						htmlFor="name-input"
 						type="text"
 						ref={contactName}
 						name="entry.2005620554"
 						placeholder="Name"
-						required="required">
-          </input>
-					<label className="form-field label" htmlFor="email-input">
-						How can I reach you best?
-					</label>
-					<input
-						className="form-email form-field input"
+						required="required"></Name>
+					<Label htmlFor="email-input">How can I reach you best?</Label>
+					<Email
 						htmlFor="email-input"
 						type="email"
 						ref={contactEmail}
 						name="entry.1045781291"
 						placeholder="E-Mail"
-						required="required">
-          </input>
-					<label className="form-field label" htmlFor="message-input">
-						What's on your mind?
-					</label>
-          <textarea 
-            className="form-message form-field input"
-            htmlFor='message-input' 
-            rows='5' 
-            cols='10'
-            ref={contactMessage}
-            name="entry.839337160"
-            placeholder="Let's get coffee!"
-            required="required">
-          </textarea>
-					<button className="submit-button" type="submit">
-						Submit
-					</button>
-				</form>
-			</div>
-		</div>
+						required="required"></Email>
+					<Label htmlFor="message-input">What's on your mind?</Label>
+					<Message
+						htmlFor="message-input"
+						rows="5"
+						cols="10"
+						ref={contactMessage}
+						name="entry.839337160"
+						placeholder="Let's get coffee!"
+						required="required"></Message>
+					<Submit type="submit">Submit</Submit>
+				</Form>
+			</FormContainer>
+		</Wrap>
 	);
 }
 

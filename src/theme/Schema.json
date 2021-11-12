@@ -1,0 +1,52 @@
+{
+  "data" : {
+    "light" : {
+      "id" : "T_001",
+      "name" : "light",
+      "colors" : {
+        "body" : "#f9f9f9",
+        "text" : "#000000",
+        "link" : {
+          "text" : "#0E151B",
+          "text-decoration" : "none"
+        },
+        "landing" : {
+          "boxShadow" : "0px 7px 39px 4px rgb(0 0 0 / 35%)",
+          "WebkitBoxShadow" : "0px 0px 39px 4px rgba(0,0,0,0.5)"
+        },
+        "boxShadow" : "0px 7px 15px 4px rgb(0 0 0 / 35%)",
+        "WebkitBoxShadow" : "0px 7px 15px 4px rgb(0 0 0 / 35%)",
+        "waveOne" : "#DF562A",
+        "waveTwo" : "#E3744E",
+        "waveThree" : "#EA9071",
+        "waveFour" : "#EEAA95",
+        "waveFive" : "#F4C7B8"
+      },
+      "font" : "Raleway"
+    },
+    "dark" : {
+      "id" : "T_002",
+      "name" : "dark",
+      "colors" : {
+        "body" : "#020E12",
+        "text" : "#F9F9F9",
+        "link" : {
+          "text" : "#F9F9F9",
+          "text-decoration" : "none"
+        },
+        "landing" : {
+          "boxShadow" : "0px 0px 39px 4px rgba(249,249,249,0.27)",
+          "WebkitBoxShadow" : "0px 0px 39px 4px rgba(249,249,249,0.27)"
+        },
+        "boxShadow" : "0px 0px 17px 1px rgba(249,249,249,0.33)",
+        "WebkitBoxShadow" : "0px 0px 17px 1px rgba(249,249,249,0.33)",
+        "waveOne" : "#0B6A81",
+        "waveTwo" : "#21788C",
+        "waveThree" : "#358496",
+        "waveFour" : "#478FA0",
+        "waveFive" : "#78ADBA"
+      },
+      "font" : "Raleway"
+    }
+  }
+}

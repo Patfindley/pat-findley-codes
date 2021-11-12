@@ -1,46 +1,78 @@
-import './Aside.css'
+import styled, { keyframes } from 'styled-components'
+
+const ProjectWrap = styled.section`
+  text-align: left;
+	font-size: 1.3em;
+	line-height: 1.4;
+	padding: 20px;
+  background-color: ${({ theme }) => theme.colors.body};
+	border-radius: 10px;
+	width: 20%;
+  margin: 20px 0;
+  -webkit-box-shadow: ${({ theme }) => theme.colors.WebkitBoxShadow}; 
+  box-shadow: ${({ theme }) => theme.colors.boxShadow};
+  transition: all 0.5s linear;
+  z-index: 2;
+`
+
+const ProjectInfo = styled.h4`
+  font-weight: 500;
+  transition: all 0.5s linear;
+`
+
+export const vertBounce = keyframes`
+0%{top: 0em}
+40%{top: 0em}
+43%{top: -0.3em}
+46%{top: 0em}
+48%{top: -0.1em}
+50%{top: 0em}
+100%{top: 0em;}
+`
+
+export const Link = styled.a`
+font-weight: 400;
+color: ${({ theme }) => theme.colors.text};
+text-decoration: none;
+position: relative;
+animation: ${vertBounce} 4.5s infinite linear;
+transition: 300ms;
+&:hover {
+  color: ${({ theme }) => theme.colors.waveThree};
+  transition: color 200ms;
+  }
+`
 
 const Aside = ({ selectedProject }) => {
-
-  if (selectedProject.id === 0) {
     return (
-      <section className='aside-wrap'>
-        <div dangerouslySetInnerHTML={{__html: selectedProject.body}}></div>
-    </section>
-    )
-  } else {
-    return (
-			<section className="aside-project-wrap">
+			<ProjectWrap>
 				<h1>{selectedProject.name}</h1>
-				<a
-					className="active-link"
+				<Link
 					style={{ animationDelay: "0.07s" }}
 					href={selectedProject.gitHub}
 					target="_blank"
 					rel="noreferrer">
 					{" "}
 					GitHub{" "}
-				</a>
+				</Link>
 				{selectedProject.deploy.length > 1 && (
-					<a
-						className="active-link"
+					<Link
 						style={{ animationDelay: "0.14s" }}
 						href={selectedProject.deploy}
 						target="_blank"
 						rel="noreferrer">
 						{" "}
 						Deploy{" "}
-					</a>
+					</Link>
 				)}
-				<h4 className="aside-project-info">
+				<ProjectInfo>
 					<strong>Date:</strong> {selectedProject.date}
-				</h4>
-				<h4 className="aside-project-info">
+				</ProjectInfo>
+				<ProjectInfo>
 					<strong>Technologies:</strong> {selectedProject.technology.join(", ")}
-				</h4>
-			</section>
+				</ProjectInfo>
+			</ProjectWrap>
 		);
-  }
 }
 
 export default Aside;

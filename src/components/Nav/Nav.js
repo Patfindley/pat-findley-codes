@@ -1,9 +1,136 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink } from "react-router-dom";
 import { gsap } from "gsap"
-import './Nav.css';
-import github_mark from '../../assets/GitHub-Mark-32px.png'
-import linkedin from '../../assets/linkedin-logo.png'
+import styled from 'styled-components';
+import { ReactComponent as github_icon } from '../../assets/github.svg';
+import { ReactComponent as linkedin_icon } from '../../assets/linkedin.svg';
+
+const HeaderNav = styled.nav`
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 76px;
+  background-color: ${({ theme }) => theme.colors.body};
+  transition: all 0.5s linear;
+  z-index: 4;
+`
+const BurgerContainer = styled.div`
+  @media only screen and (max-width: 768px) {
+  position: absolute;
+  top: 10px;
+  }
+`
+
+const Patty = styled.span`
+  visibility: hidden;
+  display: block;
+  position: relative;
+  top: 23px;
+  height: 4px;
+  width: 40px;
+  background-color: ${({ theme }) => theme.colors.text};
+  border-radius: 10px;
+  margin: 5px 20px;
+  transition: all 800ms;
+  @media only screen and (max-width: 768px) {
+    visibility: visible;
+    z-index: 3;
+  }
+`
+
+const NavOpen = styled.div`
+  width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  @media only screen and (max-width: 768px) {
+    pointer-events: none;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 86px;
+    z-index: 3;
+  }
+`
+
+const NavBarLinks = styled.ul`
+  margin: 0;
+  padding: 0;
+  width: 70%;
+  display: flex;
+  list-style-type: none;
+  align-content: stretch;
+  align-items: baseline;
+  justify-content: space-evenly;
+  font-size: 1.5em;
+  font-weight: 400;
+  z-index: 2;
+  @media only screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50%;
+  }
+`
+
+const NLink = styled(NavLink)`
+  &.nav-selected {
+    border-bottom: 2px solid ${({ theme }) => theme.colors.waveOne};
+    transition: all 0.5s;
+  }
+  &:visited {
+    color: ${({ theme }) => theme.colors.text};
+	  text-decoration: none;
+  }
+  &:link {
+    color: ${({ theme }) => theme.colors.text};
+	  text-decoration: none;
+  }
+`
+
+const ListItem = styled.li`
+  font-weight: 600;
+  transition: all 800ms;
+  &:hover {
+    color: ${({ theme }) => theme.colors.waveThree};
+    transition: color 350ms;
+  }
+`
+
+const Socials = styled.div`
+  width: 20%;
+  display: flex;
+  justify-content: space-evenly;
+  z-index: 2;
+  @media only screen and (max-width: 768px) {
+    width: 42%;
+    justify-content: space-around;
+  }
+`
+
+const Github = styled(github_icon)`
+  width: 1.8em;
+  fill: ${({ theme }) => theme.colors.text};
+  transition: all 800ms;
+  &:hover {
+    fill: ${({ theme }) => theme.colors.waveOne};
+    transition: all 500ms;
+  }
+  `
+
+const Linkedin = styled(linkedin_icon)`
+  width: 1.8em;
+  fill: ${({ theme }) => theme.colors.text};
+  transition: all 800ms;
+  &:hover {
+    fill: ${({ theme }) => theme.colors.waveOne};
+    transition: fill 500ms;
+  }
+  `
 
 const Nav = ({ windowWidth }) => {
   const [burgerActive, setBurgerActive] = useState(false)
@@ -46,51 +173,49 @@ const Nav = ({ windowWidth }) => {
   }
   
   return (
-		<nav className="header-nav">
-			<div
-				className="burger-container"
-				onClick={() => setBurgerActive(!burgerActive)}>
-				<span className="patty top"></span>
-				<span className="patty mid"></span>
-				<span className="patty bottom"></span>
-			</div>
-			<div className="nav-open">
-				<ul className="nav-links">
-					<NavLink
+		<HeaderNav className="header-nav">
+			<BurgerContainer onClick={() => setBurgerActive(!burgerActive)}>
+				<Patty className="patty top"></Patty>
+				<Patty className="patty mid"></Patty>
+				<Patty className="patty bottom"></Patty>
+			</BurgerContainer>
+			<NavOpen className="nav-open">
+				<NavBarLinks className="nav-links">
+					<NLink
 						to="/about"
 						activeClassName="nav-selected"
 						onClick={() => tl.reverse()}>
-						<li>ABOUT</li>
-					</NavLink>
-					<NavLink
+						<ListItem>ABOUT</ListItem>
+					</NLink>
+					<NLink
 						to="/projects"
 						activeClassName="nav-selected"
 						onClick={() => tl.reverse()}>
-						<li>PROJECTS</li>
-					</NavLink>
-					<NavLink
+						<ListItem>PROJECTS</ListItem>
+					</NLink>
+					<NLink
 						to="/contact"
 						activeClassName="nav-selected"
 						onClick={() => tl.reverse()}>
-						<li>CONTACT</li>
-					</NavLink>
-				</ul>
-				<div className="nav-socials">
+						<ListItem>CONTACT</ListItem>
+					</NLink>
+				</NavBarLinks>
+				<Socials>
 					<a
 						href="https://github.com/Patfindley"
 						target="_blank"
 						rel="noreferrer">
-						<img className="socials github" src={github_mark} alt="github" />
+						<Github alt="github" />
 					</a>
 					<a
 						href="https://www.linkedin.com/in/patfindley/"
 						target="_blank"
 						rel="noreferrer">
-						<img className="socials linkedin" src={linkedin} alt="linkedin" />
+						<Linkedin alt="linkedin" />
 					</a>
-				</div>
-			</div>
-		</nav>
+				</Socials>
+			</NavOpen>
+		</HeaderNav>
 	);
 }
 
