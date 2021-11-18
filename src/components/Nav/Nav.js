@@ -150,23 +150,6 @@ const Nav = ({ windowWidth }) => {
     }
   }, [tl, windowWidth])
 
-  // useEffect(() => {
-  //   tl.reversed() ? tl.play() : tl.reverse()
-  // }, [burgerActive, tl])
-
-  // useEffect(() => {
-  //   handleScroll()
-  // }, [burgerActive])
-
-  // useEffect(() => {
-  //   handleNav()
-  // }, [burgerActive])
-
-
-  // const handleScroll = () => {
-  //   !burgerActive ? enableScroll() : disableScroll();
-  // }
-
   const handleNav = () => {
     if (burgerActive) {
       console.log(burgerActive, 'burgerActive');
