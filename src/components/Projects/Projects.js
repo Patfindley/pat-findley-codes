@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
-import { Link } from '../../theme/GlobalStyles';
+import { LinkStyle } from '../../theme/GlobalStyles';
 import styled from 'styled-components'
 import DelayLink from '../DelayLink/DelayLink.js'
 import SearchBar from '../SearchBar/SearchBar.js';
@@ -46,7 +46,7 @@ const Wrap = styled.div`
   display: flex;
 	justify-content: space-around;
   overflow: hidden;
-  background: linear-gradient(to bottom, transparent 6%, ${({ theme }) => theme.colors.waveTwo} 0%);
+  background: linear-gradient(to bottom, transparent 4%, ${({ theme }) => theme.colors.waveTwo} 0%);
   transition: all 0.5s linear;
   @media only screen and (max-width: 768px) {
     justify-content: center;
@@ -402,8 +402,8 @@ export const Projects = ({ projects, filterProjects, filteredProjects, handleCli
 				</Grid>
         <AsideWrap>
           <p >
-            Hey! <br/> I'm <Link style={{animationDelay:'0.07s'}} href='/about'>Pat Findley</Link>. <br/> I'm a father, husband, musician, and software developer.
-            I make stuff, and like to consider myself a "creator of non-tangible things".<br/> This website is one of those things; a never complete, playground to log my progress and try new things <br/> <br/>Click around the projects to see what I've been building, breaking, and re-building, and when your finished <Link style={{animationDelay: '0.21s'}} href='/contact'>reach out</Link> and say hi!
+            Hey! <br/> I'm <LinkStyle style={{animationDelay:'0.07s'}} href='/about'>Pat Findley</LinkStyle>. <br/> I'm a father, husband, musician, and software developer.
+            I make stuff, and like to consider myself a "creator of non-tangible things".<br/> This website is one of those things; a never complete, playground to log my progress and try new things <br/> <br/>Click around the projects to see what I've been building, breaking, and re-building, and when your finished <LinkStyle style={{animationDelay: '0.21s'}} href='/contact'>reach out</LinkStyle> and say hi!
           </p>
         </AsideWrap>
 			</Wrap>
