@@ -8,7 +8,7 @@ const Wrap = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
+  height: 91.5vh;
   width: 100%;
   overflow: hidden;
   background: linear-gradient(to bottom, transparent 25%, ${({ theme }) => theme.colors.waveFour} 25%);
