@@ -136,9 +136,8 @@ const Linkedin = styled(linkedin_icon)`
   }
   `
 
-const Nav = ({ windowWidth, selectedTheme }) => {
+const Nav = ({ windowWidth }) => {
   const [burgerActive, setBurgerActive] = useState(false);
-  const [theme, setTheme] = useState(selectedTheme);
   const [tl] = useState(gsap.timeline({paused: true}));
 
   useEffect(() => {
@@ -148,7 +147,6 @@ const Nav = ({ windowWidth, selectedTheme }) => {
     .to('.bottom', .2, {rotationZ: '-50', x: '17px', width: '30px'})
     .to('.header-nav', .7, {height: '98vh'})
     .to('.nav-open', 0, {display: 'flex', pointerEvents: 'auto',})
-    // .to('.nav-links', .6, { height: '100%', width: '100%'})
     }
   }, [tl, windowWidth])
 
@@ -170,15 +168,16 @@ const Nav = ({ windowWidth, selectedTheme }) => {
   // }
 
   const handleNav = () => {
-    if (!burgerActive) {
-      console.log(burgerActive);
-      tl.play();
-      disableScroll();
-      setBurgerActive(true);
-    } else {
+    if (burgerActive) {
+      console.log(burgerActive, 'burgerActive');
       tl.reverse();
       enableScroll();
       setBurgerActive(false);
+    } else {
+      console.log(burgerActive, 'burgerActive');
+      tl.play();
+      disableScroll();
+      setBurgerActive(true);
     }
   }
 
@@ -197,32 +196,72 @@ const Nav = ({ windowWidth, selectedTheme }) => {
     document.body.style.overflow = "auto";
     window.onscroll = () => {}
   }
-  
-  return (
-		<HeaderNav className="header-nav">
-			<BurgerContainer onClick={() => handleNav()}>
-				<Patty className="patty top"></Patty>
-				<Patty className="patty mid"></Patty>
-				<Patty className="patty bottom"></Patty>
-			</BurgerContainer>
+
+  const mobileNav = () => {
+    return (<HeaderNav className="header-nav">
+    <BurgerContainer onClick={() => handleNav()}>
+      <Patty className="patty top"></Patty>
+      <Patty className="patty mid"></Patty>
+      <Patty className="patty bottom"></Patty>
+    </BurgerContainer>
+    <NavOpen className="nav-open">
+      <NavBarLinks className="nav-links">
+        <NLink
+          to="/about"
+          activeClassName="nav-selected"
+          onClick={() => handleNav()}>
+          <ListItem>ABOUT</ListItem>
+        </NLink>
+        <NLink
+          to="/projects"
+          activeClassName="nav-selected"
+          onClick={() => handleNav()}>
+          <ListItem>PROJECTS</ListItem>
+        </NLink>
+        <NLink
+          to="/contact"
+          activeClassName="nav-selected"
+          onClick={() => handleNav()}>
+          <ListItem>CONTACT</ListItem>
+        </NLink>
+      </NavBarLinks>
+      <Socials>
+        <a
+          href="https://github.com/Patfindley"
+          target="_blank"
+          rel="noreferrer">
+          <Github alt="github" />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/patfindley/"
+          target="_blank"
+          rel="noreferrer">
+          <Linkedin alt="linkedin" />
+        </a>
+      </Socials>
+    </NavOpen>
+  </HeaderNav>)
+
+  }
+
+  const deskTopNav = () => {
+    return (
+      <HeaderNav className="header-nav">
 			<NavOpen className="nav-open">
 				<NavBarLinks className="nav-links">
 					<NLink
 						to="/about"
-						activeClassName="nav-selected"
-						onClick={() => handleNav()}>
+						activeClassName="nav-selected">
 						<ListItem>ABOUT</ListItem>
 					</NLink>
 					<NLink
 						to="/projects"
-						activeClassName="nav-selected"
-						onClick={() => handleNav()}>
+						activeClassName="nav-selected">
 						<ListItem>PROJECTS</ListItem>
 					</NLink>
 					<NLink
 						to="/contact"
-						activeClassName="nav-selected"
-						onClick={() => handleNav()}>
+						activeClassName="nav-selected">
 						<ListItem>CONTACT</ListItem>
 					</NLink>
 				</NavBarLinks>
@@ -242,6 +281,11 @@ const Nav = ({ windowWidth, selectedTheme }) => {
 				</Socials>
 			</NavOpen>
 		</HeaderNav>
+    )
+  }
+  
+  return (
+		windowWidth <= 768 ? mobileNav() : deskTopNav()
 	);
 }
 
