@@ -124,29 +124,6 @@ const Message = styled.textarea`
   }
 `
 
-const Submit = styled.button`
-  display: inline-block;
-  padding:0.35em 1.2em;
-  border:0.1em solid ${({ theme }) => theme.colors.waveTwo};
-  margin:0 0.3em 0.3em 0;
-  border-radius:0.12em;
-  box-sizing: border-box;
-  text-decoration: none;
-  font-family:'Roboto',sans-serif;
-  font-weight:300;
-  color: ${({ theme }) => theme.colors.waveTwo};
-  background-color: transparent;
-  text-align:center;
-  position: relative;
-  animation: ${horizontalBounce} 6s infinite linear;
-  transition: all 600ms;
-  width: 100px;
-  &:hover {
-    color: ${({ theme }) => theme.colors.body};
-    background-color: ${({ theme }) => theme.colors.waveTwo};
-  }
-`
-
 const Contact = () => {
   const contactHead = useRef()
   const contactName = useRef()
@@ -244,7 +221,7 @@ const Contact = () => {
 						name="entry.839337160"
 						placeholder="Let's get coffee!"
 						required="required"></Message>
-					<Submit type="submit">Submit</Submit>
+					<button className='button' type="submit">Submit</button>
 				</Form>
 			</FormContainer>
 		</Wrap>
