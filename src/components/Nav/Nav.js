@@ -32,7 +32,7 @@ const Patty = styled.span`
   background-color: ${({ theme }) => theme.colors.text};
   border-radius: 10px;
   margin: 5px 20px;
-  transition: all 800ms;
+  transition: background-color 800ms;
   @media only screen and (max-width: 768px) {
     visibility: visible;
     z-index: 3;
@@ -44,6 +44,7 @@ const NavOpen = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+  transition: all 0.5s linear;
   @media only screen and (max-width: 768px) {
     pointer-events: none;
     display: none;
@@ -68,6 +69,9 @@ const NavBarLinks = styled.ul`
   justify-content: space-evenly;
   font-size: 1.5em;
   font-weight: 400;
+  background-color: ${({ theme }) => theme.colors.body};
+  opacity: 0.9;
+  transition: all 0.5s linear;
   z-index: 2;
   @media only screen and (max-width: 768px) {
     display: flex;
@@ -132,33 +136,54 @@ const Linkedin = styled(linkedin_icon)`
   }
   `
 
-const Nav = ({ windowWidth }) => {
-  const [burgerActive, setBurgerActive] = useState(false)
-  const [tl] = useState(gsap.timeline({paused: true}))
+const Nav = ({ windowWidth, selectedTheme }) => {
+  const [burgerActive, setBurgerActive] = useState(false);
+  const [theme, setTheme] = useState(selectedTheme);
+  const [tl] = useState(gsap.timeline({paused: true}));
 
   useEffect(() => {
     if (windowWidth <= 768 ) {
-    tl.to('.top', .2, {rotationZ: '90', backgroundColor: '#df562a'})
-    .to('.mid', .2, {rotationZ: '50', y: '9px', x: '-8px', width: '30px', backgroundColor: '#df562a'})
-    .to('.bottom', .2, {rotationZ: '-50', x: '17px', width: '30px', backgroundColor: '#df562a'})
+    tl.to('.top', .2, {rotationZ: '90'})
+    .to('.mid', .2, {rotationZ: '50', y: '9px', x: '-8px', width: '30px'})
+    .to('.bottom', .2, {rotationZ: '-50', x: '17px', width: '30px'})
     .to('.header-nav', .7, {height: '98vh'})
-    .to('.nav-open', 0, {display: 'flex', pointerEvents: 'auto'})
+    .to('.nav-open', 0, {display: 'flex', pointerEvents: 'auto',})
+    // .to('.nav-links', .6, { height: '100%', width: '100%'})
     }
   }, [tl, windowWidth])
 
-  useEffect(() => {
-    tl.reversed() ? tl.play() : tl.reverse()
-  }, [burgerActive, tl])
+  // useEffect(() => {
+  //   tl.reversed() ? tl.play() : tl.reverse()
+  // }, [burgerActive, tl])
 
-  useEffect(() => {
-    handleScroll()
-  }, [burgerActive])
+  // useEffect(() => {
+  //   handleScroll()
+  // }, [burgerActive])
 
-  const handleScroll = () => {
-    !burgerActive ? enableScroll() : disableScroll();
+  // useEffect(() => {
+  //   handleNav()
+  // }, [burgerActive])
+
+
+  // const handleScroll = () => {
+  //   !burgerActive ? enableScroll() : disableScroll();
+  // }
+
+  const handleNav = () => {
+    if (!burgerActive) {
+      console.log(burgerActive);
+      tl.play();
+      disableScroll();
+      setBurgerActive(true);
+    } else {
+      tl.reverse();
+      enableScroll();
+      setBurgerActive(false);
+    }
   }
 
   const disableScroll = () => {
+    console.log('scroll disabled')
     document.body.style.overflow = "hidden";
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
     const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
@@ -168,13 +193,14 @@ const Nav = ({ windowWidth }) => {
   }
 
   const enableScroll = () => {
+    console.log('scroll enabled')
     document.body.style.overflow = "auto";
     window.onscroll = () => {}
   }
   
   return (
 		<HeaderNav className="header-nav">
-			<BurgerContainer onClick={() => setBurgerActive(!burgerActive)}>
+			<BurgerContainer onClick={() => handleNav()}>
 				<Patty className="patty top"></Patty>
 				<Patty className="patty mid"></Patty>
 				<Patty className="patty bottom"></Patty>
@@ -184,19 +210,19 @@ const Nav = ({ windowWidth }) => {
 					<NLink
 						to="/about"
 						activeClassName="nav-selected"
-						onClick={() => tl.reverse()}>
+						onClick={() => handleNav()}>
 						<ListItem>ABOUT</ListItem>
 					</NLink>
 					<NLink
 						to="/projects"
 						activeClassName="nav-selected"
-						onClick={() => tl.reverse()}>
+						onClick={() => handleNav()}>
 						<ListItem>PROJECTS</ListItem>
 					</NLink>
 					<NLink
 						to="/contact"
 						activeClassName="nav-selected"
-						onClick={() => tl.reverse()}>
+						onClick={() => handleNav()}>
 						<ListItem>CONTACT</ListItem>
 					</NLink>
 				</NavBarLinks>
