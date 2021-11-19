@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import styled from 'styled-components'
-import { horizontalBounce } from '../../theme/GlobalStyles'
 import Aside from '../Aside/Aside.js';
 import { ReactComponent as Wave } from '../../assets/wave.svg';
 
@@ -89,28 +88,6 @@ const ProjectBody = styled.p`
   transition: all 0.5s linear;
 `
 
-const BackButton = styled.button`
-  display: inline-block;
-  padding: 0.35em 1.2em;
-  border: 0.1em solid ${({ theme }) => theme.colors.waveTwo};
-  margin: 0 0.3em 0.3em 0;
-  border-radius: 0.12em;
-  box-sizing: border-box;
-  text-decoration: none;
-  font-family: 'Roboto',sans-serif;
-  font-weight: 300;
-  color: ${({ theme }) => theme.colors.waveTwo};
-  background-color: transparent;
-  text-align: center;
-  position: relative;
-  animation: ${horizontalBounce} 4.5s infinite linear;
-  transition: all 600ms;
-  &:hover {
-    color: #f9f9f9;
-  background-color: ${({ theme }) => theme.colors.waveOne};
-  }
-`
-
 const ProjectInfo = ({ selectedProject, homeButton }) => {
 
   useEffect(() => {
@@ -133,7 +110,7 @@ const ProjectInfo = ({ selectedProject, homeButton }) => {
 					<h2>{selectedProject.description}</h2>
 					<ProjectBody>{selectedProject.body}</ProjectBody>
 					<Link to="/Projects">
-						<BackButton>Back to Projects</BackButton>
+						<button className='button'>Back to Projects</button>
 					</Link>
 				</Info>
 				<Aside selectedProject={selectedProject} />

@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { gsap } from 'gsap';
 import styled from 'styled-components'
-import { Link } from '../../theme/GlobalStyles';
+import { LinkStyle } from '../../theme/GlobalStyles';
 import { ReactComponent as Wave } from '../../assets/wave.svg';
 import './AboutMe.css'
 import me_photo from '../../assets/me_photo.JPG'
@@ -96,13 +96,13 @@ const AboutMe = () => {
 				<p className="about-me-body">
 					{" "}
 					I'm a web developer, father, husband, service industry veteran,{" "}
-					<Link
+					<LinkStyle
 						style={{ animationDelay: "0.07s" }}
 						href="https://herenowband.com/"
 						target="_blank"
 						rel="noreferrer">
 						musician
-					</Link>
+					</LinkStyle>
 					, creator, doer, and (aspiring) optimist.
 					<br />
 					<br />
@@ -118,27 +118,27 @@ const AboutMe = () => {
 					started thinking about who I was, and what else I was capable of. 13
 					years in the service industry felt like enough. I looked into web
 					development, dipped my toes in the water with some{" "}
-					<Link
+					<LinkStyle
 						style={{ animationDelay: "0.14s" }}
 						href="https://www.codecademy.com/"
 						target="_blank"
 						rel="noreferrer">
 						codecademy
-					</Link>{" "}
+					</LinkStyle>{" "}
 					courses and found something that I never thought would fit me, but
 					checked <em>every box</em>.<br />
 					<Check>&#10003;</Check>Deep <br />
 					<Check className="check">&#10003;</Check>Creative <br />
 					<Check className="check">&#10003;</Check>Collaboritive <br />I enrolled
 					in{" "}
-					<Link
+					<LinkStyle
 						style={{ animationDelay: "0.21s" }}
 						href="https://turing.io/"
 						target="_blank"
 						rel="noreferrer">
 						{" "}
 						Turing School of Software and Design's
-					</Link>{" "}
+					</LinkStyle>{" "}
 					Front-End program, unaware it would become the first accredited coding
 					bootcamp, and can't believe what I was able to learn in such a short
 					time. I built <strong>A LOT</strong> of basic vanilla JS apps, And
@@ -163,13 +163,13 @@ const AboutMe = () => {
 					<br />
 					I'm, Currently playing with Context API, Theming, and GraphQL, While
 					polishing up an App built with some friends called{" "}
-					<Link
+					<LinkStyle
 						style={{ animationDelay: "0.28s" }}
 						href="https://mysterious-cove-94790.herokuapp.com/"
 						target="_blank"
 						rel="noreferrer">
 						"What We Eatin"
-					</Link>
+					</LinkStyle>
 					.
 				</p>
 			</BodyContainer>

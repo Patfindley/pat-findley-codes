@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route, Redirect, Link } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components'
 import { GlobalStyles } from '../../theme/GlobalStyles';
 import WebFont from 'webfontloader';
@@ -32,6 +32,16 @@ const ResumeWrap = styled.div`
   display: flex;
   justify-content: center;
   height: 100%
+`
+
+const NoProjectWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
+const NoProject = styled.h2`
+  text-align: center;
 `
 
 const App = () => {
@@ -111,10 +121,10 @@ const App = () => {
 									exact
 									path="/contact"
 									render={() => (
-										<MainContent>
+										<div>
 											<Nav windowWidth={windowWidth} />
 											<Contact windowWidth={windowWidth} />
-										</MainContent>
+										</div>
 									)}
 								/>
 								<Route
@@ -144,7 +154,24 @@ const App = () => {
 												<Nav windowWidth={windowWidth} />
 												<ProjectInfo selectedProject={selectedProject} />
 											</div>
-										) : null
+										) : (
+											<NoProjectWrap>
+												<Nav windowWidth={windowWidth} />
+												<NoProject>
+													I don't think that project's been started yet!
+													<Link
+														style={{
+															textDecoration: "none",
+															color: `${theme.colors.text}`,
+														}}
+														href="/contact"> Reach out 
+													</Link> if there's something you'd like to work on!
+												</NoProject>
+												<Link to="/Projects">
+													<button className="button">Back to Projects</button>
+												</Link>
+											</NoProjectWrap>
+										)
 									}
 								/>
 								<Redirect to="/Projects" />
