@@ -1,7 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
 import { gsap } from 'gsap';
 import styled from 'styled-components'
-import { horizontalBounce } from '../../theme/GlobalStyles'
 import { ReactComponent as Wave } from '../../assets/wave.svg';
 
 const Wrap = styled.div`

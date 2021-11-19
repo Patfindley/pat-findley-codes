@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import styled from 'styled-components'
-import { horizontalBounce } from '../../theme/GlobalStyles'
 import Aside from '../Aside/Aside.js';
 import { ReactComponent as Wave } from '../../assets/wave.svg';
 
