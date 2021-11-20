@@ -82,6 +82,7 @@ const Grid = styled.div`
     }
   @media only screen and (max-width: 768px) {
       min-width: 729px;
+      margin-left: 0px;
     }
   @media only screen and (max-width: 540px) {
       min-width: 512px;
@@ -336,6 +337,10 @@ const AsideWrap = styled.section`
   z-index: 2;
   &.link, :visited, :link {
     text-decoration: none;
+  }
+  @media only screen and (max-width: 768px) {
+    width: auto;
+    margin-left: 16px;
   }
 `
 

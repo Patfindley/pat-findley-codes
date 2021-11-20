@@ -161,16 +161,14 @@ const AboutMe = () => {
 					bringing something to life in an application.
 					<br />
 					<br />
-					I'm, Currently playing with Context API, Theming, and GraphQL, While
-					polishing up an App built with some friends called{" "}
-					<LinkStyle
-						style={{ animationDelay: "0.28s" }}
-						href="https://mysterious-cove-94790.herokuapp.com/"
+					I'm currently a Front End Developer at <LinkStyle
+						style={{ animationDelay: "0.21s" }}
+						href="https://www.neomindlabs.com/"
 						target="_blank"
 						rel="noreferrer">
-						"What We Eatin"
-					</LinkStyle>
-					.
+						{" "}
+						Neomind Labs, </LinkStyle>
+          and learning Typescript, &amp; Tailwind in my free time.
 				</p>
 			</BodyContainer>
 		</Wrap>

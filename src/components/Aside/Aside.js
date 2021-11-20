@@ -13,6 +13,9 @@ const ProjectWrap = styled.section`
   box-shadow: ${({ theme }) => theme.colors.boxShadow};
   transition: all 0.5s linear;
   z-index: 2;
+  @media only screen and (max-width: 768px) {
+    width: 70%;
+  }
 `
 
 const ProjectInfo = styled.h4`
