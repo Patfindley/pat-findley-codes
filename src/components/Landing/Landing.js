@@ -51,7 +51,7 @@ const WaveTwo = styled(Wave)`
   overflow: hidden;
   fill: ${({ theme }) => theme.colors.waveTwo};
   transition: fill 0.5s;
-  `
+`
 
 const WaveThree = styled(Wave)`
   position: relative;

@@ -41,6 +41,10 @@ const ProjectImage = styled.img`
     width: 276px;
     height: 158px;
   }
+  @media only screen and (max-width: 768px) {
+    width: 336px;
+    height: 191px;
+  }
 `
 
 const WaveBackground = styled(Wave)`
@@ -67,6 +71,7 @@ const Wrap = styled.div`
     flex-direction: column-reverse;
     align-items: center;
     justify-content: normal;
+    height: 100%;
   }
 `
 
