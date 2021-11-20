@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Switch, Route, Redirect, Link } from 'react-router-dom';
+import { Switch, Route, Link } from 'react-router-dom';
 import styled, { ThemeProvider } from 'styled-components'
 import { GlobalStyles } from '../../theme/GlobalStyles';
 import WebFont from 'webfontloader';
@@ -113,6 +113,7 @@ const App = () => {
 												filterProjects={filterProjects}
 												filteredProjects={filteredProjects}
 												handleClick={handleClick}
+												windowWidth={windowWidth}
 											/>
 										</div>
 									)}
@@ -164,8 +165,11 @@ const App = () => {
 															textDecoration: "none",
 															color: `${theme.colors.text}`,
 														}}
-														href="/contact"> Reach out 
-													</Link> if there's something you'd like to work on!
+														href="/contact">
+														{" "}
+														Reach out
+													</Link>{" "}
+													if there's something you'd like to work on!
 												</NoProject>
 												<Link to="/Projects">
 													<button className="button">Back to Projects</button>
@@ -174,7 +178,6 @@ const App = () => {
 										)
 									}
 								/>
-								<Redirect to="/Projects" />
 							</Switch>
 						</SiteContainer>
 					</ThemeProvider>
