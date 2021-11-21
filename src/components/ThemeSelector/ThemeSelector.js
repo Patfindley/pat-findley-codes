@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   top: 51px;
   left: 16px;
   cursor: pointer;
-  z-index: 5;
+  z-index: 10;
 `
 
 const SunIcon = styled(Sun)`

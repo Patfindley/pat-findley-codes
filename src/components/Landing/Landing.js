@@ -40,9 +40,6 @@ const WaveOne = styled(Wave)`
   overflow: hidden;
   fill: ${({ theme }) => theme.colors.waveOne};
   transition: fill 0.5s;
-  @media only screen and (max-width: 768px) {
-    z-index: 4;
-  }
 `
 
 const WaveTwo = styled(Wave)`
