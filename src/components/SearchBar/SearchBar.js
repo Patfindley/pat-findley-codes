@@ -43,6 +43,12 @@ const Input = styled.input`
 const SearchBar = ({ filterProjects }) => {
   const searchValue = useRef()
 
+  const submitHandler = (e) => {
+    if (e.key === "Enter") { 
+      e.preventDefault() 
+    }
+}
+
     return (
 			<Wrap>
 				<SearchForm>
@@ -52,6 +58,7 @@ const SearchBar = ({ filterProjects }) => {
 						ref={searchValue}
 						name="input"
 						onChange={() => filterProjects(searchValue.current.value)}
+            onKeyPress={submitHandler}
 					/>
 				</SearchForm>
 			</Wrap>
