@@ -63,6 +63,14 @@ const App = () => {
       }
     });
   });
+
+  useEffect(() => {
+    setSelectedProject(JSON.parse(window.localStorage.getItem('selectedProject')));
+  }, [])
+
+  useEffect(() => {
+    window.localStorage.setItem('selectedProject', JSON.stringify(selectedProject))
+  }, [selectedProject])
  
   const handleClick = (event) => {
     setSelectedProject(projects.find(project => project.id === Number(event.target.closest('article').id)));
