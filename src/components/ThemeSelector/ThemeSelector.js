@@ -40,9 +40,10 @@ const ThemeSelector = (props) => {
 	const { setMode } = useTheme();
 
 	const themeSwitcher = (selectedTheme) => {
-		setMode(selectedTheme);
+    setMode(selectedTheme);
 		props.setter(selectedTheme);
     setCurrentTheme(selectedTheme)
+    handleFavicon(selectedTheme);
 	};
 
 	useEffect(() => {
@@ -52,6 +53,15 @@ const ThemeSelector = (props) => {
 	useEffect(() => {
 		props.newTheme && updateTheme(props.newTheme);
 	}, [props.newTheme]);
+
+  const getFavicon = () => {
+    return document.getElementById("favicon");
+  }
+
+  const handleFavicon = (theme) => {
+    const favicon = getFavicon();
+    favicon.href = theme.favicon;
+  }
 
 	const updateTheme = (theme) => {
 		const key = _.keys(theme)[0];

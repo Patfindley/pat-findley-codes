@@ -3,6 +3,7 @@
     "light" : {
       "id" : "T_001",
       "name" : "light",
+      "favicon": "landing_image_light.png",
       "colors" : {
         "body" : "#f9f9f9",
         "text" : "#000000",
@@ -27,6 +28,7 @@
     "dark" : {
       "id" : "T_002",
       "name" : "dark",
+      "favicon": "landing_image_dark.png",
       "colors" : {
         "body" : "#020E12",
         "text" : "#F9F9F9",
